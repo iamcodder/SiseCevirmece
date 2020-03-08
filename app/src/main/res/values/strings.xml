@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SiseCevirmece</string>
+    <string name="dogruluk">Doğruluk</string>
+    <string name="cesaret">Cesaret</string>
 </resources>

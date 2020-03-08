@@ -1,9 +1,11 @@
 package com.frappeclub.sisecevirmece
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.animation.Animation
 import android.view.animation.RotateAnimation
 import androidx.appcompat.app.AppCompatActivity
+import com.frappeclub.sisecevirmece.Activity.dogrulukCesaretSecimi
 import kotlinx.android.synthetic.main.activity_game.*
 
 class GameActivity : AppCompatActivity() {
@@ -38,6 +40,11 @@ class GameActivity : AppCompatActivity() {
 
                 override fun onAnimationEnd(animation: Animation?) {
                     donduMu = false
+                    val intent = Intent(
+                        this@GameActivity,
+                        dogrulukCesaretSecimi::class.java
+                    )
+                    startActivity(intent)
                 }
 
                 override fun onAnimationRepeat(animation: Animation?) {
