@@ -1,11 +1,11 @@
-package com.frappeclub.sisecevirmece.Activity
+package com.frappeclub.sisecevirmece.ui.Activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.frappeclub.sisecevirmece.R
 import kotlinx.android.synthetic.main.activity_dogruluk_cesaret_secimi.*
 
-class dogrulukCesaretSecimi : AppCompatActivity() {
+class DogrulukCesaretActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
