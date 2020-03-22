@@ -9,11 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.Activity.GameActivity"></activity>
         <activity
-            android:name=".ui.Activity.DogrulukCesaretActivity"
+            android:name=".ui.SoruActivity"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar"></activity>
+        <activity android:name=".ui.GameActivity" />
+        <activity
+            android:name=".ui.DogrulukCesaretActivity"
             android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
-        <activity android:name=".ui.Activity.HomeActivity">
+        <activity android:name=".ui.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
