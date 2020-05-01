@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.frappeclub.sisecevirmece.databinding.ActivityDogrulukCesaretBinding
 import com.frappeclub.sisecevirmece.util.extSayfaGecisi
+import kotlinx.android.synthetic.main.activity_dogruluk_cesaret.view.*
 
 class DogrulukCesaretActivity : AppCompatActivity() {
 
@@ -14,8 +15,13 @@ class DogrulukCesaretActivity : AppCompatActivity() {
         binding = ActivityDogrulukCesaretBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.cardviewGroup.setOnClickListener {
-            it.context extSayfaGecisi SoruActivity::class.java
+        binding.cardviewGroup.imgDogruluk.setOnClickListener {
+            it.context.extSayfaGecisi(SoruActivity::class.java, true)
+            finish()
+        }
+
+        binding.cardviewGroup.imgCesaret.setOnClickListener {
+            it.context.extSayfaGecisi(SoruActivity::class.java)
             finish()
         }
 

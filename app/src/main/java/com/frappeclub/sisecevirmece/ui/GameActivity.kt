@@ -7,10 +7,10 @@ import android.view.animation.RotateAnimation
 import androidx.appcompat.app.AppCompatActivity
 import com.frappeclub.sisecevirmece.databinding.ActivityGameBinding
 import com.frappeclub.sisecevirmece.enums.GameTimer
+import com.frappeclub.sisecevirmece.enums.ImageDegree
 import com.frappeclub.sisecevirmece.util.extGetRandomNumber
 import com.frappeclub.sisecevirmece.util.extLogMessage
 import com.frappeclub.sisecevirmece.util.extSayfaGecisi
-import com.rappeclub.sisecevirmece.enums.Sayi
 import kotlinx.android.synthetic.main.activity_game.*
 
 class GameActivity : AppCompatActivity() {
@@ -53,7 +53,7 @@ class GameActivity : AppCompatActivity() {
                 pivotY
             )
                 .apply {
-                    this.duration = Sayi.BESBIN.deger.toLong()
+                    this.duration = ImageDegree.BESBIN.deger.toLong()
                     this.fillAfter = true
                 }
 
@@ -85,7 +85,7 @@ class GameActivity : AppCompatActivity() {
             GameTimer.ONE_SECOND.getTimer()
         ) {
             override fun onFinish() {
-                this@GameActivity extSayfaGecisi (DogrulukCesaretActivity::class.java)
+                this@GameActivity.extSayfaGecisi(DogrulukCesaretActivity::class.java)
             }
 
             override fun onTick(millisUntilFinished: Long) {

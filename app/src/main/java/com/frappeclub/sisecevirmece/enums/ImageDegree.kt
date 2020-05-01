@@ -1,6 +1,6 @@
-package com.rappeclub.sisecevirmece.enums
+package com.frappeclub.sisecevirmece.enums
 
-enum class Sayi(val deger: Int) {
+enum class ImageDegree(val deger: Int) {
     SIFIR(0),
     BIN(1000),
     IKIBIN(2000),
