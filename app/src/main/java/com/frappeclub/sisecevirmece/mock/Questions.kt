@@ -10,6 +10,7 @@ object Questions {
     val cesaretSoruListesi
         get() = _cesaretSoruListesi
 
+    //Todo : Bu sınıfta gereksiz kodlar var.Bunlar düzeltilecek.
     fun listeEkleDogruluk() {
         _dogrulukSoruListesi.add("Soru1")
         _dogrulukSoruListesi.add("Soru2")

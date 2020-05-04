@@ -5,13 +5,13 @@ import android.os.CountDownTimer
 import android.view.animation.Animation
 import android.view.animation.RotateAnimation
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import com.frappeclub.sisecevirmece.R
 import com.frappeclub.sisecevirmece.databinding.ActivityGameBinding
 import com.frappeclub.sisecevirmece.enums.GameTimer
 import com.frappeclub.sisecevirmece.enums.ImageDegree
 import com.frappeclub.sisecevirmece.util.extGetRandomNumber
-import com.frappeclub.sisecevirmece.util.extLogMessage
 import com.frappeclub.sisecevirmece.util.extSayfaGecisi
-import kotlinx.android.synthetic.main.activity_game.*
 
 class GameActivity : AppCompatActivity() {
 
@@ -23,28 +23,28 @@ class GameActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityGameBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_game)
 
+//Todo: şişeye tıklama işlemini binding listener ile yapmayı dene
         binding.bottleImg.setOnClickListener {
             dondur()
         }
 
     }
 
+
     override fun onResume() {
         super.onResume()
-        bottleImg.isEnabled = true
+        binding.bottleImg.isEnabled = true
     }
 
     private fun dondur() {
 
         if (!donduMu) {
 
-            randomNumber = (randomNumber.toInt()).extGetRandomNumber().toFloat()
-            (randomNumber.toString()).extLogMessage()
-            val pivotY: Float = (bottleImg.height / 2).toFloat()
-            val pivotX: Float = ((bottleImg.width / 2).toFloat())
+            randomNumber = randomNumber.extGetRandomNumber()
+            val pivotY: Float = (binding.bottleImg.height / 2).toFloat()
+            val pivotX: Float = ((binding.bottleImg.width / 2).toFloat())
 
             val animationRotate = RotateAnimation(
                 sonKonum,

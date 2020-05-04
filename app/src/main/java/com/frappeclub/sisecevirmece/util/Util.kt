@@ -34,8 +34,8 @@ fun String.extLogMessage() {
     Log.d("TAG: ", this)
 }
 
-fun Int.extGetRandomNumber(): Int {
-    val randomNumber: IntRange = when (this) {
+fun Float.extGetRandomNumber(): Float {
+    val randomNumber: IntRange = when (this.toInt()) {
         in ImageDegree.SIFIR.deger..ImageDegree.BIN.deger -> ImageDegree.BIN.deger..ImageDegree.IKIBIN.deger
         in ImageDegree.BIN.deger..ImageDegree.IKIBIN.deger -> ImageDegree.IKIBIN.deger..ImageDegree.UCBIN.deger
         in ImageDegree.IKIBIN.deger..ImageDegree.UCBIN.deger -> ImageDegree.UCBIN.deger..ImageDegree.DORTBIN.deger
@@ -48,5 +48,5 @@ fun Int.extGetRandomNumber(): Int {
         in ImageDegree.DOKUZBIN.deger..ImageDegree.ONBIN.deger -> ImageDegree.SIFIR.deger..ImageDegree.BIN.deger
         else -> ImageDegree.SIFIR.deger..ImageDegree.ONBIN.deger
     }
-    return randomNumber.random()
+    return (randomNumber.random()).toFloat()
 }

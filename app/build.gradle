@@ -1,14 +1,15 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
 
     android {
-        viewBinding {
-            enabled = true
+        dataBinding{
+            enabled=true
         }
 
         defaultConfig {
@@ -50,6 +51,6 @@ android {
         androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
         implementation 'androidx.cardview:cardview:1.0.0'
 
-        implementation 'com.google.android.material:material:1.2.0-alpha05'
+        implementation 'com.google.android.material:material:1.2.0-alpha06'
     }
 }
