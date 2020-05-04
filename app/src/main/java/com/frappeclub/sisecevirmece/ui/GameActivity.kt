@@ -4,8 +4,9 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.frappeclub.sisecevirmece.R
-import com.frappeclub.sisecevirmece.binding.Bottle
+import com.frappeclub.sisecevirmece.binding.SiseDondurme
 import com.frappeclub.sisecevirmece.databinding.ActivityGameBinding
+import com.frappeclub.sisecevirmece.util.extSayfaGecisi
 
 class GameActivity : AppCompatActivity() {
 
@@ -16,7 +17,11 @@ class GameActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_game)
 
-        binding.bottle = Bottle(this)
+        val donmeBitinceYap = {
+            this.extSayfaGecisi(DogrulukCesaretActivity::class.java)
+        }
+
+        binding.sise = SiseDondurme(donmeBitinceYap)
 
     }
 

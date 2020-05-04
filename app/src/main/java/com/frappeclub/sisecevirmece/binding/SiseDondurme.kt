@@ -1,6 +1,5 @@
 package com.frappeclub.sisecevirmece.binding
 
-import android.content.Context
 import android.os.CountDownTimer
 import android.view.View
 import android.view.animation.Animation
@@ -8,11 +7,9 @@ import android.view.animation.RotateAnimation
 import android.widget.ImageView
 import com.frappeclub.sisecevirmece.enums.GameTimer
 import com.frappeclub.sisecevirmece.enums.ImageDegree
-import com.frappeclub.sisecevirmece.ui.DogrulukCesaretActivity
 import com.frappeclub.sisecevirmece.util.extGetRandomNumber
-import com.frappeclub.sisecevirmece.util.extSayfaGecisi
 
-class Bottle(val mContext: Context) {
+class SiseDondurme(val sayfaGecisiBaslat: () -> Unit) {
 
     private var donduMu = false
     private var sonKonum: Float = 0f
@@ -72,7 +69,7 @@ class Bottle(val mContext: Context) {
             GameTimer.ONE_SECOND.getTimer()
         ) {
             override fun onFinish() {
-                mContext.extSayfaGecisi(DogrulukCesaretActivity::class.java)
+                sayfaGecisiBaslat()
             }
 
             override fun onTick(millisUntilFinished: Long) {
