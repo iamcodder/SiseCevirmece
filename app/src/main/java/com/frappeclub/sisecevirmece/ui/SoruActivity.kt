@@ -29,6 +29,8 @@ class SoruActivity : AppCompatActivity() {
         } else {
             Questions.cesaretSoruListesi
         }
+
+
         gosterilenSoru = Questions.getSoru(liste as ArrayList<String>)
 
         binding.ustCard.cardSoru.text = gosterilenSoru
@@ -42,18 +44,14 @@ class SoruActivity : AppCompatActivity() {
             soruSil()
             soruDegistir(true)
         }
-
-
         binding.altCard.soru_benSoracagim.setOnClickListener {
             soruSil()
             soruDegistir()
         }
-
-
     }
 
     fun soruSil() {
-        Questions.removeSoru(liste as ArrayList<String>)
+        Questions.removeSoru(liste)
     }
 
     fun soruDegistir(degistir: Boolean = false) {

@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
 
+    <data>
+
+        <variable
+            name="bottle"
+            type="com.frappeclub.sisecevirmece.binding.Bottle" />
+
+
+    </data>
+
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -14,6 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="64dp"
+            android:onClick="@{(view)->bottle.tiklandi(view)}"
             android:src="@drawable/beer" />
 
     </FrameLayout>

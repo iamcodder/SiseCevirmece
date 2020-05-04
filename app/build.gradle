@@ -52,5 +52,9 @@ android {
         implementation 'androidx.cardview:cardview:1.0.0'
 
         implementation 'com.google.android.material:material:1.2.0-alpha06'
+
+        def lifecycle_version = "2.2.0"
+        implementation "android.arch.lifecycle:extensions:$lifecycle_version"
+        annotationProcessor "android.arch.lifecycle:compiler:$lifecycle_version"
     }
 }

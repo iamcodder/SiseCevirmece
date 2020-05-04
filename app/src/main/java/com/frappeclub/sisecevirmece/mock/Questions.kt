@@ -3,11 +3,11 @@ package com.frappeclub.sisecevirmece.mock
 object Questions {
 
     private val _dogrulukSoruListesi = ArrayList<String>()
-    val dogrulukSoruListesi
+    val dogrulukSoruListesi: List<String>
         get() = _dogrulukSoruListesi
 
     private val _cesaretSoruListesi = ArrayList<String>()
-    val cesaretSoruListesi
+    val cesaretSoruListesi: List<String>
         get() = _cesaretSoruListesi
 
     //Todo : Bu sınıfta gereksiz kodlar var.Bunlar düzeltilecek.
@@ -40,10 +40,10 @@ object Questions {
         return listeTuru[0]
     }
 
-    fun removeSoru(listeTuru: ArrayList<String>) {
+    fun removeSoru(listeTuru: List<String>) {
 
         if (listeTuru.size > 1) {
-            listeTuru.removeAt(0)
+            (listeTuru as ArrayList).removeAt(0)
             return
         } else {
             if (listeTuru == _dogrulukSoruListesi) {
