@@ -8,17 +8,17 @@ import com.frappeclub.sisecevirmece.binding.SiseDondurme
 import com.frappeclub.sisecevirmece.databinding.ActivityGameBinding
 import com.frappeclub.sisecevirmece.util.extSayfaGecisi
 
-class GameActivity : AppCompatActivity() {
+class SiseDondurmeActivity : AppCompatActivity() {
 
 
     private lateinit var binding: ActivityGameBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_game)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_sise_dondurme)
 
         val donmeBitinceYap = {
-            this.extSayfaGecisi(DogrulukCesaretActivity::class.java)
+            this.extSayfaGecisi(SecimEkraniActivity::class.java)
         }
 
         binding.sise = SiseDondurme(donmeBitinceYap)
@@ -28,6 +28,7 @@ class GameActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         binding.bottleImg.isEnabled = true
+
     }
 
 

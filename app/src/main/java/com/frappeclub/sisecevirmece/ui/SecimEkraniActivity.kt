@@ -6,15 +6,13 @@ import androidx.databinding.DataBindingUtil
 import com.frappeclub.sisecevirmece.R
 import com.frappeclub.sisecevirmece.databinding.ActivityDogrulukCesaretBinding
 import com.frappeclub.sisecevirmece.enums.DogrulukCesaret
-import com.frappeclub.sisecevirmece.util.extSayfaGecisi
-import kotlinx.android.synthetic.main.activity_dogruluk_cesaret.view.*
 
-class DogrulukCesaretActivity : AppCompatActivity() {
+class SecimEkraniActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding: ActivityDogrulukCesaretBinding =
-            DataBindingUtil.setContentView(this, R.layout.activity_dogruluk_cesaret)
+            DataBindingUtil.setContentView(this, R.layout.activity_secim_ekrani)
 
         binding.cesaret = DogrulukCesaret.CESARET.isim
         binding.dogruluk = DogrulukCesaret.DOGRULUK.isim

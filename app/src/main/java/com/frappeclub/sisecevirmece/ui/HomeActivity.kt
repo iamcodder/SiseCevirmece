@@ -20,7 +20,7 @@ class HomeActivity : AppCompatActivity() {
         Questions.listeEkleCesaret()
 
         binding.imgBeer.setOnClickListener {
-            this.extSayfaGecisi(GameActivity::class.java)
+            this.extSayfaGecisi(SiseDondurmeActivity::class.java)
         }
     }
 }
