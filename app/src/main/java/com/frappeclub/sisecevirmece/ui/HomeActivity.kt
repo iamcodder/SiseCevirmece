@@ -12,6 +12,10 @@ class HomeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHomeBinding
 
+    private val TAG = this.javaClass.simpleName
+
+//    private lateinit var model: SorularDatabase
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_home)
@@ -19,8 +23,30 @@ class HomeActivity : AppCompatActivity() {
         Questions.listeEkleDogruluk()
         Questions.listeEkleCesaret()
 
+//        model = Room.databaseBuilder(
+//            applicationContext,
+//            SorularDatabase::class.java,
+//            "Sorular.db"
+//        )
+//            .allowMainThreadQueries()
+//            .build()
+//        model.dogrulukDao().insert(DogrulukModel(soru = "123", sorulduMu = false))
+
+
+
         binding.imgBeer.setOnClickListener {
             this.extSayfaGecisi(SiseDondurmeActivity::class.java)
         }
+
+
+
+        binding.imgSoru.setOnClickListener {
+        }
+        binding.imgAyarlar.setOnClickListener {
+        }
+        binding.imgStore.setOnClickListener {
+        }
+
     }
+
 }

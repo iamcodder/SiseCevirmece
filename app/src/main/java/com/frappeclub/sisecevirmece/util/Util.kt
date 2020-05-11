@@ -30,8 +30,8 @@ fun <ClassTipi> Context.extSayfaGecisi(
 
 }
 
-fun String.extLogMessage() {
-    Log.d("TAG: ", this)
+infix fun String.extLogMessage(message: String) {
+    Log.d(this, message)
 }
 
 fun Float.extGetRandomNumber(): Float {

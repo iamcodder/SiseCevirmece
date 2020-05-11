@@ -17,20 +17,20 @@
         android:layout_height="150dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/beer"
-        app:layout_constraintBottom_toTopOf="@+id/imgCup"
-        app:layout_constraintEnd_toStartOf="@+id/imgCola"
+        app:layout_constraintBottom_toTopOf="@+id/imgAyarlar"
+        app:layout_constraintEnd_toStartOf="@+id/imgSoru"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <ImageView
-        android:id="@+id/imgCola"
+        android:id="@+id/imgSoru"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/answer"
-        app:layout_constraintBottom_toTopOf="@+id/imgWhisky"
+        app:layout_constraintBottom_toTopOf="@+id/imgStore"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imgBeer"
@@ -38,19 +38,19 @@
         app:layout_constraintVertical_chainStyle="packed" />
 
     <ImageView
-        android:id="@+id/imgCup"
+        android:id="@+id/imgAyarlar"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/settings"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imgWhisky"
+        app:layout_constraintEnd_toStartOf="@+id/imgStore"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgBeer" />
 
     <ImageView
-        android:id="@+id/imgWhisky"
+        android:id="@+id/imgStore"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginTop="16dp"
@@ -58,8 +58,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imgCup"
-        app:layout_constraintTop_toBottomOf="@+id/imgCola" />
+        app:layout_constraintStart_toEndOf="@+id/imgAyarlar"
+        app:layout_constraintTop_toBottomOf="@+id/imgSoru" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

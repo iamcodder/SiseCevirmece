@@ -5,13 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.frappeclub.sisecevirmece.R
 import com.frappeclub.sisecevirmece.binding.SiseDondurme
-import com.frappeclub.sisecevirmece.databinding.ActivityGameBinding
+import com.frappeclub.sisecevirmece.databinding.ActivitySiseDondurmeBinding
 import com.frappeclub.sisecevirmece.util.extSayfaGecisi
 
 class SiseDondurmeActivity : AppCompatActivity() {
 
 
-    private lateinit var binding: ActivityGameBinding
+    private lateinit var binding: ActivitySiseDondurmeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
