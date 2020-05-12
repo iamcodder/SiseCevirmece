@@ -1,23 +1,27 @@
 package com.frappeclub.sisecevirmece.binding
 
-import android.os.CountDownTimer
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.RotateAnimation
 import android.widget.ImageView
-import com.frappeclub.sisecevirmece.enums.GameTimer
 import com.frappeclub.sisecevirmece.enums.ImageDegree
+import com.frappeclub.sisecevirmece.util.CustomTimer
 import com.frappeclub.sisecevirmece.util.extGetRandomNumber
 
-class SiseDondurme(val sayfaGecisiBaslat: () -> Unit) {
+class SiseDondurme {
 
     private var donduMu = false
     private var sonKonum: Float = 0f
     private var randomNumber: Float = 0f
 
     private lateinit var image: ImageView
+    private lateinit var customTimer: CustomTimer
 
-    fun tiklandi(view: View) {
+    fun tiklandi(
+        view: View,
+        customTimer: CustomTimer
+    ) {
+        this.customTimer = customTimer
         image = view as ImageView
         dondur()
     }
@@ -49,7 +53,7 @@ class SiseDondurme(val sayfaGecisiBaslat: () -> Unit) {
 
                 override fun onAnimationEnd(animation: Animation?) {
                     donduMu = false
-                    sayacBaslat()
+                    customTimer.sayacBaslat()
                 }
 
                 override fun onAnimationRepeat(animation: Animation?) {
@@ -63,18 +67,5 @@ class SiseDondurme(val sayfaGecisiBaslat: () -> Unit) {
         }
     }
 
-    private fun sayacBaslat() {
-        object : CountDownTimer(
-            GameTimer.TWO_SECOND.getTimer(),
-            GameTimer.ONE_SECOND.getTimer()
-        ) {
-            override fun onFinish() {
-                sayfaGecisiBaslat()
-            }
-
-            override fun onTick(millisUntilFinished: Long) {
-            }
-        }.start()
-    }
 
 }

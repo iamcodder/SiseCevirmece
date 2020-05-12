@@ -7,6 +7,9 @@
             name="sise"
             type="com.frappeclub.sisecevirmece.binding.SiseDondurme" />
 
+        <variable
+            name="customTimer"
+            type="com.frappeclub.sisecevirmece.util.CustomTimer" />
 
     </data>
 
@@ -23,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="64dp"
-            android:onClick="@{(view)->sise.tiklandi(view)}"
+            android:onClick="@{(view)->sise.tiklandi(view,customTimer)}"
             android:src="@drawable/beer" />
 
     </FrameLayout>

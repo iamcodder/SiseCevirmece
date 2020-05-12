@@ -38,8 +38,6 @@ class HomeActivity : AppCompatActivity() {
             this.extSayfaGecisi(SiseDondurmeActivity::class.java)
         }
 
-
-
         binding.imgSoru.setOnClickListener {
         }
         binding.imgAyarlar.setOnClickListener {
