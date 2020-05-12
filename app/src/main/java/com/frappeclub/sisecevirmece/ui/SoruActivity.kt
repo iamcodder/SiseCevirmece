@@ -50,11 +50,11 @@ class SoruActivity : AppCompatActivity() {
         }
     }
 
-    fun soruSil() {
+    private fun soruSil() {
         Questions.removeSoru(liste)
     }
 
-    fun soruDegistir(degistir: Boolean = false) {
+    private fun soruDegistir(degistir: Boolean = false) {
 
         if (degistir) {
             gosterilenSoru = Questions.getSoru(liste as ArrayList<String>)

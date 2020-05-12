@@ -9,14 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ui.HomeActivity" />
         <activity
             android:name=".ui.SoruActivity"
-            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
         <activity android:name=".ui.SiseDondurmeActivity" />
         <activity
             android:name=".ui.SecimEkraniActivity"
             android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
-        <activity android:name=".ui.HomeActivity">
+        <activity
+            android:name=".ui.SplashScreenActivity"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -8,13 +8,13 @@ android {
     buildToolsVersion "29.0.3"
 
     android {
-        dataBinding{
-            enabled=true
+        dataBinding {
+            enabled = true
         }
 
         defaultConfig {
             applicationId "com.frappeclub.sisecevirmece"
-            minSdkVersion 15
+            minSdkVersion 16
             targetSdkVersion 29
             versionCode 1
             versionName "1.0"
@@ -23,7 +23,7 @@ android {
 
             javaCompileOptions {
                 annotationProcessorOptions {
-                    arguments = ["room.schemaLocation":"$projectDir/schemas".toString()]
+                    arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
                 }
             }
         }
@@ -67,5 +67,13 @@ android {
 
         implementation "androidx.room:room-runtime:$room_version"
         kapt "androidx.room:room-compiler:$room_version"
+
+        implementation "com.github.sam43:AnimateViewLibrary:1.0.1"
+
     }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:+'
+    implementation 'androidx.constraintlayout:constraintlayout:+'
 }

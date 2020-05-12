@@ -20,6 +20,7 @@ class CustomTimer(val sayacBitince: () -> Unit) {
 
     fun sayacBaslat() {
         ikiSaniye.start()
+
     }
 
     fun sayacDurdur() {
