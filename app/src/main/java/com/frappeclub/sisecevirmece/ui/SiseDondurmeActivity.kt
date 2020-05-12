@@ -6,11 +6,10 @@ import androidx.databinding.DataBindingUtil
 import com.frappeclub.sisecevirmece.R
 import com.frappeclub.sisecevirmece.binding.SiseDondurme
 import com.frappeclub.sisecevirmece.databinding.ActivitySiseDondurmeBinding
-import com.frappeclub.sisecevirmece.interfaces.TimerCallBack
 import com.frappeclub.sisecevirmece.util.CustomTimer
 import com.frappeclub.sisecevirmece.util.extSayfaGecisi
 
-class SiseDondurmeActivity : AppCompatActivity(), TimerCallBack {
+class SiseDondurmeActivity : AppCompatActivity() {
 
 
     private lateinit var binding: ActivitySiseDondurmeBinding
@@ -19,7 +18,12 @@ class SiseDondurmeActivity : AppCompatActivity(), TimerCallBack {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_sise_dondurme)
-        customTimer = CustomTimer()
+
+        val sayacBitince = {
+            this.extSayfaGecisi(SecimEkraniActivity::class.java)
+        }
+
+        customTimer = CustomTimer(sayacBitince)
         binding.sise = SiseDondurme()
         binding.customTimer = customTimer
 
@@ -30,9 +34,9 @@ class SiseDondurmeActivity : AppCompatActivity(), TimerCallBack {
         binding.bottleImg.isEnabled = true
     }
 
-    override fun onFinishTimer() {
+    override fun onBackPressed() {
+        super.onBackPressed()
         customTimer.sayacDurdur()
-        this.extSayfaGecisi(SecimEkraniActivity::class.java)
     }
 
 
