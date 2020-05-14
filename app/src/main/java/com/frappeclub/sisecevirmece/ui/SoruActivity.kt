@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.frappeclub.sisecevirmece.R
 import com.frappeclub.sisecevirmece.databinding.ActivitySoruBinding
-import com.frappeclub.sisecevirmece.enums.Veri
+import com.frappeclub.sisecevirmece.enums.DogrulukCesaret
 import kotlinx.android.synthetic.main.card_alt_cevap.view.*
 import kotlinx.android.synthetic.main.card_ust_cevap.view.*
 
@@ -22,7 +22,7 @@ class SoruActivity : AppCompatActivity() {
 //Todo: Seçime göre soru getirelecek
         //true doğruluk
         //false cesaret
-        getBooleanIntent = intent.getBooleanExtra(Veri.DOGRULUK_CESARET.name, false)
+        getBooleanIntent = intent.getBooleanExtra(DogrulukCesaret.DOGRULUK_CESARET.name, false)
 
 
         //gosterilenSoru dbden çekilen soru olacan

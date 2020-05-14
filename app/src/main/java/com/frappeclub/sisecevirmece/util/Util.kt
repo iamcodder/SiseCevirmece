@@ -3,8 +3,8 @@ package com.frappeclub.sisecevirmece.util
 import android.content.Context
 import android.content.Intent
 import android.util.Log
+import com.frappeclub.sisecevirmece.enums.DogrulukCesaret
 import com.frappeclub.sisecevirmece.enums.ImageDegree
-import com.frappeclub.sisecevirmece.enums.Veri
 
 
 /**     Code with ❤
@@ -24,7 +24,7 @@ fun <ClassTipi> Context.extSayfaGecisi(
     if (!veri) startActivity(Intent(this, gidilecekClass))
     else {
         val intent = Intent(this, gidilecekClass)
-        intent.putExtra(Veri.DOGRULUK_CESARET.name, veri)
+        intent.putExtra(DogrulukCesaret.DOGRULUK_CESARET.name, veri)
         this.startActivity(intent)
     }
 

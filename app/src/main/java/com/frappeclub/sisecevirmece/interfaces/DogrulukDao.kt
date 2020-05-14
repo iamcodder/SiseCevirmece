@@ -9,6 +9,9 @@ interface DogrulukDao {
     @Insert
     fun insert(model: DogrulukModel)
 
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertAll(list: List<DogrulukModel>)
+
     @Update
     fun update(model: DogrulukModel)
 

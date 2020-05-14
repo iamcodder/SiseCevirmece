@@ -8,21 +8,38 @@ import com.app.lets_go_splash.CreateAnim.createAnimation
 import com.app.lets_go_splash.OnAnimationListener
 import com.app.lets_go_splash.StarterAnimation
 import com.frappeclub.sisecevirmece.R
+import com.frappeclub.sisecevirmece.abstracts.CesaretDatabase
+import com.frappeclub.sisecevirmece.abstracts.DogrulukDatabase
+import com.frappeclub.sisecevirmece.util.SharedVeriSaklama
+import com.frappeclub.sisecevirmece.util.SoruEkleme
 import com.frappeclub.sisecevirmece.util.extSayfaGecisi
 import kotlinx.android.synthetic.main.activity_splash_screen.*
 
 
 class SplashScreenActivity : AppCompatActivity() {
 
+    val TAG = this.javaClass.simpleName
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
         startAnim()
 
-        //Todo : Soru ekleme yapılacak.Eğer ekliyse ekleme yapılmayacak.
-        //Dosya okuma yazma işlemi.
-        //val cesaretDatabase = CesaretDatabase.getDatabaseManager(this)
-        //cesaretDatabase.cesaretDao().insert(CesaretModel(soru = "asdasd",sorulduMu = false))
+        val sharedVeriSaklama = SharedVeriSaklama(this)
+        val isWrited = sharedVeriSaklama.isSharedPrefCreated()
+
+
+        if (!isWrited) {
+            val soruEkleme = SoruEkleme()
+            val cesaretDatabase = CesaretDatabase.getDatabaseManager(this)
+            cesaretDatabase.cesaretDao().insertAll(soruEkleme.cesaretListesiEkleme())
+
+            val dogrulukDatabase = DogrulukDatabase.getDatabaseManager(this)
+            dogrulukDatabase.dogrulukDao().insertAll(soruEkleme.dogrulukListesiEkleme())
+
+            sharedVeriSaklama.putValue()
+        }
+
 
     }
 
