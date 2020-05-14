@@ -18,4 +18,7 @@ interface DogrulukDao {
     @Query("Select * from DogrulukTablosu Where soruId = :id")
     fun getModel(id: Int): DogrulukModel
 
+    @Query("Select * from DogrulukTablosu")
+    fun getAllModel(): List<DogrulukModel>
+
 }

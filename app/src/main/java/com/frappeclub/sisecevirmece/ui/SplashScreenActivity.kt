@@ -11,12 +11,19 @@ import com.frappeclub.sisecevirmece.R
 import com.frappeclub.sisecevirmece.util.extSayfaGecisi
 import kotlinx.android.synthetic.main.activity_splash_screen.*
 
+
 class SplashScreenActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
         startAnim()
+
+        //Todo : Soru ekleme yapılacak.Eğer ekliyse ekleme yapılmayacak.
+        //Dosya okuma yazma işlemi.
+        //val cesaretDatabase = CesaretDatabase.getDatabaseManager(this)
+        //cesaretDatabase.cesaretDao().insert(CesaretModel(soru = "asdasd",sorulduMu = false))
+
     }
 
     private fun startAnim() {
@@ -47,5 +54,7 @@ class SplashScreenActivity : AppCompatActivity() {
 
         return animList
     }
+
+
 }
 

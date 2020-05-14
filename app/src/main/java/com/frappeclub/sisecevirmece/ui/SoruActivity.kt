@@ -6,9 +6,7 @@ import androidx.databinding.DataBindingUtil
 import com.frappeclub.sisecevirmece.R
 import com.frappeclub.sisecevirmece.databinding.ActivitySoruBinding
 import com.frappeclub.sisecevirmece.enums.Veri
-import com.frappeclub.sisecevirmece.mock.Questions
 import kotlinx.android.synthetic.main.card_alt_cevap.view.*
-import kotlinx.android.synthetic.main.card_soru.view.cardSoru
 import kotlinx.android.synthetic.main.card_ust_cevap.view.*
 
 class SoruActivity : AppCompatActivity() {
@@ -21,19 +19,15 @@ class SoruActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_soru)
-//Todo: Bu sınıf karışık.Burası temizlenecek.
+//Todo: Seçime göre soru getirelecek
+        //true doğruluk
+        //false cesaret
         getBooleanIntent = intent.getBooleanExtra(Veri.DOGRULUK_CESARET.name, false)
 
-        liste = if (getBooleanIntent) {
-            Questions.dogrulukSoruListesi
-        } else {
-            Questions.cesaretSoruListesi
-        }
 
+        //gosterilenSoru dbden çekilen soru olacan
 
-        gosterilenSoru = Questions.getSoru(liste as ArrayList<String>)
-
-        binding.ustCard.cardSoru.text = gosterilenSoru
+        //binding.ustCard.cardSoru.text = gosterilenSoru
 
         binding.ortaCard.soru_cevaplandi.setOnClickListener {
             soruSil()
@@ -42,7 +36,7 @@ class SoruActivity : AppCompatActivity() {
 
         binding.ortaCard.soru_soruDegistir.setOnClickListener {
             soruSil()
-            soruDegistir(true)
+            soruDegistir()
         }
         binding.altCard.soru_benSoracagim.setOnClickListener {
             soruSil()
@@ -50,17 +44,11 @@ class SoruActivity : AppCompatActivity() {
         }
     }
 
+    //Todo: Db hazır.Fonksiyonları doldur.
     private fun soruSil() {
-        Questions.removeSoru(liste)
     }
 
-    private fun soruDegistir(degistir: Boolean = false) {
+    private fun soruDegistir() {
 
-        if (degistir) {
-            gosterilenSoru = Questions.getSoru(liste as ArrayList<String>)
-            binding.ustCard.cardSoru.text = gosterilenSoru
-            return
-        }
-        finish()
     }
 }

@@ -1,0 +1,34 @@
+package com.frappeclub.sisecevirmece.abstracts
+
+import android.content.Context
+import androidx.room.Database
+import androidx.room.Room
+import androidx.room.RoomDatabase
+import com.frappeclub.sisecevirmece.interfaces.DogrulukDao
+import com.frappeclub.sisecevirmece.model.DogrulukModel
+
+@Database(entities = [DogrulukModel::class], version = 1)
+abstract class DogrulukDatabase : RoomDatabase() {
+
+    abstract fun dogrulukDao(): DogrulukDao
+
+    companion object {
+
+        private var dogrulukDb: DogrulukDatabase? = null
+
+        fun getDatabaseManager(mContext: Context): DogrulukDatabase {
+            if (dogrulukDb == null) {
+                dogrulukDb = Room.databaseBuilder(
+                    mContext,
+                    DogrulukDatabase::class.java,
+                    "Dogruluk.db"
+                )
+                    .allowMainThreadQueries()
+                    .build()
+            }
+            return dogrulukDb!!
+        }
+
+    }
+
+}
