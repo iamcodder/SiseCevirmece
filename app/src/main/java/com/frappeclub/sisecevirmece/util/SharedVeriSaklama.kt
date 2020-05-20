@@ -18,11 +18,67 @@ class SharedVeriSaklama(val mContext: Context) {
         false
     )
 
-    fun putValue() {
+    fun getDogrulukListValue(): Int = sharedPreferences.getInt(
+        SharedPref.DB_DOGRULUK_SIZE.value,
+        0
+    )
+
+    fun getCesaretListValue(): Int = sharedPreferences.getInt(
+        SharedPref.DB_CESARET_SIZE.value,
+        0
+    )
+
+    fun getDogrulukLastValue(): Int = sharedPreferences.getInt(
+        SharedPref.DB_DOGRULUK_LAST_VALUE.value,
+        0
+    )
+
+    fun getCesaretLastValue(): Int = sharedPreferences.getInt(
+        SharedPref.DB_CESARET_LAST_VALUE.value,
+        0
+    )
+
+    fun updateValue(
+        dogrulukLastValue: Int,
+        cesaretLastValue: Int
+    ) {
+        sharedPreferences.edit()
+            .putInt(
+                SharedPref.DB_DOGRULUK_LAST_VALUE.value,
+                dogrulukLastValue
+            )
+            .putInt(
+                SharedPref.DB_CESARET_LAST_VALUE.value,
+                cesaretLastValue
+            )
+            .apply()
+    }
+
+    fun putValueForFirstStarted(
+        isCreated: Boolean,
+        dogrulukSize: Int,
+        cesaretSize: Int
+    ) {
         sharedPreferences.edit()
             .putBoolean(
                 SharedPref.DB_CREATED.value,
-                true
+                isCreated
+            )
+            .putInt(
+                SharedPref.DB_DOGRULUK_SIZE.value,
+                dogrulukSize
+            )
+            .putInt(
+                SharedPref.DB_CESARET_SIZE.value,
+                cesaretSize
+            )
+            .putInt(
+                SharedPref.DB_CESARET_LAST_VALUE.value,
+                0
+            )
+            .putInt(
+                SharedPref.DB_DOGRULUK_LAST_VALUE.value,
+                0
             )
             .apply()
     }

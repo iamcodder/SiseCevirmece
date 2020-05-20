@@ -10,6 +10,7 @@ import com.app.lets_go_splash.StarterAnimation
 import com.frappeclub.sisecevirmece.R
 import com.frappeclub.sisecevirmece.abstracts.CesaretDatabase
 import com.frappeclub.sisecevirmece.abstracts.DogrulukDatabase
+import com.frappeclub.sisecevirmece.util.ListSize
 import com.frappeclub.sisecevirmece.util.SharedVeriSaklama
 import com.frappeclub.sisecevirmece.util.SoruEkleme
 import com.frappeclub.sisecevirmece.util.extSayfaGecisi
@@ -18,12 +19,9 @@ import kotlinx.android.synthetic.main.activity_splash_screen.*
 
 class SplashScreenActivity : AppCompatActivity() {
 
-    val TAG = this.javaClass.simpleName
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
-        startAnim()
 
         val sharedVeriSaklama = SharedVeriSaklama(this)
         val isWrited = sharedVeriSaklama.isSharedPrefCreated()
@@ -37,9 +35,20 @@ class SplashScreenActivity : AppCompatActivity() {
             val dogrulukDatabase = DogrulukDatabase.getDatabaseManager(this)
             dogrulukDatabase.dogrulukDao().insertAll(soruEkleme.dogrulukListesiEkleme())
 
-            sharedVeriSaklama.putValue()
+            sharedVeriSaklama.putValueForFirstStarted(
+                true,
+                soruEkleme.dogrulukListSize,
+                soruEkleme.cesaretListSize
+            )
         }
 
+        ListSize.cesaretSize = sharedVeriSaklama.getCesaretListValue()
+        ListSize.dogrulukSize = sharedVeriSaklama.getDogrulukListValue()
+
+        ListSize.cesaretLastValue = sharedVeriSaklama.getCesaretLastValue()
+        ListSize.dogrulukLastValue = sharedVeriSaklama.getDogrulukLastValue()
+
+        startAnim()
 
     }
 
