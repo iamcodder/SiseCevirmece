@@ -9,5 +9,5 @@ data class DogrulukModel(
     @PrimaryKey(autoGenerate = true)
     val soruId: Int = 0,
     val soru: String,
-    val sorulduMu: Boolean = false
+    var sorulduMu: Boolean = false
 )

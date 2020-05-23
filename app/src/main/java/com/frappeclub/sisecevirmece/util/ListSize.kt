@@ -6,4 +6,5 @@ object ListSize {
 
     var dogrulukLastValue = 1
     var cesaretLastValue = 1
+
 }

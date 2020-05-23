@@ -36,7 +36,7 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:id="@+id/imgCesaret"
+                    android:id="@+id/imgDogruluk"
                     android:layout_width="0dp"
                     android:layout_height="150dp"
                     android:layout_marginStart="16dp"
@@ -45,12 +45,12 @@
                     android:layout_marginEnd="8dp"
                     android:layout_marginRight="8dp"
                     android:src="@drawable/dogruluk"
-                    app:layout_constraintEnd_toStartOf="@+id/imgDogruluk"
+                    app:layout_constraintEnd_toStartOf="@+id/imgCesaret"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
-                    android:id="@+id/imgDogruluk"
+                    android:id="@+id/imgCesaret"
                     android:layout_width="0dp"
                     android:layout_height="150dp"
                     android:layout_marginStart="8dp"
@@ -60,7 +60,7 @@
                     android:layout_marginRight="16dp"
                     android:src="@drawable/cesaret"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/imgCesaret"
+                    app:layout_constraintStart_toEndOf="@+id/imgDogruluk"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
@@ -72,9 +72,9 @@
                     android:text="@{cesaret}"
                     android:textSize="24sp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/imgDogruluk"
-                    app:layout_constraintStart_toStartOf="@+id/imgDogruluk"
-                    app:layout_constraintTop_toBottomOf="@+id/imgDogruluk" />
+                    app:layout_constraintEnd_toEndOf="@+id/imgCesaret"
+                    app:layout_constraintStart_toStartOf="@+id/imgCesaret"
+                    app:layout_constraintTop_toBottomOf="@+id/imgCesaret" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -85,9 +85,9 @@
                     android:text="@{dogruluk}"
                     android:textSize="24sp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/imgCesaret"
-                    app:layout_constraintStart_toStartOf="@+id/imgCesaret"
-                    app:layout_constraintTop_toBottomOf="@+id/imgCesaret" />
+                    app:layout_constraintEnd_toEndOf="@+id/imgDogruluk"
+                    app:layout_constraintStart_toStartOf="@+id/imgDogruluk"
+                    app:layout_constraintTop_toBottomOf="@+id/imgDogruluk" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

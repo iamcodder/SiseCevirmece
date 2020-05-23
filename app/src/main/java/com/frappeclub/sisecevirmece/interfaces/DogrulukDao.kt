@@ -18,6 +18,9 @@ interface DogrulukDao {
     @Delete
     fun delete(model: DogrulukModel)
 
+    @Query("Update DogrulukTablosu Set sorulduMu = 0")
+    fun updateAll()
+
     @Query("Select * from DogrulukTablosu Where soruId = :id")
     fun getModel(id: Int): DogrulukModel
 

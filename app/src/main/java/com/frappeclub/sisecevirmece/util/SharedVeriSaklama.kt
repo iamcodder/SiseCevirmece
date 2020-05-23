@@ -74,11 +74,11 @@ class SharedVeriSaklama(val mContext: Context) {
             )
             .putInt(
                 SharedPref.DB_CESARET_LAST_VALUE.value,
-                0
+                1
             )
             .putInt(
                 SharedPref.DB_DOGRULUK_LAST_VALUE.value,
-                0
+                1
             )
             .apply()
     }

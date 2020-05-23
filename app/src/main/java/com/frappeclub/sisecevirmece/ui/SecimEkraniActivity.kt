@@ -11,6 +11,8 @@ import kotlinx.android.synthetic.main.activity_secim_ekrani.view.*
 
 class SecimEkraniActivity : AppCompatActivity() {
 
+    private val TAG = this.javaClass.simpleName
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding: ActivitySecimEkraniBinding =
@@ -19,13 +21,14 @@ class SecimEkraniActivity : AppCompatActivity() {
         binding.cesaret = DogrulukCesaret.CESARET.isim
         binding.dogruluk = DogrulukCesaret.DOGRULUK.isim
 
-        binding.cardviewGroup.imgDogruluk.setOnClickListener {
-            it.context.extSayfaGecisi(SoruActivity::class.java, true)
-            finish()
-        }
 
         binding.cardviewGroup.imgCesaret.setOnClickListener {
             it.context.extSayfaGecisi(SoruActivity::class.java)
+            finish()
+        }
+
+        binding.cardviewGroup.imgDogruluk.setOnClickListener {
+            it.context.extSayfaGecisi(SoruActivity::class.java, true)
             finish()
         }
 

@@ -18,6 +18,9 @@ interface CesaretDao {
     @Update
     fun update(model: CesaretModel)
 
+    @Query("Update CesaretTablosu Set sorulduMu = 0")
+    fun updateAll()
+
     @Query("Select * from CesaretTablosu Where soruId = :id")
     fun getModel(id: Int): CesaretModel
 
