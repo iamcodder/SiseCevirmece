@@ -11,21 +11,21 @@
 
         <include
             android:id="@+id/ustCard"
-            layout="@layout/card_soru"
+            layout="@layout/card_soru_gosterilen_soru"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@id/ortaCard" />
 
         <include
             android:id="@+id/ortaCard"
-            layout="@layout/card_ust_cevap"
+            layout="@layout/card_soru_ust_cevap"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true" />
 
         <include
             android:id="@+id/altCard"
-            layout="@layout/card_alt_cevap"
+            layout="@layout/card_soru_alt_cevap"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/ortaCard" />

@@ -25,6 +25,7 @@ class HomeActivity : AppCompatActivity() {
         binding.imgSoru.setOnClickListener {
         }
         binding.imgAyarlar.setOnClickListener {
+            this.extSayfaGecisi(AyarlarActivity::class.java)
         }
         binding.imgStore.setOnClickListener {
         }
