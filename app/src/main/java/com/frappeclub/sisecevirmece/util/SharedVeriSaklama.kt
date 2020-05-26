@@ -38,7 +38,21 @@ class SharedVeriSaklama(val mContext: Context) {
         0
     )
 
-    fun updateValue(
+    fun getSiseTuru(): Int = sharedPreferences.getInt(
+        SharedPref.SISE_TURU.value,
+        1
+    )
+
+    fun updateSiseValue(siseTuru: Int) {
+        sharedPreferences.edit()
+            .putInt(
+                SharedPref.SISE_TURU.value,
+                siseTuru
+            )
+            .apply()
+    }
+
+    fun updateLastValue(
         dogrulukLastValue: Int,
         cesaretLastValue: Int
     ) {
@@ -57,7 +71,8 @@ class SharedVeriSaklama(val mContext: Context) {
     fun putValueForFirstStarted(
         isCreated: Boolean,
         dogrulukSize: Int,
-        cesaretSize: Int
+        cesaretSize: Int,
+        siseTuru: Int
     ) {
         sharedPreferences.edit()
             .putBoolean(
@@ -79,6 +94,10 @@ class SharedVeriSaklama(val mContext: Context) {
             .putInt(
                 SharedPref.DB_DOGRULUK_LAST_VALUE.value,
                 1
+            )
+            .putInt(
+                SharedPref.SISE_TURU.value,
+                siseTuru
             )
             .apply()
     }

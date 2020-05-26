@@ -8,11 +8,11 @@ import com.frappeclub.sisecevirmece.abstracts.CesaretDatabase
 import com.frappeclub.sisecevirmece.abstracts.DogrulukDatabase
 import com.frappeclub.sisecevirmece.databinding.ActivitySoruBinding
 import com.frappeclub.sisecevirmece.enums.DogrulukCesaret
-import com.frappeclub.sisecevirmece.util.ListSize
+import com.frappeclub.sisecevirmece.util.OyunIslemleri
 import com.frappeclub.sisecevirmece.util.SharedVeriSaklama
 import com.frappeclub.sisecevirmece.util.extLogMessage
 import kotlinx.android.synthetic.main.card_alt_cevap.view.*
-import kotlinx.android.synthetic.main.card_ust_cevap.view.*
+import kotlinx.android.synthetic.main.card_soru_ust_cevap.view.*
 
 class SoruActivity : AppCompatActivity() {
 
@@ -63,13 +63,13 @@ class SoruActivity : AppCompatActivity() {
     }
 
     private fun soruSayisiKontrol(dogrulukMu: Boolean) {
-        if (ListSize.cesaretLastValue > ListSize.cesaretSize) {
+        if (OyunIslemleri.cesaretLastValue > OyunIslemleri.cesaretSize) {
             cesaretDatabase.cesaretDao().updateAll()
-            ListSize.cesaretLastValue = 1
+            OyunIslemleri.cesaretLastValue = 1
             TAG extLogMessage "C Güncellendi"
-        } else if (ListSize.dogrulukLastValue > ListSize.dogrulukSize) {
+        } else if (OyunIslemleri.dogrulukLastValue > OyunIslemleri.dogrulukSize) {
             dogrulukDatabase.dogrulukDao().updateAll()
-            ListSize.dogrulukLastValue = 1
+            OyunIslemleri.dogrulukLastValue = 1
             TAG extLogMessage "D Güncellendi"
         }
         soruGetir(dogrulukMu)
@@ -77,8 +77,8 @@ class SoruActivity : AppCompatActivity() {
 
     private fun soruGetir(dogrulukMu: Boolean) {
         if (dogrulukMu) {
-            val model = dogrulukDatabase.dogrulukDao().getModel(ListSize.dogrulukLastValue)
-            ListSize.dogrulukLastValue++
+            val model = dogrulukDatabase.dogrulukDao().getModel(OyunIslemleri.dogrulukLastValue)
+            OyunIslemleri.dogrulukLastValue++
             model.sorulduMu = true
             dogrulukDatabase.dogrulukDao().update(model)
             gosterilenSoru = model.soru
@@ -86,8 +86,8 @@ class SoruActivity : AppCompatActivity() {
             TAG extLogMessage "D : " + model.soruId
 
         } else {
-            val model = cesaretDatabase.cesaretDao().getModel(ListSize.cesaretLastValue)
-            ListSize.cesaretLastValue++
+            val model = cesaretDatabase.cesaretDao().getModel(OyunIslemleri.cesaretLastValue)
+            OyunIslemleri.cesaretLastValue++
             model.sorulduMu = true
             cesaretDatabase.cesaretDao().update(model)
             gosterilenSoru = model.soru
@@ -97,9 +97,9 @@ class SoruActivity : AppCompatActivity() {
 
     private fun sharedGuncelle() {
 
-        model.updateValue(
-            ListSize.dogrulukLastValue,
-            ListSize.cesaretLastValue
+        model.updateLastValue(
+            OyunIslemleri.dogrulukLastValue,
+            OyunIslemleri.cesaretLastValue
         )
     }
 

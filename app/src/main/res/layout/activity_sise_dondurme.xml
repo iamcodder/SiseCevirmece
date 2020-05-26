@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -22,12 +21,11 @@
         tools:context=".ui.SiseDondurmeActivity">
 
         <ImageView
-            android:id="@+id/bottleImg"
+            android:id="@+id/siseDonen"
             android:layout_width="300dp"
             android:layout_height="300dp"
             android:layout_gravity="center"
             android:scaleType="fitXY"
-            android:background="@drawable/beer"
             android:onClick="@{(view)->sise.tiklandi(view,customTimer)}" />
 
     </FrameLayout>

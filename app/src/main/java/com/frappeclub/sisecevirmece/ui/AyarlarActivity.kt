@@ -1,13 +1,21 @@
 package com.frappeclub.sisecevirmece.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
 import com.frappeclub.sisecevirmece.R
+import com.frappeclub.sisecevirmece.binding.Ayarlar
+import com.frappeclub.sisecevirmece.databinding.ActivityAyarlarBinding
 
 class AyarlarActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityAyarlarBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_ayarlar)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_ayarlar)
+
+        binding.mainAyarlar = Ayarlar(binding.root)
+
     }
 }

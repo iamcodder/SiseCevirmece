@@ -1,20 +1,15 @@
 package com.frappeclub.sisecevirmece.ui
 
 import android.os.Bundle
-import android.view.View
 import android.view.animation.Animation
 import androidx.appcompat.app.AppCompatActivity
-import com.app.lets_go_splash.CreateAnim.createAnimation
-import com.app.lets_go_splash.OnAnimationListener
 import com.app.lets_go_splash.StarterAnimation
 import com.frappeclub.sisecevirmece.R
 import com.frappeclub.sisecevirmece.abstracts.CesaretDatabase
 import com.frappeclub.sisecevirmece.abstracts.DogrulukDatabase
-import com.frappeclub.sisecevirmece.util.ListSize
+import com.frappeclub.sisecevirmece.util.OyunIslemleri
 import com.frappeclub.sisecevirmece.util.SharedVeriSaklama
 import com.frappeclub.sisecevirmece.util.SoruEkleme
-import com.frappeclub.sisecevirmece.util.extSayfaGecisi
-import kotlinx.android.synthetic.main.activity_splash_screen.*
 
 
 class SplashScreenActivity : AppCompatActivity() {
@@ -39,15 +34,18 @@ class SplashScreenActivity : AppCompatActivity() {
             sharedVeriSaklama.putValueForFirstStarted(
                 true,
                 soruEkleme.dogrulukListSize,
-                soruEkleme.cesaretListSize
+                soruEkleme.cesaretListSize,
+                4
             )
         }
 
-        ListSize.cesaretSize = sharedVeriSaklama.getCesaretListValue()
-        ListSize.dogrulukSize = sharedVeriSaklama.getDogrulukListValue()
+        OyunIslemleri.cesaretSize = sharedVeriSaklama.getCesaretListValue()
+        OyunIslemleri.dogrulukSize = sharedVeriSaklama.getDogrulukListValue()
 
-        ListSize.cesaretLastValue = sharedVeriSaklama.getCesaretLastValue()
-        ListSize.dogrulukLastValue = sharedVeriSaklama.getDogrulukLastValue()
+        OyunIslemleri.cesaretLastValue = sharedVeriSaklama.getCesaretLastValue()
+        OyunIslemleri.dogrulukLastValue = sharedVeriSaklama.getDogrulukLastValue()
+
+        OyunIslemleri.siseTuru = sharedVeriSaklama.getSiseTuru()
 
         startAnim()
 
