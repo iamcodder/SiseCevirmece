@@ -6,4 +6,5 @@
 
     <color name="colorWhiteTransparent">#9EFFFFFF</color>
     <color name="colorDark">#9EFFFFFF</color>
+    <color name="sorularTextColor">#B44545</color>
 </resources>

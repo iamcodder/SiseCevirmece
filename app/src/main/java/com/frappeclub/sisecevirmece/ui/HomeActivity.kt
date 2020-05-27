@@ -23,6 +23,7 @@ class HomeActivity : AppCompatActivity() {
         }
 
         binding.imgSoru.setOnClickListener {
+            this.extSayfaGecisi(SorulariGoruntuleActivity::class.java)
         }
         binding.imgAyarlar.setOnClickListener {
             this.extSayfaGecisi(AyarlarActivity::class.java)
