@@ -6,6 +6,7 @@ import androidx.databinding.DataBindingUtil
 import com.frappeclub.sisecevirmece.R
 import com.frappeclub.sisecevirmece.databinding.ActivityHomeBinding
 import com.frappeclub.sisecevirmece.util.extSayfaGecisi
+import com.frappeclub.sisecevirmece.util.extStatusBarColor
 
 class HomeActivity : AppCompatActivity() {
 
@@ -18,12 +19,14 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_home)
 
+        this extStatusBarColor "#01A555"
+
         binding.imgBeer.setOnClickListener {
             this.extSayfaGecisi(SiseDondurmeActivity::class.java)
         }
 
         binding.imgSoru.setOnClickListener {
-            this.extSayfaGecisi(SorulariGoruntuleActivity::class.java)
+            this.extSayfaGecisi(SorulariGoruntuleSecimEkrani::class.java)
         }
         binding.imgAyarlar.setOnClickListener {
             this.extSayfaGecisi(AyarlarActivity::class.java)

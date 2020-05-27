@@ -10,10 +10,7 @@ import com.app.lets_go_splash.StarterAnimation
 import com.frappeclub.sisecevirmece.R
 import com.frappeclub.sisecevirmece.abstracts.CesaretDatabase
 import com.frappeclub.sisecevirmece.abstracts.DogrulukDatabase
-import com.frappeclub.sisecevirmece.util.OyunIslemleri
-import com.frappeclub.sisecevirmece.util.SharedVeriSaklama
-import com.frappeclub.sisecevirmece.util.SoruEkleme
-import com.frappeclub.sisecevirmece.util.extSayfaGecisi
+import com.frappeclub.sisecevirmece.util.*
 import kotlinx.android.synthetic.main.activity_splash_screen.*
 
 
@@ -24,6 +21,8 @@ class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
+
+        this extStatusBarColor "#00000000"
 
         val sharedVeriSaklama = SharedVeriSaklama(this)
         val isWrited = sharedVeriSaklama.isSharedPrefCreated()

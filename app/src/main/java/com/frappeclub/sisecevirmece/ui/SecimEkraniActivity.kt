@@ -28,7 +28,11 @@ class SecimEkraniActivity : AppCompatActivity() {
         }
 
         binding.cardviewGroup.imgDogruluk.setOnClickListener {
-            it.context.extSayfaGecisi(SoruActivity::class.java, true)
+            it.context.extSayfaGecisi(
+                SoruActivity::class.java,
+                true,
+                DogrulukCesaret.DOGRULUK_CESARET.name
+            )
             finish()
         }
 

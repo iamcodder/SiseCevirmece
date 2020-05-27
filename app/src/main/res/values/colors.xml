@@ -3,8 +3,10 @@
     <color name="colorPrimary">#00E676</color>
     <color name="colorPrimaryDark">#01A555</color>
     <color name="colorAccent">#03DAC5</color>
-
+    <color name="colorTransparent">#75FFFFFF</color>
     <color name="colorWhiteTransparent">#9EFFFFFF</color>
     <color name="colorDark">#9EFFFFFF</color>
     <color name="sorularTextColor">#B44545</color>
+
+    <color name="colorBlack">#000000</color>
 </resources>

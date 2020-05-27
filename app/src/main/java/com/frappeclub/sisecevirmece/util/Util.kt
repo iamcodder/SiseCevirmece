@@ -1,9 +1,13 @@
 package com.frappeclub.sisecevirmece.util
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
+import android.os.Build
 import android.util.Log
-import com.frappeclub.sisecevirmece.enums.DogrulukCesaret
+import android.view.Window
+import android.view.WindowManager
 import com.frappeclub.sisecevirmece.enums.ImageDegree
 
 
@@ -19,12 +23,13 @@ import com.frappeclub.sisecevirmece.enums.ImageDegree
 
 fun <ClassTipi> Context.extSayfaGecisi(
     gidilecekClass: Class<ClassTipi>,
-    veri: Boolean = false
+    gonderilenVeri: Boolean = false,
+    veriyeErisimIsmi: String = ""
 ) {
-    if (!veri) startActivity(Intent(this, gidilecekClass))
+    if (!gonderilenVeri) startActivity(Intent(this, gidilecekClass))
     else {
         val intent = Intent(this, gidilecekClass)
-        intent.putExtra(DogrulukCesaret.DOGRULUK_CESARET.name, veri)
+        intent.putExtra(veriyeErisimIsmi, gonderilenVeri)
         this.startActivity(intent)
     }
 
@@ -51,5 +56,12 @@ fun Float.extGetRandomNumber(): Float {
     return (randomNumber.random()).toFloat()
 }
 
-
+infix fun Activity.extStatusBarColor(color: String) {
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+        val window: Window = this.window
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        window.statusBarColor = Color.parseColor(color)
+    }
+}
 
