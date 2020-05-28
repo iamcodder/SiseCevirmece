@@ -37,6 +37,7 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
+                    android:contentDescription="@string/oyuna_basla"
                     android:src="@drawable/beer" />
 
                 <TextView
@@ -44,7 +45,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:text="Başla"
+                    android:text="@string/basla"
                     android:textColor="@android:color/white"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -78,6 +79,7 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
+                    android:contentDescription="@string/sorulari_goruntule"
                     android:src="@drawable/answer" />
 
                 <TextView
@@ -85,7 +87,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:text="Sorular"
+                    android:text="@string/sorular"
                     android:textColor="@android:color/white"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -119,6 +121,7 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
+                    android:contentDescription="@string/ayarlar"
                     android:src="@drawable/settings" />
 
                 <TextView
@@ -126,7 +129,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:text="Ayarlar"
+                    android:text="@string/ayarlar"
                     android:textColor="@android:color/white"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -159,6 +162,7 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
+                    android:contentDescription="@string/uygulamarimiz"
                     android:src="@drawable/playstore" />
 
                 <TextView
@@ -166,7 +170,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:text="Play Store"
+                    android:text="@string/uygulamarimiz"
                     android:textColor="@android:color/white"
                     android:textSize="24sp"
                     android:textStyle="bold" />

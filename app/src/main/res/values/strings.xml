@@ -1,6 +1,30 @@
 <resources>
-    <string name="app_name">SiseCevirmece</string>
-    <string name="dogruluk">Doğruluk</string>
-    <string name="cesaret">Cesaret</string>
+    <string name="app_name">Şişe Çevirmece</string>
     <string name="splash_screen_resmi">Splash screen resmi</string>
+    <string name="oyuna_basla">Oyuna Başla</string>
+    <string name="sorulari_goruntule">Soruları Görüntüle</string>
+    <string name="cesaret">Cesaret</string>
+    <string name="dogruluk">Doğruluk</string>
+    <string name="sise_donuyor">Şişe Dönüyor</string>
+    <string name="dogruluk_sorularini_goruntule">Doğruluk Sorularını Görüntüle</string>
+    <string name="cesaret_sorularini_goruntule">Cesaret Sorularını Görüntüle</string>
+    <string name="kola_sisesi">Kola Şişesi</string>
+    <string name="viski_sisesi">Viski Şişesi</string>
+    <string name="sarap_sisesi">Şarap Şişesi</string>
+    <string name="gazoz_sisesi">Gazoz Şişesi</string>
+    <string name="surum_v_1_0">Sürüm v1.0</string>
+    <string name="basla">Başla</string>
+    <string name="sorular">Sorular</string>
+    <string name="ayarlar">Ayarlar</string>
+    <string name="uygulamarimiz">Uygulamalarımız</string>
+    <string name="soruyu_ben_soracagim">Soruyu ben soracağım</string>
+    <string name="oyun_ici_sesler">Oyun İçi Sesler</string>
+    <string name="sise_turu">Şişe Türü</string>
+    <string name="cola">Cola</string>
+    <string name="sarap">Şarap</string>
+    <string name="viski">Viski</string>
+    <string name="gazoz">Gazoz</string>
+    <string name="ornek_soru_1">Odadaki en güzel kız kim?</string>
+    <string name="cevaplandi">Cevaplandı</string>
+    <string name="soru_degistir">Soru Değiştir</string>
 </resources>

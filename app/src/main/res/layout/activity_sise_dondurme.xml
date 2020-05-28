@@ -26,6 +26,7 @@
             android:layout_height="300dp"
             android:layout_gravity="center"
             android:scaleType="fitXY"
+            android:contentDescription="@string/sise_donuyor"
             android:onClick="@{(view)->sise.tiklandi(view,customTimer)}" />
 
     </FrameLayout>

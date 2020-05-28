@@ -114,7 +114,8 @@ class SoruEkleme {
         _cesaretList.add(CesaretModel(soru = "3 dakika boyunca tek ayak üzerinde bekle"))
         _cesaretList.add(CesaretModel(soru = "Çiğ soğan yemeye çalış"))
         _cesaretList.add(CesaretModel(soru = "3 dakika boyunca tavuk gibi davran"))
-        return listShuffle(_cesaretList)
+        _cesaretList.shuffle()
+        return _cesaretList
 
     }
 
@@ -421,12 +422,9 @@ class SoruEkleme {
         _dogrulukList.add(DogrulukModel(soru = "Dışarıda yaşadığın en utanç verici an neydi ?"))
         _dogrulukList.add(DogrulukModel(soru = "Küçükken hiç bir çizgi film karakterine aşık olmuş muydun ?"))
 
-        return listShuffle(_dogrulukList)
+        _dogrulukList.shuffle()
+        return _dogrulukList
     }
 
-    private fun <ModelTipi> listShuffle(list: List<ModelTipi>): List<ModelTipi> {
-        list.shuffled()
-        return list
-    }
 
 }

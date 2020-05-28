@@ -10,13 +10,11 @@ import com.frappeclub.sisecevirmece.databinding.ActivitySoruBinding
 import com.frappeclub.sisecevirmece.enums.DogrulukCesaret
 import com.frappeclub.sisecevirmece.util.OyunIslemleri
 import com.frappeclub.sisecevirmece.util.SharedVeriSaklama
-import com.frappeclub.sisecevirmece.util.extLogMessage
-import kotlinx.android.synthetic.main.card_alt_cevap.view.*
-import kotlinx.android.synthetic.main.card_soru_ust_cevap.view.*
+import com.frappeclub.sisecevirmece.util.extStatusBarColor
+import kotlinx.android.synthetic.main.card_soru_alt.view.*
+import kotlinx.android.synthetic.main.card_soru_orta.view.*
 
 class SoruActivity : AppCompatActivity() {
-
-    private var TAG = this.javaClass.simpleName
 
     private lateinit var binding: ActivitySoruBinding
     private lateinit var gosterilenSoru: String
@@ -35,6 +33,8 @@ class SoruActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_soru)
+
+        this extStatusBarColor "#00000000"
 
         getBooleanIntent = intent.getBooleanExtra(DogrulukCesaret.DOGRULUK_CESARET.isim, false)
 
@@ -66,11 +66,9 @@ class SoruActivity : AppCompatActivity() {
         if (OyunIslemleri.cesaretLastValue > OyunIslemleri.cesaretSize) {
             cesaretDatabase.cesaretDao().updateAll()
             OyunIslemleri.cesaretLastValue = 1
-            TAG extLogMessage "C Güncellendi"
         } else if (OyunIslemleri.dogrulukLastValue > OyunIslemleri.dogrulukSize) {
             dogrulukDatabase.dogrulukDao().updateAll()
             OyunIslemleri.dogrulukLastValue = 1
-            TAG extLogMessage "D Güncellendi"
         }
         soruGetir(dogrulukMu)
     }
@@ -83,15 +81,12 @@ class SoruActivity : AppCompatActivity() {
             dogrulukDatabase.dogrulukDao().update(model)
             gosterilenSoru = model.soru
 
-            TAG extLogMessage "D : " + model.soruId
-
         } else {
             val model = cesaretDatabase.cesaretDao().getModel(OyunIslemleri.cesaretLastValue)
             OyunIslemleri.cesaretLastValue++
             model.sorulduMu = true
             cesaretDatabase.cesaretDao().update(model)
             gosterilenSoru = model.soru
-            TAG extLogMessage "C : " + model.soruId
         }
     }
 

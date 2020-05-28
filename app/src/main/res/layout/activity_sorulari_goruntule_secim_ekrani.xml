@@ -42,6 +42,7 @@
                     android:src="@drawable/dogruluk"
                     app:layout_constraintEnd_toStartOf="@+id/imgCesaret"
                     app:layout_constraintStart_toStartOf="parent"
+                    android:contentDescription="@string/dogruluk_sorularini_goruntule"
                     app:layout_constraintTop_toTopOf="@+id/imgCesaret" />
 
                 <ImageView
@@ -51,6 +52,7 @@
                     android:src="@drawable/cesaret"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/imgDogruluk"
+                    android:contentDescription="@string/cesaret_sorularini_goruntule"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView

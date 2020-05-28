@@ -28,20 +28,20 @@
 
         <include
             android:id="@+id/include2"
-            layout="@layout/card_ayarlar_arkaplan_turu"
+            layout="@layout/card_ayarlar_oyun_ici_sesler"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/textView2"
+            app:layout_constraintBottom_toTopOf="@+id/txtSurum"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/includeUst" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/txtSurum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sürüm v1.0"
+            android:text="@string/surum_v_1_0"
             android:textColor="@android:color/white"
             android:textSize="18sp"
             android:textStyle="bold"

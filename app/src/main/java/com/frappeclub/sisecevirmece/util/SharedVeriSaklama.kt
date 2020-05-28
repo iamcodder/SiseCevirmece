@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.Context.MODE_PRIVATE
 import com.frappeclub.sisecevirmece.enums.SharedPref
 
-class SharedVeriSaklama(val mContext: Context) {
+class SharedVeriSaklama(private val mContext: Context) {
 
     private val sharedPreferences by lazy {
         mContext.getSharedPreferences(
@@ -99,12 +99,6 @@ class SharedVeriSaklama(val mContext: Context) {
                 SharedPref.SISE_TURU.value,
                 siseTuru
             )
-            .apply()
-    }
-
-    fun clearSharedPref() {
-        sharedPreferences.edit()
-            .clear()
             .apply()
     }
 

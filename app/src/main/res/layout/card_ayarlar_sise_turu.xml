@@ -44,7 +44,7 @@
                         android:layout_marginStart="24dp"
                         android:layout_marginLeft="24dp"
                         android:layout_marginTop="16dp"
-                        android:text="Şişe Türü"
+                        android:text="@string/sise_turu"
                         android:textColor="@android:color/white"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -60,6 +60,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:onClick="@{(view) -> secondAyarlar.imageOnClick(view,1) }"
+                        android:contentDescription="@string/kola_sisesi"
                         android:src="@drawable/cola" />
 
                     <ImageView
@@ -68,6 +69,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:onClick="@{(view) -> secondAyarlar.imageOnClick(view,2) }"
+                        android:contentDescription="@string/viski_sisesi"
                         android:src="@drawable/whisky" />
 
                     <ImageView
@@ -76,6 +78,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:onClick="@{(view) -> secondAyarlar.imageOnClick(view,3) }"
+                        android:contentDescription="@string/sarap_sisesi"
                         android:src="@drawable/wine" />
 
                     <ImageView
@@ -84,6 +87,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:onClick="@{(view) -> secondAyarlar.imageOnClick(view,4) }"
+                        android:contentDescription="@string/gazoz_sisesi"
                         android:src="@drawable/beer" />
 
                 </LinearLayout>
@@ -106,7 +110,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:onClick="@{(v)->secondAyarlar.imageOnClick(v,1)}"
-                        android:text="Cola"
+                        android:text="@string/cola"
                         android:textColor="@android:color/white" />
 
                     <RadioButton
@@ -115,7 +119,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:onClick="@{(v)->secondAyarlar.imageOnClick(v,2)}"
-                        android:text="Şarap"
+                        android:text="@string/sarap"
                         android:textColor="@android:color/white" />
 
                     <RadioButton
@@ -124,7 +128,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:onClick="@{(v)->secondAyarlar.imageOnClick(v,3)}"
-                        android:text="Viski"
+                        android:text="@string/viski"
                         android:textColor="@android:color/white" />
 
                     <RadioButton
@@ -133,7 +137,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:onClick="@{(v)->secondAyarlar.imageOnClick(v,4)}"
-                        android:text="Gazoz"
+                        android:text="@string/gazoz"
                         android:textColor="@android:color/white" />
                 </RadioGroup>
 

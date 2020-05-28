@@ -10,9 +10,9 @@ import com.frappeclub.sisecevirmece.model.CesaretModel
 import com.frappeclub.sisecevirmece.model.DogrulukModel
 
 class SorularAdapter<T>(
-    val sorularListesi: List<T>,
-    val dogrulukMu: Boolean = false,
-    val longClick: (Int) -> Unit
+    private val sorularListesi: List<T>,
+    private val dogrulukMu: Boolean = false,
+    private val longClick: (Int) -> Unit
 ) : RecyclerView.Adapter<SorularViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SorularViewHolder {

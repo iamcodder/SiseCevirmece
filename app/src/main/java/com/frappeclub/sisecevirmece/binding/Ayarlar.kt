@@ -5,7 +5,7 @@ import com.frappeclub.sisecevirmece.util.OyunIslemleri
 import com.frappeclub.sisecevirmece.util.SharedVeriSaklama
 import kotlinx.android.synthetic.main.card_ayarlar_sise_turu.view.*
 
-class Ayarlar(val mainView: View) {
+class Ayarlar(private val mainView: View) {
 
     private val model by lazy {
         SharedVeriSaklama(mainView.context)
@@ -21,7 +21,7 @@ class Ayarlar(val mainView: View) {
         kayit(islemTuru = siseTuru)
     }
 
-    fun setRadioButton(siseTuru: Int) {
+    private fun setRadioButton(siseTuru: Int) {
         when (siseTuru) {
             1 -> {
                 mainView.radioGroup.radioCola.isChecked = true
@@ -39,7 +39,7 @@ class Ayarlar(val mainView: View) {
     }
 
 
-    fun kayit(isFirstCall: Boolean = false, islemTuru: Int = 0) {
+    private fun kayit(isFirstCall: Boolean = false, islemTuru: Int = 0) {
 
         if (isFirstCall) {
             val sharedSiseTuru = model.getSiseTuru()

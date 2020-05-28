@@ -32,7 +32,7 @@ class SiseDondurmeActivity : AppCompatActivity() {
 
     }
 
-    fun imgKontrol() {
+    private fun imgKontrol() {
 
         val resId =
             when (OyunIslemleri.siseTuru) {
