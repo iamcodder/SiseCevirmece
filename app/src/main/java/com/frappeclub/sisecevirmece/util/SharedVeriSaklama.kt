@@ -52,6 +52,22 @@ class SharedVeriSaklama(private val mContext: Context) {
             .apply()
     }
 
+    fun updateDogrulukSize(
+        dogrulukSize: Int
+    ) {
+        sharedPreferences.edit()
+            .putInt(SharedPref.DB_DOGRULUK_SIZE.value, dogrulukSize)
+            .apply()
+    }
+
+    fun updateCesaretSize(
+        cesaretSize: Int
+    ) {
+        sharedPreferences.edit()
+            .putInt(SharedPref.DB_CESARET_SIZE.value, cesaretSize)
+            .apply()
+    }
+
     fun updateLastValue(
         dogrulukLastValue: Int,
         cesaretLastValue: Int

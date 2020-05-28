@@ -23,13 +23,13 @@ import com.frappeclub.sisecevirmece.enums.ImageDegree
 
 fun <ClassTipi> Context.extSayfaGecisi(
     gidilecekClass: Class<ClassTipi>,
-    gonderilenVeri: Boolean = false,
-    veriyeErisimIsmi: String = ""
+    birinciVeriyeErisimIsmi: String = "",
+    birinciGonderilenVeri: Boolean = false
 ) {
-    if (!gonderilenVeri) startActivity(Intent(this, gidilecekClass))
+    if (!birinciGonderilenVeri) startActivity(Intent(this, gidilecekClass))
     else {
         val intent = Intent(this, gidilecekClass)
-        intent.putExtra(veriyeErisimIsmi, gonderilenVeri)
+        intent.putExtra(birinciVeriyeErisimIsmi, birinciGonderilenVeri)
         this.startActivity(intent)
     }
 

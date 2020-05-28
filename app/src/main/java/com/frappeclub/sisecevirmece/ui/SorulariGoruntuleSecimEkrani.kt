@@ -31,8 +31,8 @@ class SorulariGoruntuleSecimEkrani : AppCompatActivity() {
         binding.imgDogruluk.setOnClickListener {
             this.extSayfaGecisi(
                 SorulariGoruntuleActivity::class.java,
-                true,
-                DogrulukCesaret.DOGRULUK_CESARET.isim
+                DogrulukCesaret.DOGRULUK_CESARET.isim,
+                true
             )
             finishActivity()
         }

@@ -32,7 +32,11 @@ class SorulariGoruntuleActivity : AppCompatActivity() {
         }
 
         binding.cardSoruEkleButton.setOnClickListener {
-            this.extSayfaGecisi(SoruEkleActivity::class.java)
+            this.extSayfaGecisi(
+                SoruEkleActivity::class.java,
+                DogrulukCesaret.DOGRULUK_CESARET.isim,
+                getBooleanIntent
+            )
         }
 
         binding.dogrulukMu = getBooleanIntent
