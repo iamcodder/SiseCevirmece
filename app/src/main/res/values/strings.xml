@@ -27,4 +27,7 @@
     <string name="ornek_soru_1">Odadaki en güzel kız kim?</string>
     <string name="cevaplandi">Cevaplandı</string>
     <string name="soru_degistir">Soru Değiştir</string>
+    <string name="soru_ekle">Soru Ekle</string>
+    <string name="soruyu_yazin">Soruyu Yazın</string>
+    <string name="soruyu_kaydet">Soruyu Kaydet</string>
 </resources>

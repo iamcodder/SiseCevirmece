@@ -10,6 +10,7 @@ import com.frappeclub.sisecevirmece.abstracts.DogrulukDatabase
 import com.frappeclub.sisecevirmece.adapter.SorularAdapter
 import com.frappeclub.sisecevirmece.databinding.ActivitySorulariGoruntuleBinding
 import com.frappeclub.sisecevirmece.enums.DogrulukCesaret
+import com.frappeclub.sisecevirmece.util.extSayfaGecisi
 
 class SorulariGoruntuleActivity : AppCompatActivity() {
 
@@ -28,6 +29,10 @@ class SorulariGoruntuleActivity : AppCompatActivity() {
         //TODO: Liste elemanı passlanacak
         val longClick = { position: Int ->
 
+        }
+
+        binding.cardSoruEkleButton.setOnClickListener {
+            this.extSayfaGecisi(SoruEkleActivity::class.java)
         }
 
         binding.dogrulukMu = getBooleanIntent
