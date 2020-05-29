@@ -7,7 +7,7 @@
 
         <variable
             name="mainAyarlar"
-            type="com.frappeclub.sisecevirmece.binding.Ayarlar" />
+            type="com.frappeclub.sisecevirmece.binding.SiseSecimiOnClickBinding" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

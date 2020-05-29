@@ -8,9 +8,9 @@ import com.frappeclub.sisecevirmece.R
 import com.frappeclub.sisecevirmece.abstracts.CesaretDatabase
 import com.frappeclub.sisecevirmece.abstracts.DogrulukDatabase
 import com.frappeclub.sisecevirmece.adapter.SorularAdapter
+import com.frappeclub.sisecevirmece.binding.SorulariGoruntuleOnClickBinding
 import com.frappeclub.sisecevirmece.databinding.ActivitySorulariGoruntuleBinding
 import com.frappeclub.sisecevirmece.enums.DogrulukCesaret
-import com.frappeclub.sisecevirmece.util.extSayfaGecisi
 
 class SorulariGoruntuleActivity : AppCompatActivity() {
 
@@ -31,15 +31,9 @@ class SorulariGoruntuleActivity : AppCompatActivity() {
 
         }
 
-        binding.cardSoruEkleButton.setOnClickListener {
-            this.extSayfaGecisi(
-                SoruEkleActivity::class.java,
-                DogrulukCesaret.DOGRULUK_CESARET.isim,
-                getBooleanIntent
-            )
-        }
-
         binding.dogrulukMu = getBooleanIntent
+        binding.liste = list
+        binding.onClickBinding = SorulariGoruntuleOnClickBinding(this)
         binding.sorularRecycler.adapter = SorularAdapter(list, getBooleanIntent, longClick)
         binding.sorularRecycler.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)

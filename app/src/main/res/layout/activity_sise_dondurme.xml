@@ -6,7 +6,7 @@
 
         <variable
             name="sise"
-            type="com.frappeclub.sisecevirmece.binding.SiseDondurme" />
+            type="com.frappeclub.sisecevirmece.binding.SiseDondurmeOnClickBinding" />
 
         <variable
             name="customTimer"

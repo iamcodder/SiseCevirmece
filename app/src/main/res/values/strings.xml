@@ -30,4 +30,5 @@
     <string name="soru_ekle">Soru Ekle</string>
     <string name="soruyu_yazin">Soruyu Yazın</string>
     <string name="soruyu_kaydet">Soruyu Kaydet</string>
+    <string name="sorulari_karistir">Soruları Karıştır</string>
 </resources>

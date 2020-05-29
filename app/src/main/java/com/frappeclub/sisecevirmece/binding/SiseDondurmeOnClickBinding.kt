@@ -8,7 +8,7 @@ import com.frappeclub.sisecevirmece.enums.ImageDegree
 import com.frappeclub.sisecevirmece.util.CustomTimer
 import com.frappeclub.sisecevirmece.util.extGetRandomNumber
 
-class SiseDondurme {
+class SiseDondurmeOnClickBinding {
 
     private var donduMu = false
     private var sonKonum: Float = 0f

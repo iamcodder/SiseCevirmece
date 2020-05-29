@@ -18,6 +18,9 @@ interface DogrulukDao {
     @Delete
     fun delete(model: DogrulukModel)
 
+    @Query("DELETE FROM DogrulukTablosu")
+    fun deleteAllModel()
+
     @Query("Update DogrulukTablosu Set sorulduMu = 0")
     fun updateAll()
 

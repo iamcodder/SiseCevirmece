@@ -15,6 +15,9 @@ interface CesaretDao {
     @Delete
     fun delete(model: CesaretModel)
 
+    @Query("DELETE FROM CesaretTablosu")
+    fun deleteAllModel()
+
     @Update
     fun update(model: CesaretModel)
 

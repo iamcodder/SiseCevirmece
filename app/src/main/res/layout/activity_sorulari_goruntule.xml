@@ -8,6 +8,14 @@
             name="dogrulukMu"
             type="Boolean" />
 
+        <variable
+            name="onClickBinding"
+            type="com.frappeclub.sisecevirmece.binding.SorulariGoruntuleOnClickBinding" />
+
+        <variable
+            name="liste"
+            type="java.util.List" />
+
     </data>
 
     <FrameLayout
@@ -34,6 +42,7 @@
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="16dp"
                     android:text="@{dogrulukMu ? `Doğruluk Soruları` : `Cesaret Soruları`}"
+                    android:hint="Doğruluk Soruları"
                     android:textColor="@android:color/white"
                     android:textSize="24sp"
                     android:textStyle="bold"
@@ -63,9 +72,14 @@
                     android:id="@+id/cardSoruEkleButton"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:onClick="@{(view)->onClickBinding.soruEkle(view,dogrulukMu)}"
                     app:cardCornerRadius="16dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/cardSorulariKaristirButton"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent">
 
@@ -75,6 +89,32 @@
                         android:gravity="center"
                         android:padding="8dp"
                         android:text="@string/soru_ekle"
+                        android:textColor="@color/sorularTextColor"
+                        android:textSize="16sp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardSorulariKaristirButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="16dp"
+                    android:onClick="@{(view) -> onClickBinding.sorulariKaristir(view,dogrulukMu,liste)}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="@string/sorulari_karistir"
                         android:textColor="@color/sorularTextColor"
                         android:textSize="16sp" />
 

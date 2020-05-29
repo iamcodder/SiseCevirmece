@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.bumptech.glide.Glide
 import com.frappeclub.sisecevirmece.R
-import com.frappeclub.sisecevirmece.binding.SiseDondurme
+import com.frappeclub.sisecevirmece.binding.SiseDondurmeOnClickBinding
 import com.frappeclub.sisecevirmece.databinding.ActivitySiseDondurmeBinding
 import com.frappeclub.sisecevirmece.util.CustomTimer
 import com.frappeclub.sisecevirmece.util.OyunIslemleri
@@ -27,7 +27,7 @@ class SiseDondurmeActivity : AppCompatActivity() {
         }
 
         customTimer = CustomTimer(sayacBitince)
-        binding.sise = SiseDondurme()
+        binding.sise = SiseDondurmeOnClickBinding()
         binding.customTimer = customTimer
 
     }

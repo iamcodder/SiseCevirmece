@@ -5,7 +5,7 @@ import com.frappeclub.sisecevirmece.util.OyunIslemleri
 import com.frappeclub.sisecevirmece.util.SharedVeriSaklama
 import kotlinx.android.synthetic.main.card_ayarlar_sise_turu.view.*
 
-class Ayarlar(private val mainView: View) {
+class SiseSecimiOnClickBinding(private val mainView: View) {
 
     private val model by lazy {
         SharedVeriSaklama(mainView.context)
