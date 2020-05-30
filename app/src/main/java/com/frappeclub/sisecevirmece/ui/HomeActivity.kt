@@ -30,7 +30,6 @@ class HomeActivity : AppCompatActivity() {
         }
         binding.imgStore.setOnClickListener {
         }
-
     }
 
 }

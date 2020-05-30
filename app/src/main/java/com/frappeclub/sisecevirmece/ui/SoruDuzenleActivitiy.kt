@@ -19,9 +19,11 @@ class SoruDuzenleActivitiy : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_soru_duzenle)
 
-        val activitySonlandir = { mesaj: String ->
+        val activitySonlandir = { mesaj: String, bitirelecekMi: Boolean ->
             Toast.makeText(this, mesaj, Toast.LENGTH_SHORT).show()
-            finish()
+            if (bitirelecekMi) {
+                finish()
+            }
         }
 
         val getBoolean = intent.getBooleanExtra(DogrulukCesaret.DOGRULUK_CESARET.isim, false)
