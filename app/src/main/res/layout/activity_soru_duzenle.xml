@@ -7,7 +7,7 @@
 
         <variable
             name="soruDuzenleOnClick"
-            type="com.frappeclub.sisecevirmece.binding.SoruDuzenleOnClickBinding" />
+            type="com.patronusstudio.sisecevirmece.binding.SoruDuzenleOnClickBinding" />
 
         <variable
             name="text"

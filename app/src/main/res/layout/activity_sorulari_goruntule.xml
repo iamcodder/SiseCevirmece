@@ -10,7 +10,7 @@
 
         <variable
             name="onClickBinding"
-            type="com.frappeclub.sisecevirmece.binding.SorulariGoruntuleOnClickBinding" />
+            type="com.patronusstudio.sisecevirmece.binding.SorulariGoruntuleOnClickBinding" />
 
         <variable
             name="liste"
