@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".ui.SoruDuzenleActivitiy"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity
             android:name=".ui.SoruEkleActivity"
             android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
         <activity

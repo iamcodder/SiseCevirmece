@@ -25,7 +25,7 @@ interface CesaretDao {
     fun updateAll()
 
     @Query("Select * from CesaretTablosu Where soruId = :id")
-    fun getModel(id: Int): CesaretModel
+    fun getModel(id: Int): CesaretModel?
 
     @Query("Select * from CesaretTablosu")
     fun getAllModel(): List<CesaretModel>

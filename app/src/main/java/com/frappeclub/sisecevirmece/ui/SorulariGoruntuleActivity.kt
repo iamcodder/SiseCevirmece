@@ -1,5 +1,6 @@
 package com.frappeclub.sisecevirmece.ui
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -11,6 +12,8 @@ import com.frappeclub.sisecevirmece.adapter.SorularAdapter
 import com.frappeclub.sisecevirmece.binding.SorulariGoruntuleOnClickBinding
 import com.frappeclub.sisecevirmece.databinding.ActivitySorulariGoruntuleBinding
 import com.frappeclub.sisecevirmece.enums.DogrulukCesaret
+import com.frappeclub.sisecevirmece.model.CesaretModel
+import com.frappeclub.sisecevirmece.model.DogrulukModel
 
 class SorulariGoruntuleActivity : AppCompatActivity() {
 
@@ -26,8 +29,15 @@ class SorulariGoruntuleActivity : AppCompatActivity() {
                 DogrulukDatabase.getDatabaseManager(this).dogrulukDao().getAllModel()
             else CesaretDatabase.getDatabaseManager(this).cesaretDao().getAllModel()
 
-        //TODO: Liste elemanı passlanacak
         val longClick = { position: Int ->
+
+            val model = if (getBooleanIntent) list[position] as DogrulukModel
+            else list[position] as CesaretModel
+
+            val gecis = Intent(applicationContext, SoruDuzenleActivitiy::class.java)
+            gecis.putExtra(DogrulukCesaret.DOGRULUK_CESARET.isim, getBooleanIntent)
+            gecis.putExtra(DogrulukCesaret.SORU_MODELI.isim, model)
+            startActivity(gecis)
 
         }
 

@@ -50,7 +50,7 @@ class SoruEkleActivity : AppCompatActivity() {
                 val model = CesaretModel(soru = girilenSoru.toString())
                 CesaretDatabase.getDatabaseManager(this).cesaretDao().insert(model)
                 OyunIslemleri.cesaretSize++
-                sharedPref.updateDogrulukSize(OyunIslemleri.cesaretSize)
+                sharedPref.updateCesaretSize(OyunIslemleri.cesaretSize)
             }
             return true
         } else return false

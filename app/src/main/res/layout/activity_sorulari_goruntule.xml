@@ -42,7 +42,7 @@
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="16dp"
                     android:text="@{dogrulukMu ? `Doğruluk Soruları` : `Cesaret Soruları`}"
-                    android:hint="Doğruluk Soruları"
+                    android:hint="@string/dogruluk_sorulari"
                     android:textColor="@android:color/white"
                     android:textSize="24sp"
                     android:textStyle="bold"

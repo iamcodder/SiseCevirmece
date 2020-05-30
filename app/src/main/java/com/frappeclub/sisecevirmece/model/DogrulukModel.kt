@@ -1,8 +1,11 @@
 package com.frappeclub.sisecevirmece.model
 
+import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 @Entity(tableName = "DogrulukTablosu")
 data class DogrulukModel(
     //Db'de soru id ilk olarak 1 den başlıyor.
@@ -10,4 +13,4 @@ data class DogrulukModel(
     var soruId: Int = 0,
     val soru: String,
     var sorulduMu: Boolean = false
-)
+) : Parcelable

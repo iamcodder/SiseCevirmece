@@ -31,4 +31,7 @@
     <string name="soruyu_yazin">Soruyu Yazın</string>
     <string name="soruyu_kaydet">Soruyu Kaydet</string>
     <string name="sorulari_karistir">Soruları Karıştır</string>
+    <string name="kaydet">Kaydet</string>
+    <string name="Sil">sil</string>
+    <string name="dogruluk_sorulari">Doğruluk Soruları</string>
 </resources>

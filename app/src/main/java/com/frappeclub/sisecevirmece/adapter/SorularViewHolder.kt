@@ -13,7 +13,7 @@ class SorularViewHolder(val binding: ItemviewSorulariGoruntuleBinding) :
     fun onLongClick(position: Int, longClick: (Int) -> Unit) {
 
         binding.itemviewSoru.setOnLongClickListener {
-            longClick((position + 1))
+            longClick((position))
             false
         }
     }

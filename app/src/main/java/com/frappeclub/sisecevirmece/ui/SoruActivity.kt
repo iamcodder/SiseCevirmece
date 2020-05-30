@@ -76,17 +76,28 @@ class SoruActivity : AppCompatActivity() {
     private fun soruGetir(dogrulukMu: Boolean) {
         if (dogrulukMu) {
             val model = dogrulukDatabase.dogrulukDao().getModel(OyunIslemleri.dogrulukLastValue)
-            OyunIslemleri.dogrulukLastValue++
-            model.sorulduMu = true
-            dogrulukDatabase.dogrulukDao().update(model)
-            gosterilenSoru = model.soru
+            if (model == null) {
+                OyunIslemleri.dogrulukLastValue++
+                soruGetir(dogrulukMu)
+            } else {
+                OyunIslemleri.dogrulukLastValue++
+                model.sorulduMu = true
+                dogrulukDatabase.dogrulukDao().update(model)
+                gosterilenSoru = model.soru
+            }
 
         } else {
             val model = cesaretDatabase.cesaretDao().getModel(OyunIslemleri.cesaretLastValue)
-            OyunIslemleri.cesaretLastValue++
-            model.sorulduMu = true
-            cesaretDatabase.cesaretDao().update(model)
-            gosterilenSoru = model.soru
+            if (model == null) {
+                OyunIslemleri.cesaretLastValue++
+                soruGetir(dogrulukMu)
+            } else {
+                OyunIslemleri.cesaretLastValue++
+                model.sorulduMu = true
+                cesaretDatabase.cesaretDao().update(model)
+                gosterilenSoru = model.soru
+            }
+
         }
     }
 
