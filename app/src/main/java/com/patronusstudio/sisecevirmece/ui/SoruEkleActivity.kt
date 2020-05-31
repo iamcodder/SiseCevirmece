@@ -39,7 +39,7 @@ class SoruEkleActivity : AppCompatActivity() {
 
     private fun textControl(girilenSoru: Editable?, getBooleanIntent: Boolean): Boolean {
 
-        if (!girilenSoru.isNullOrBlank()) {
+        return if (!girilenSoru.isNullOrBlank()) {
             val sharedPref = SharedVeriSaklama(this)
             if (getBooleanIntent) {
                 val model = DogrulukModel(soru = girilenSoru.toString())
@@ -52,8 +52,8 @@ class SoruEkleActivity : AppCompatActivity() {
                 OyunIslemleri.cesaretSize++
                 sharedPref.updateCesaretSize(OyunIslemleri.cesaretSize)
             }
-            return true
-        } else return false
+            true
+        } else false
 
     }
 }

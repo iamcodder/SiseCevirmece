@@ -1,10 +1,12 @@
 package com.patronusstudio.sisecevirmece.ui
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.github.florent37.viewtooltip.ViewTooltip
 import com.patronusstudio.sisecevirmece.R
 import com.patronusstudio.sisecevirmece.abstracts.CesaretDatabase
 import com.patronusstudio.sisecevirmece.abstracts.DogrulukDatabase
@@ -14,6 +16,8 @@ import com.patronusstudio.sisecevirmece.databinding.ActivitySorulariGoruntuleBin
 import com.patronusstudio.sisecevirmece.enums.DogrulukCesaret
 import com.patronusstudio.sisecevirmece.model.CesaretModel
 import com.patronusstudio.sisecevirmece.model.DogrulukModel
+import com.patronusstudio.sisecevirmece.util.SharedVeriSaklama
+
 
 class SorulariGoruntuleActivity : AppCompatActivity() {
 
@@ -47,5 +51,32 @@ class SorulariGoruntuleActivity : AppCompatActivity() {
         binding.sorularRecycler.adapter = SorularAdapter(list, getBooleanIntent, longClick)
         binding.sorularRecycler.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        toolTip()
     }
+
+    private fun toolTip() {
+
+        val sharedPref = SharedVeriSaklama(this)
+        val tooltipGosterildiMi = sharedPref.getToolTip()
+
+        if (!tooltipGosterildiMi) {
+            ViewTooltip
+                .on(this, binding.sorularRecycler)
+                .autoHide(true, 10000)
+                .corner(30)
+                .position(ViewTooltip.Position.BOTTOM)
+                .text(R.string.silmek_icin_uzun_bas)
+                .textColor(Color.BLACK)
+                .color(Color.GREEN)
+                .clickToHide(true)
+                .textSize(1, 16f)
+                .arrowWidth(16)
+                .arrowHeight(16)
+                .show()
+            sharedPref.updateToolTip(true)
+        }
+
+
+    }
+
 }

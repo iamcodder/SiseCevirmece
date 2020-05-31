@@ -37,12 +37,12 @@ class OyunSifirlaActivity : AppCompatActivity() {
         }
     }
 
-    fun butonSetVeFinish() {
+    private fun butonSetVeFinish() {
         OyunIslemleri.dialogButonunaBasildiMi = true
         finish()
     }
 
-    fun veriSil() {
+    private fun veriSil() {
         val sharedVeriSaklama = SharedVeriSaklama(this)
         sharedVeriSaklama.clearSharedPref()
         val soruEkleme = SoruEkleme()

@@ -38,4 +38,5 @@
     <string name="oyun_verileri_silme">Oyun verileri silinsin mi? \nEklemiş olduğunuz sorular ve oyun ayarları sıfırlanacaktır.</string>
     <string name="sifirlandi">Sıfırlandı</string>
     <string name="iptal_edildi">İptal Edildi</string>
+    <string name="silmek_icin_uzun_bas">SİLMEK VEYA DÜZENLEMEK İÇİN UZUN BASIN</string>
 </resources>

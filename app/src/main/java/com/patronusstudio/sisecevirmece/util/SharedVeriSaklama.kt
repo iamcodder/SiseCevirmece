@@ -43,6 +43,20 @@ class SharedVeriSaklama(private val mContext: Context) {
         1
     )
 
+    fun getToolTip(): Boolean = sharedPreferences.getBoolean(
+        SharedPref.TOOLTIP.value,
+        false
+    )
+
+    fun updateToolTip(gosterildiMi: Boolean) {
+        sharedPreferences.edit()
+            .putBoolean(
+                SharedPref.TOOLTIP.value,
+                gosterildiMi
+            )
+            .apply()
+    }
+
     fun updateSiseValue(siseTuru: Int) {
         sharedPreferences.edit()
             .putInt(
@@ -51,6 +65,7 @@ class SharedVeriSaklama(private val mContext: Context) {
             )
             .apply()
     }
+
 
     fun updateDogrulukSize(
         dogrulukSize: Int
@@ -114,6 +129,10 @@ class SharedVeriSaklama(private val mContext: Context) {
             .putInt(
                 SharedPref.SISE_TURU.value,
                 siseTuru
+            )
+            .putBoolean(
+                SharedPref.TOOLTIP.value,
+                false
             )
             .apply()
     }
