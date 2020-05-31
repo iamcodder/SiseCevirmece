@@ -4,6 +4,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.bumptech.glide.Glide
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.MobileAds
 import com.patronusstudio.sisecevirmece.R
 import com.patronusstudio.sisecevirmece.binding.SiseDondurmeOnClickBinding
 import com.patronusstudio.sisecevirmece.databinding.ActivitySiseDondurmeBinding
@@ -29,6 +31,10 @@ class SiseDondurmeActivity : AppCompatActivity() {
         customTimer = CustomTimer(sayacBitince)
         binding.sise = SiseDondurmeOnClickBinding()
         binding.customTimer = customTimer
+
+        MobileAds.initialize(this) {}
+        val adRequest = AdRequest.Builder().build()
+        binding.adView.loadAd(adRequest)
 
     }
 

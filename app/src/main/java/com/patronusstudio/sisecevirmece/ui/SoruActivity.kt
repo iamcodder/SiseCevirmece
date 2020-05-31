@@ -3,6 +3,8 @@ package com.patronusstudio.sisecevirmece.ui
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.MobileAds
 import com.patronusstudio.sisecevirmece.R
 import com.patronusstudio.sisecevirmece.abstracts.CesaretDatabase
 import com.patronusstudio.sisecevirmece.abstracts.DogrulukDatabase
@@ -55,6 +57,10 @@ class SoruActivity : AppCompatActivity() {
         binding.altCard.soru_benSoracagim.setOnClickListener {
             finish()
         }
+
+        MobileAds.initialize(this) {}
+        val adRequest = AdRequest.Builder().build()
+        binding.adView.loadAd(adRequest)
     }
 
 

@@ -29,5 +29,13 @@
             android:contentDescription="@string/sise_donuyor"
             android:onClick="@{(view)->sise.tiklandi(view,customTimer)}" />
 
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-1818679104699845/5231582827"></com.google.android.gms.ads.AdView>
+
     </FrameLayout>
 </layout>

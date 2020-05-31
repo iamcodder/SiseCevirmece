@@ -17,7 +17,7 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
-
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         javaCompileOptions {
@@ -67,12 +67,11 @@ android {
         annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 
         implementation "com.github.sam43:AnimateViewLibrary:1.0.1"
+        implementation 'com.google.android.gms:play-services-ads:19.1.0'
+        implementation 'com.android.support:multidex:1.0.3'
+
 
 
     }
 }
 
-dependencies {
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-}
