@@ -118,4 +118,9 @@ class SharedVeriSaklama(private val mContext: Context) {
             .apply()
     }
 
+    fun clearSharedPref() {
+        sharedPreferences.edit()
+            .clear()
+            .apply()
+    }
 }

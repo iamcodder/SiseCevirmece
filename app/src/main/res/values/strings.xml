@@ -18,7 +18,6 @@
     <string name="ayarlar">Ayarlar</string>
     <string name="uygulamarimiz">Uygulamalarımız</string>
     <string name="soruyu_ben_soracagim">Soruyu ben soracağım</string>
-    <string name="oyun_ici_sesler">Oyun İçi Sesler</string>
     <string name="sise_turu">Şişe Türü</string>
     <string name="cola">Cola</string>
     <string name="sarap">Şarap</string>
@@ -34,4 +33,9 @@
     <string name="kaydet">Kaydet</string>
     <string name="Sil">sil</string>
     <string name="dogruluk_sorulari">Doğruluk Soruları</string>
+    <string name="oyunu_sifirla">Oyunu Sıfırla</string>
+    <string name="iptal_et">İptal Et</string>
+    <string name="oyun_verileri_silme">Oyun verileri silinsin mi? \nEklemiş olduğunuz sorular ve oyun ayarları sıfırlanacaktır.</string>
+    <string name="sifirlandi">Sıfırlandı</string>
+    <string name="iptal_edildi">İptal Edildi</string>
 </resources>

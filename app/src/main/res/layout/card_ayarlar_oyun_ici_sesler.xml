@@ -35,7 +35,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
-                    android:text="@string/oyun_ici_sesler"
+                    android:text="@string/oyunu_sifirla"
                     android:textColor="@android:color/white"
                     android:textStyle="bold" />
 

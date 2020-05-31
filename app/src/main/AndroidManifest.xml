@@ -15,26 +15,30 @@
             android:value="ca-app-pub-1818679104699845~9597315196" />
 
         <activity
-            android:name="com.patronusstudio.sisecevirmece.ui.SoruDuzenleActivitiy"
+            android:name=".ui.OyunSifirlaActivity"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+
+        <activity
+            android:name=".ui.SoruDuzenleActivitiy"
             android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
         <activity
-            android:name="com.patronusstudio.sisecevirmece.ui.SoruEkleActivity"
+            android:name=".ui.SoruEkleActivity"
             android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
         <activity
-            android:name="com.patronusstudio.sisecevirmece.ui.SorulariGoruntuleSecimEkrani"
+            android:name=".ui.SorulariGoruntuleSecimEkrani"
             android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
-        <activity android:name="com.patronusstudio.sisecevirmece.ui.SorulariGoruntuleActivity" />
-        <activity android:name="com.patronusstudio.sisecevirmece.ui.AyarlarActivity" />
-        <activity android:name="com.patronusstudio.sisecevirmece.ui.HomeActivity" />
+        <activity android:name=".ui.SorulariGoruntuleActivity" />
+        <activity android:name=".ui.AyarlarActivity" />
+        <activity android:name=".ui.HomeActivity" />
         <activity
-            android:name="com.patronusstudio.sisecevirmece.ui.SoruActivity"
+            android:name=".ui.SoruActivity"
             android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
-        <activity android:name="com.patronusstudio.sisecevirmece.ui.SiseDondurmeActivity" />
+        <activity android:name=".ui.SiseDondurmeActivity" />
         <activity
-            android:name="com.patronusstudio.sisecevirmece.ui.SecimEkraniActivity"
+            android:name=".ui.SecimEkraniActivity"
             android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
         <activity
-            android:name="com.patronusstudio.sisecevirmece.ui.SplashScreenActivity"
+            android:name=".ui.SplashScreenActivity"
             android:theme="@style/Theme.AppCompat.Transparent.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

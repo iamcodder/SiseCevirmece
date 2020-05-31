@@ -9,4 +9,5 @@ object OyunIslemleri {
 
     var siseTuru = 1
 
+    var dialogButonunaBasildiMi = false
 }
