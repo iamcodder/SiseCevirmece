@@ -22,21 +22,23 @@ import com.patronusstudio.sisecevirmece.util.SharedVeriSaklama
 class SorulariGoruntuleActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySorulariGoruntuleBinding
+    private var dogrulukListesi: List<DogrulukModel> = listOf()
+    private var cesaretListesi: List<CesaretModel> = listOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_sorulari_goruntule)
 
         val getBooleanIntent = intent.getBooleanExtra(DogrulukCesaret.DOGRULUK_CESARET.isim, false)
-        val list =
-            if (getBooleanIntent)
-                DogrulukDatabase.getDatabaseManager(this).dogrulukDao().getAllModel()
-            else CesaretDatabase.getDatabaseManager(this).cesaretDao().getAllModel()
+
+        if (getBooleanIntent)
+            dogrulukListesi = DogrulukDatabase.getDatabaseManager(this).dogrulukDao().getAllModel()
+        else cesaretListesi = CesaretDatabase.getDatabaseManager(this).cesaretDao().getAllModel()
 
         val longClick = { position: Int ->
 
-            val model = if (getBooleanIntent) list[position] as DogrulukModel
-            else list[position] as CesaretModel
+            val model = if(getBooleanIntent)dogrulukListesi[position]
+            else cesaretListesi[position]
 
             val gecis = Intent(applicationContext, SoruDuzenleActivitiy::class.java)
             gecis.putExtra(DogrulukCesaret.DOGRULUK_CESARET.isim, getBooleanIntent)
@@ -46,9 +48,11 @@ class SorulariGoruntuleActivity : AppCompatActivity() {
         }
 
         binding.dogrulukMu = getBooleanIntent
-        binding.liste = list
+        binding.dogrulukListesi = dogrulukListesi
+        binding.cesaretListesi = cesaretListesi
         binding.onClickBinding = SorulariGoruntuleOnClickBinding(this)
-        binding.sorularRecycler.adapter = SorularAdapter(list, getBooleanIntent, longClick)
+        binding.sorularRecycler.adapter =
+            SorularAdapter(dogrulukListesi, cesaretListesi, getBooleanIntent, longClick)
         binding.sorularRecycler.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         toolTip()

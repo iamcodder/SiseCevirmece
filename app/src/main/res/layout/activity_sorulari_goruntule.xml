@@ -3,6 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+        <import type="com.patronusstudio.sisecevirmece.model.DogrulukModel"/>
+        <import type="com.patronusstudio.sisecevirmece.model.CesaretModel"/>
 
         <variable
             name="dogrulukMu"
@@ -13,8 +15,11 @@
             type="com.patronusstudio.sisecevirmece.binding.SorulariGoruntuleOnClickBinding" />
 
         <variable
-            name="liste"
-            type="java.util.List" />
+            name="dogrulukListesi"
+            type="java.util.List&lt;DogrulukModel&gt;" />
+        <variable
+            name="cesaretListesi"
+            type="java.util.List&lt;CesaretModel&gt;" />
 
     </data>
 
@@ -104,7 +109,7 @@
                     android:layout_marginRight="16dp"
                     android:layout_marginBottom="16dp"
                     app:cardCornerRadius="16dp"
-                    android:onClick="@{(view) -> onClickBinding.sorulariKaristir(view,dogrulukMu,liste)}"
+                    android:onClick="@{(view) -> onClickBinding.sorulariKaristir(view,dogrulukMu,dogrulukListesi,cesaretListesi)}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent">

@@ -9,8 +9,9 @@ import com.patronusstudio.sisecevirmece.databinding.ItemviewSorulariGoruntuleBin
 import com.patronusstudio.sisecevirmece.model.CesaretModel
 import com.patronusstudio.sisecevirmece.model.DogrulukModel
 
-class SorularAdapter<T>(
-    private val sorularListesi: List<T>,
+class SorularAdapter(
+    private val dogrulukSoruListesi: List<DogrulukModel>,
+    private val cesaretSoruListesi: List<CesaretModel>,
     private val dogrulukMu: Boolean = false,
     private val longClick: (Int) -> Unit
 ) : RecyclerView.Adapter<SorularViewHolder>() {
@@ -24,12 +25,15 @@ class SorularAdapter<T>(
         return SorularViewHolder(binding)
     }
 
-    override fun getItemCount(): Int = sorularListesi.size
+    override fun getItemCount(): Int {
+        return if (dogrulukMu) dogrulukSoruListesi.size
+        else cesaretSoruListesi.size
+    }
 
 
     override fun onBindViewHolder(holder: SorularViewHolder, position: Int) {
-        if (dogrulukMu) holder.setText((sorularListesi[position] as DogrulukModel).soru)
-        else holder.setText((sorularListesi[position] as CesaretModel).soru)
+        if (dogrulukMu) holder.setText(dogrulukSoruListesi[position].soru)
+        else holder.setText(cesaretSoruListesi[position].soru)
         holder.onLongClick(position, longClick)
     }
 

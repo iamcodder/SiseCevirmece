@@ -25,16 +25,16 @@ class SorulariGoruntuleOnClickBinding(private val mContext: Context) {
         )
     }
 
-    fun <T> sorulariKaristir(
+    fun sorulariKaristir(
         view: View,
         dogrulukMu: Boolean,
-        list: List<T>
+        dogrulukListesi: List<DogrulukModel>,
+        cesaretListesi: List<CesaretModel>
     ) {
 
         if (dogrulukMu) {
-            val newList = (list as MutableList<DogrulukModel>).apply {
-                this.shuffle()
-            }
+            val newList: ArrayList<DogrulukModel> = dogrulukListesi as ArrayList<DogrulukModel>
+            newList.shuffle()
             var number = 1
             newList.forEach {
                 it.soruId = number
@@ -44,9 +44,8 @@ class SorulariGoruntuleOnClickBinding(private val mContext: Context) {
             DogrulukDatabase.getDatabaseManager(mContext).dogrulukDao().deleteAllModel()
             DogrulukDatabase.getDatabaseManager(mContext).dogrulukDao().insertAll(newList)
         } else {
-            val newList = (list as MutableList<CesaretModel>).apply {
-                this.shuffle()
-            }
+            val newList: ArrayList<CesaretModel> = cesaretListesi as ArrayList<CesaretModel>
+            newList.shuffle()
             var number = 1
             newList.forEach {
                 it.soruId = number
