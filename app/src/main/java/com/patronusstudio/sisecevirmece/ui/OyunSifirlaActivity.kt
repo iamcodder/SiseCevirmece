@@ -45,7 +45,7 @@ class OyunSifirlaActivity : AppCompatActivity() {
     private fun veriSil() {
         val sharedVeriSaklama = SharedVeriSaklama(this)
         sharedVeriSaklama.clearSharedPref()
-        val soruEkleme = SoruEkleme()
+        val soruEkleme = SoruEkleme(this)
         val cesaretDatabase = CesaretDatabase.getDatabaseManager(this)
         cesaretDatabase.cesaretDao().deleteAllModel()
         cesaretDatabase.cesaretDao().insertAll(soruEkleme.cesaretListesiEkleme())

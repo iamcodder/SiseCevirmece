@@ -39,4 +39,413 @@
     <string name="sifirlandi">Sıfırlandı</string>
     <string name="iptal_edildi">İptal Edildi</string>
     <string name="silmek_icin_uzun_bas">SİLMEK VEYA DÜZENLEMEK İÇİN UZUN BASIN</string>
+
+    <string-array name="cesaretListesi">
+        <item>"Alfabeyi tersten oku."</item>
+        <item>"Gözlerini bağla, bir oyuncuyla yavaşça dans et ve dokunarak kim olduğunu tahmin et."</item>
+        <item>"İnsandan battaniye ol ve birini ısıt."</item>
+        <item>"Bir paspas veya süpürge ile dans et"</item>
+        <item>"Solundaki kişi sana bir tokat atsın."</item>
+        <item>"Biriyle nasıl flört edeceğini göster."</item>
+        <item>"Komşularına bağır: “Bir sessiz olun be!”"</item>
+        <item>"İki kolunun üzerine tükenmez kalem ile “Ben bir çomarım” yaz"</item>
+        <item>"Whatsapp'da mesajlaştığın son üç kişiye “Seni seviyorum” diye mesaj yolla."</item>
+        <item>"Oyunculardan biri sana ruj sürsün."</item>
+        <item>"Odadan birini seç ve onu öp."</item>
+        <item>"Erkek ise; makyaj yap. Kız ise; makyajını temizle."</item>
+        <item>"Tsirtünü çıkar ve 30 saniye boyunca gömlek dansı yap."</item>
+        <item>"Bebek sesiyle favori şarkını söyle!"</item>
+        <item>"Pencereyi aç ve sokaktaki birinin sana el sallamasını sağla"</item>
+        <item>"Sonraki 3 tur boyunca istenen bir şiveyle konuş."</item>
+        <item>"Sihirbazlık yap."</item>
+        <item>"Ardı ardına dört takla at."</item>
+        <item>"5 dakika boyunca oyundaki birinin evcil hayvanı ol."</item>
+        <item>"30 saniye boyunca dilediğin müzik türünde dans etm."</item>
+        <item>"Herhangi bir kesme ve kırpma işlemi yapılmadan bir kişinin saçını yeniden şekillendir."</item>
+        <item>"3 dakika boyunca solucan gibi hareket et"</item>
+        <item>"3 dakika boyunca bir bebek taklidi yap."</item>
+        <item>"Müziğin ritmine ayak uydurarak göbek dansı yap."</item>
+        <item>"Erkekse bir kızın makyajını yıka,kızsa erkeğe makyaj yap."</item>
+        <item>"3 dakika boyunca müzik olmadan dans et."</item>
+        <item>"Bardağı hiç ağızdan çekmeden ardı ardına 3 bardak su iç."</item>
+        <item>"Cesaret diyen kişinin utandırıcı bir poz vermesini iste ve paylaş."</item>
+        <item>"1 bardak asitli içeceği/meyve suyunu bir dikişte iç."</item>
+        <item>"Gruptan seçilen bir kişinin makyaj malzemesiyle vücuduna bir şey yaz."</item>
+        <item>"5 dakika boyunca çeşitli egzersizler yap."</item>
+        <item>"Grupta yer alan herkesin 1 dakika boyunca telefonunu karıştır."</item>
+        <item>"3 dakika boyunca bir ünlüyü taklit et."</item>
+        <item>"Ellerinin üzerinde evi dolaş."</item>
+        <item>"Gruptan birini seç ve yüzüne tokat atsın."</item>
+        <item>"Oyun devam ederken 3 dakika boyunca belinde hayali bir halka varmış gibi onu çevir."</item>
+        <item>"Grubun ortaya koyduğu bir konu etrafında sekiz satır ve iki mısralık bir şiir yaz."</item>
+        <item>"Dışarı çık ve karşına çıkan ilk kişiyi korkut."</item>
+        <item>"Oyundaki kişilerin ortak kararıyla gruptan birini öp."</item>
+        <item>"5 dakika boyunca bir arkadaşına masaj yap."</item>
+        <item>"Dışarı çık ve sokaktan geçen herhangi birine komik bir şey anlat."</item>
+        <item>"5 dakika boyunca oyundaki bir kişinin kölesi ol."</item>
+        <item>"Bir süpürgeyle veya paspas ile dans et."</item>
+        <item>"Bir manken gibi kedi yürüyüşü yap."</item>
+        <item>"Ağzını hareket ettirmeden baştan sona alfabeyi oku."</item>
+        <item>"Gözlerini kapat ve oyundaki herhangi birinin yüzüne dokunup kim olduğunu tahmin et."</item>
+        <item>"Sağında yer alan oyuncu hakkında bir hikaye uydur."</item>
+        <item>"Oyundaki herhangi birine ayak masajı yap."</item>
+        <item>"Bir köpek gibi 6 kez havla."</item>
+        <item>"Bir şarkıyı baştan sona söyle."</item>
+        <item>"En sevdiğin şarkıyla çılgınca dans et."</item>
+        <item>"Bir dakika boyunca gözünü kırpmadan bekle."</item>
+        <item>"Çıktığın en kötü ve en iyi kişiyi açıkla."</item>
+        <item>"Bir dakika boyunca karşı cinsten biri gibi yürü."</item>
+        <item>"Sevgiline atıp atabileceğin en acımasız mesajı gönder."</item>
+        <item>"Birkaç tur boyunca biriyle el ele tutuş."</item>
+        <item>"Oyunda yer alan her kişi hakkında bildiğin komik bir şey anlat."</item>
+        <item>"Birkaç tur boyunca farklı bir dilde konuş."</item>
+        <item>"Telefondaki tarayıcı geçmişini herkese göster."</item>
+        <item>"Odadan birisi için satın alacakmış gibi iç çamaşırı araştırması yap."</item>
+        <item>"Yaşlı bir kadın ya da yaşlı bir adam gibi davran"</item>
+        <item>"1 dakika tavuk gibi davran"</item>
+        <item>"Ayakkabı iplerinizi birbirine bağlayın ve geriye doğru yürümeye çalışın"</item>
+        <item>"Bir sonraki sıraya kadar bir bebek gibi davran"</item>
+        <item>"En sevdiğin süper kahraman gibi davran"</item>
+        <item>"Senin sıran gelene kadar bir heykel gibi hareket et (konuşmadan veya hareket etmeden)"</item>
+        <item>"Kedi gibi miyavla"</item>
+        <item>"2 dakika uçak olduğunuzu farz et ve bir uçak gibi 2 dakika boyunca uç"</item>
+        <item>"Telefonunu yanında ki kişiye ver. 5 dk boyunca her yere bakmak serbest."</item>
+        <item>"Birine telefonunu ver ve istediği herhangi birine mesaj atsın."</item>
+        <item>"Önümüzdeki 5 dakika içinde birinin hayvanı olun."</item>
+        <item>"Seçtiğiniz bir sosyal medya hesabınızdan çok çirkin bir fotoğrafınızı paylaşın."</item>
+        <item>"Mesaj yazma bölümünüzü telefonunuzdan açın gözlerinizi kapatın ve rasgele bir kişiye körü körüne bir metin gönderin."</item>
+        <item>"Başkasının dişlerini fırçala."</item>
+        <item>"İğrenç bir ses tonuyla şarkı söyle"</item>
+        <item>"Yalandan bir şekilde 2 dakika boyunca ağla"</item>
+        <item>"Rehberinden rastgele birini ara ve sonra yanlış aradım diye kapat"</item>
+        <item>"1 dakika boyunca bir tavukmuşsun gibi davran"</item>
+        <item>"İnstagramda çok saçma bir şey paylaş 5 dakika sonra sil !"</item>
+        <item>"Bugün yaptığın bir şeyle alakalı uydurma kısa, komik bir hikaye anlat"</item>
+        <item>"Birini ara ve karadeniz şivesiyle konuş"</item>
+        <item>"Whatsapp ındaki son mesajlaşmanı bize oku"</item>
+        <item>"Çok yüksek bir sesle 3 saniye bağır"</item>
+        <item>"Sarhoş taklidi yap"</item>
+        <item>"Hemen kısa bir aşk şiiri yazıp oku"</item>
+        <item>"Yanındaki kişiye masaj yap"</item>
+        <item>"30 saniyeliğine bir balerin gibi dans et"</item>
+        <item>"Yüzüne çirkin ve iğrenç bir ifade ver"</item>
+        <item>"Yere yat ve bir balık gibi davran"</item>
+        <item>"1 dakikalığına köpek taklidi yap"</item>
+        <item>"Rap şarkısı uydur ve söyle"</item>
+        <item>"Kendi etrafında 10 defa hızlıca dön ve düz bir çizgide yürümeye çalış"</item>
+        <item>"Tekrar sıran gelene kadar bir maymun gibi davran"</item>
+        <item>"30 saniye boyunca opera şarkısı söylemeye çalış"</item>
+        <item>"Telefonunun galerisinden son çektiğin 5 fotoğrafı göster"</item>
+        <item>"Ağzında su varken şarkı söylemeye çalış"</item>
+        <item>"Yanındaki kişinin yüzüne tükenmez kalemle bir şey çizmesine izin ver"</item>
+        <item>"3 dakika boyunca tek ayak üzerinde bekle"</item>
+        <item>"Çiğ soğan yemeye çalış"</item>
+        <item>"3 dakika boyunca tavuk gibi davran"</item>
+    </string-array>
+
+    <string-array name="dogrulukListesi">
+
+        <item>"En çok utandığın an ne zamandı?"</item>
+        <item>"En son neden ağladın?"</item>
+        <item>"En çaresiz anında kimi aradın?"</item>
+        <item>"Deseler ki sana “geçmişte bir anı seç ve seni oraya döndüreceğiz” Tekrar yaşamak istediğin an nedir?"</item>
+        <item>"Bu odadakiler arasında sır tutma  konusunda en çok zorlanan kişi kimdir?"</item>
+        <item>"Yapıpta tamamen utanç duyduğun birşeyden bahset."</item>
+        <item>"En kötü alışkanlığın nedir?"</item>
+        <item>"Instagram'da en son kimi engelledin ve neden?"</item>
+        <item>"Bu odadaki birini kölen olarak alabilme şansın olsaydı, kim olurdu ve ne yapmasını isterdin?"</item>
+        <item>"Hayatında yaptığın en büyük hata nedir?"</item>
+        <item>"Söylediğin en son yalan neydi?"</item>
+        <item>"Bize bir sarhoşluk hikayeni anlat!"</item>
+        <item>"Sağ tarafında oturan insanın en çok hangi özelliğini sevmiyorsun?"</item>
+        <item>"Daha önce hiç komşudan birşey çaldın mı?"</item>
+        <item>"Telefonunda en son arama yaptığın şey neydi?"</item>
+        <item>"Çıplak olmak mı yoksa düşündüğün her şeyin tişörtünde yazması mı? Hangisini seçerdin?"</item>
+        <item>"Yere düşürdüğün, uzun süre bekledikten sonra yediğin en son şey neydi?"</item>
+        <item>"Bir gün karşı cins olarak uyansan yapacağın ilk şey ne olurdu?"</item>
+        <item>"Hiç havuza işeyip hiçbir şey olmamış gibi davrandın mı?"</item>
+        <item>"Sence bu odada en kötü giyinen kişi kimdir?"</item>
+        <item>"Seninle birlikte büyüyen bir hayali arkadaşın var mı?"</item>
+        <item>"Hiç asansörde osurdun mu?"</item>
+        <item>"Bu odadaki insanlardan kiminle hayatını değiştirmek isterdin?"</item>
+        <item>"Tuvalete oturduğun zaman genelde ne düşünürsün?"</item>
+        <item>"Hiç aynada öpüşmeyi denedin mi?"</item>
+        <item>"En kötü alışkanlığın nedir?"</item>
+        <item>"Hiç sen banyodayken birisi içeri pat diye girdi mi?"</item>
+        <item>"Burnunu karıştırır mısın?"</item>
+        <item>"Banyoda şarkı söyler misin?"</item>
+        <item>"Web geçmişini birisi görece utanacağın şey ne olurdu?"</item>
+        <item>"Uykunda konuşur musun?"</item>
+        <item>"Gizli aşkın kim?"</item>
+        <item>"Bu odada en az kimden hoşlanıyorsun ve neden?"</item>
+        <item>"Hayalindeki erkek/kız nasıl birisi?"</item>
+        <item>"Duşta söylediğin popüler şarkın hangisi?"</item>
+        <item>"Benim hakkımda nelerden hoşlanmıyor musun?"</item>
+        <item>"Instagram'dan son attığın mesaj neydi?"</item>
+        <item>"Mevcut sevgilinle evleneceğini düşünüyor musun?"</item>
+        <item>"İç çamaşırlarını ne sıklıkla yıkıyorsun?"</item>
+        <item>"Hiç osurup başka birini suçladın mı?"</item>
+        <item>"Tabağını yalıyor musun?"</item>
+        <item>"Kimsenin senin hakkında bilmediği şey nedir?"</item>
+        <item>"Her seferinde yeniden izlediğin çizgi film nedir?"</item>
+        <item>"Ayaklarını hergün yıkar mısın?"</item>
+        <item>"Saçma takma adlara sahip misin?"</item>
+        <item>"En son ne zaman yatağını ıslattın?"</item>
+        <item>"Telefonunda hangi uygulamayı daha sık kullanıyorsun?"</item>
+        <item>"Hiç bir şeyden kaçmak için hasta numarası yaptın mı? Yaptıysan neyden kaçtın?"</item>
+        <item>"Bir oturuşta en fazla yediğin yemek hangisi?"</item>
+        <item>"En çok neyden korkarsın?"</item>
+        <item>"Tek başınayken dans eder misin?"</item>
+        <item>"Bütün günü evde geçirsen ne yaparsın?"</item>
+        <item>"En son ne zaman dişlerini fırçaladın?"</item>
+        <item>"Anneni mi yoksa babanı mı daha çok seviyorsun?"</item>
+        <item>"Yaptığın en yasa dışı şey neydi?"</item>
+        <item>"Anneni mi yoksa babanı mı daha çok seviyorsun?"</item>
+        <item>"Kardeşini 1 milyon TL karşılığında başka bir kardeşle değişir misin?"</item>
+        <item>"Birden fazla kişiyle evlenme şansın olsa kimleri seçerdin?"</item>
+        <item>"Zorunda olsaydın bu odada bulunan kiminle evlenirdin?"</item>
+        <item>"Hayatının sonuna kadar sadece tek bir şarkı duyacak olsan bu ne olurdu?"</item>
+        <item>"Sence bu odadaki en kötü insan kim olabilir?"</item>
+        <item>"Yeniden doğma şansın olsaydı hangi dönemde yaşamak isterdin?"</item>
+        <item>"Geçmişe giderek söylediğin veya yaptığın bir şeyi silebilecek olsan, bu ne olurdu?"</item>
+        <item>"Sevgilin seni hiç utandırdı mı?"</item>
+        <item>"Banyoda kaldığın en uzun süre nedir?"</item>
+        <item>"Okulda çekilmiş olduğun en çılgınca resim hangisi?"</item>
+        <item>"Aileni özlediğin için hiç ağladın mı?"</item>
+        <item>"Hiç sosyal medyada pişman olduğun bir şey paylaştın mı?"</item>
+        <item>"En büyük korkun nedir?"</item>
+        <item>"Duşta tuvaletini yapar mısın?"</item>
+        <item>"Hiç birini terk ettin mi?"</item>
+        <item>"Hiç sevgilini aldattın mı?"</item>
+        <item>"Hala yaptığın en çocukça şey nedir?"</item>
+        <item>"Hiç bir kütüphaneden kitap çaldın mı?"</item>
+        <item>"Satın aldığın ama asla kullanmadığın 10 şey nedir?"</item>
+        <item>"Hayatının en utanç verici anı neydi?"</item>
+        <item>"Hiç birisi tarafından hor görüldün mü? Hangi konuda hor görüldün?"</item>
+        <item>"Bugüne kadar gördüğün en garip rüyayı tarif eder misin?"</item>
+        <item>"Bu gruptan kiminle bir hafta boyunca hayatını değiştirmek isterdin?"</item>
+        <item>"En çok hangi özelliğine iltifat edersin?"</item>
+        <item>"Birisi sana dünyanın en zengini olmayı teklif etse bile asla yapmayacağın şey nedir?"</item>
+        <item>"Sence bu grupta yer alan ve en kötü sevgili olacak kişi kimdir?"</item>
+        <item>"Değiştirmek istediğin niteliğin veya karakteristik özelliğin nedir?"</item>
+        <item>"Hiç sevgilinin arkadaşına aşık oldun mu?"</item>
+        <item>"Sence sevgilin evlilik hakkında ne düşünüyordur?"</item>
+        <item>"Bir alışveriş merkezinde başına gelen en çılgınca şey neydi?"</item>
+        <item>"Hayatında yaptığın en kaba şey neydi?"</item>
+        <item>"Söylediğin veya arkadaşına aktardığın en kötü dedikodu konusu neydi?"</item>
+        <item>"Birine yaptığın en iğrenç şaka neydi?"</item>
+        <item>"Bir başkasından etkilenerek yaptığın en çılgınca şey neydi?"</item>
+        <item>"Google’da aradığın en son şey neydi?"</item>
+        <item>"Daha önce hiç sümüğünün tadına baktın mı?"</item>
+        <item>"Uyurken horlar mısın?"</item>
+        <item>"Sence bu odada en kötü giyinen kişi kim?"</item>
+        <item>"Kendinden en az 10-15 yaş büyük birine aşık oldun mu?"</item>
+        <item>"Bir parçası olduğun en utanç verici durum neydi?"</item>
+        <item>"Hiç yanlışlıkla bir duvara veya ağaca çarptın mı?"</item>
+        <item>"Ne kadar yaşlı biriyle sevgili olurdun?"</item>
+        <item>"Daha önce hiç altına yaptığın oldu mu?"</item>
+        <item>"İnsanların içindeyken en utandığın an neydi?"</item>
+        <item>"Hiç oyuncak bir hayvanla uyuduğun oldu mu?"</item>
+        <item>"Hiç uykunda ağzının aktığı oldu mu?"</item>
+        <item>"Uykunda konuşur musun?"</item>
+        <item>"Gizliden gizliye ilgi duyduğun kişi kim?"</item>
+        <item>"Bu oyunda yer alan ve en az sevdiğin kişi kim?"</item>
+        <item>"Hayalindeki erkeği/kadını tarif eder misin?"</item>
+        <item>"Duşta söylediğin bir şarkıyı söyler misin?"</item>
+        <item>"Görünümünü 1-10 arasında nasıl değerlendirirsin?"</item>
+        <item>"Benim hakkımda sevmediğin şeyler neler?"</item>
+        <item>"Gizli gizli söylediğin en sevdiğin şarkı nedir?"</item>
+        <item>"Karşı cinsten birine gönderdiğin en son mesaj neydi?"</item>
+        <item>"İnsanları yanan bir binadan kurtaracaksın ama bu oyundaki bir kişi binada kalmak zorunda, kimi seçerdin?"</item>
+        <item>"Hiç yanlışlıkla bir arkadaşının sırrını ortaya çıkardın mı?"</item>
+        <item>"Çamaşırlarını ne sıklıkla değiştiriyorsun?"</item>
+        <item>"Hiç gaz çıkardığın halde suçu başkasının üzerine attın mı?"</item>
+        <item>"Birden fazla kişiyle evlenmene izin verilseydi kimlerle evlenmeyi seçerdin?"</item>
+        <item>"Bu oyunda yer alan ve tanıdığın en kötü kişi olduğuna inandığın kişi kim?"</item>
+        <item>"Yeniden doğma şansın olsa hangi yıl doğmak isterdin?"</item>
+        <item>"Söylediğin veya yaptığın bir şeyi silmek için zamanda geriye gidebilecek olsaydın bu ne olurdu?"</item>
+        <item>"Erkek arkadaşın/kız arkadaşın seni hiç utandırdı mı?"</item>
+        <item>"Birdenbire görünmez olsaydın ne yapardın?"</item>
+        <item>"Hiç birini gizli gizli takip ederken yakaladın mı?"</item>
+        <item>"En sevdiğin içecek hangisi?"</item>
+        <item>"Uzun süredir seni görmeyen birisi sana el sallasa ne yaparsın?"</item>
+        <item>"En sinir bozucu okul resmin hangisi?"</item>
+        <item>"Aileni çok özlediğin için hiç ağladın mı?"</item>
+        <item>"Hiç burnunu karıştırırken yakalandın mı?"</item>
+        <item>"Gerçek dışı olan en büyük korkun nedir?"</item>
+        <item>"Şimdiye kadar izlediğin en korkunç film hangisi?"</item>
+        <item>"Hiç öfkeden birinin boğazına sarıldın mı?"</item>
+        <item>"Seni gerçekten gururlandıran bir şey yaptın mı?"</item>
+        <item>"Dünya önümüzdeki hafta yok olacak; dilediğin her şeyi yapabilirsin, ne yapardın?"</item>
+        <item>"Hangi salata sosunu doğrudan içebilirsin?"</item>
+        <item>"Bugüne kadar yaptığın en çocukça şey nedir?"</item>
+        <item>"Hayalindeki erkeği/kadını kovalamaya ne kadar devam edeceksin?"</item>
+        <item>"Aşık olduğun kişinin önünde en çok utandığın zaman ne zamandı?"</item>
+        <item>"Sevdiğini iddia ettiğin ama aslında sevmediğin bir kişi kim?"</item>
+        <item>"Saçma bir takma adın var mı?"</item>
+        <item>"Yatağını en son ne zaman ıslattın?"</item>
+        <item>"Telefonunda en çok hangi uygulamada zaman harcıyorsun?"</item>
+        <item>"Hayatının en acı verici deneyimi nedir?"</item>
+        <item>"Birine söylediğin en acımasızca şey nedir?"</item>
+        <item>"Hiç köpük banyosu yaptın mı?"</item>
+        <item>"Günde kaç selfie çekiyorsun?"</item>
+        <item>"Lisede aşık olduğun kişiyle bugün buluşma şansın olsa buluşur muydun?"</item>
+        <item>"Daha havalı görünmek için yaptığın şey nedir?"</item>
+        <item>"En son ne zaman dişlerini fırçaladığını söyler misin?"</item>
+        <item>"Bir kıyafeti ne kadar uzun süre kullandın?"</item>
+        <item>"Çocukluğundan beri sevdiğin bir şey var mı?"</item>
+        <item>"Ailenle takılmayı sever misin?"</item>
+        <item>"Geç yatmayı mı yoksa erken yatmayı mı tercih edersin?"</item>
+        <item>"Hiç bir şey çaldın mı?"</item>
+        <item>"Bugüne kadar yaşadığın en kötü ilişki hangisiydi?"</item>
+        <item>"Hiç bir arkadaşının sevgilisine aşık oldun mu?"</item>
+        <item>"Okulundan biriyle çıkmak zorunda olsan bu kim olurdu?"</item>
+        <item>"Şuana kadar kaç kişiyle flört ettin?"</item>
+        <item>"Şuan birisiyle flört ediyor musun?"</item>
+        <item>"Hiç aynaya bakıp kendine hayranlık duydun mu?"</item>
+        <item>"Herhangi bir ünlüyle evlenme fırsatın olsaydı bu kim olurdu?"</item>
+        <item>"Sevdiğin birinin önünde yaptığın veya söylediğin en utanç verici şey nedir?"</item>
+        <item>"Hayran olduğun ünlü isim kim?"</item>
+        <item>"Vücudunla ilgili bir şeyi değiştirebilecek olsan bu ne olurdu?"</item>
+        <item>"En çok kimi kıskanıyorsun?"</item>
+        <item>"En çok kimden nefret ediyorsun?"</item>
+        <item>"Issız bir adada mahsur kalsan kimin yanında olmasını isterdin?"</item>
+        <item>"Hiç terk edildin mi?"</item>
+        <item>"Kıvırcık saçlar mı yoksa düz saçlar mı?"</item>
+        <item>"Senden daha kısa biriyle çıkar mısın?"</item>
+        <item>"Eğer görünmez olsaydın kimi sıkı sıkı takip ederdin?"</item>
+        <item>"Burada yer alan kişilerden kimle çıkmak istersin?"</item>
+        <item>"Hiç aşık oldun mu?"</item>
+        <item>"Sarışınlar mı yoksa esmerler mi?"</item>
+        <item>"Ailen kız/erkek arkadaşından nefret ederse onu terk eder misin?"</item>
+        <item>"Daha önce biri tarafından reddedildin mi?"</item>
+        <item>"Sevgiline hiç yalan söyledin mi?"</item>
+        <item>"Hiç sevgilini aldattın mı?"</item>
+        <item>"Hiç yaşın hakkında yalan söyledin mi?"</item>
+        <item>"Sevmediğin bir kız/erkek sana aşık olsaydı ona karşı davranışların nasıl olurdu?"</item>
+        <item>"Bilmediğin bir kalabalığın önünde yaptığın en aptalca şey nedir?"</item>
+        <item>"Bir saat boyunca görünmez olsaydın ne yapmak isterdin?"</item>
+        <item>"Hiç başka biri tarafından aşağılandın mı?"</item>
+        <item>"Sana yanlış yapan birinden hiç intikam aldın mı?"</item>
+        <item>"Satın aldığın hiç kullanmadığın ilk 10 ürün nedir?"</item>
+        <item>"Hayatının geri kalanı için bir küfür seçmiş olsan bu ne olurdu?"</item>
+        <item>"Odadaki herkesin bir yemek olduğunu düşünsen kime hangi yemeği layık görürdün?"</item>
+        <item>"Bu odada bir kişiyle evlenmek isteseydin bu kim olurdu?"</item>
+        <item>"Tanınmak için yaptığın en aptalca şey nedir?"</item>
+        <item>"Durağan, sakin veya çılgınca bir ilişkiden hangisini seçersin?"</item>
+        <item>"Duş almadan en fazla kaç gün geçirdin?"</item>
+        <item>"Hayatının geri kalanında sadece mesajlaşarak iletişim kurabilecek olduğun bir kişi olsa bu kim olurdu?"</item>
+        <item>"İlk buluşmada asla yemeyeceğin yemek nedir?"</item>
+        <item>"Görmemek istediğin halde görmek zorunda kişi kimdir?"</item>
+        <item>"Bir başkasının bedeninde yaşayabilecek olsan kimi seçerdin?"</item>
+        <item>"Bir restoranda asla sipariş etmeyeceğin yemek nedir?"</item>
+        <item>"Bildiğin en işe yaramaz bilgi nedir?"</item>
+        <item>"Okulda öğrendiğin keşke unutsam dediğin o şey nedir?"</item>
+        <item>"Şampuanı sabun olarak kullanmak mı sabunu şampuan olarak kullanmak mı?"</item>
+        <item>"Hayatının geri kalanında sadece bir tek yemin etme hakkın olsa neyi seçerdin?"</item>
+        <item>"Köpek maması mı yoksa kedi maması mı yemeyi tercih edersin?"</item>
+        <item>"Dokuz canın olsaydı şimdi yapamayacağın neyi yapmaya çalışırdın?"</item>
+        <item>"Hiç hoşlanmadığın halde bir hediyeyi sevmiş gibi yaptın mı?"</item>
+        <item>"Bir ay boyunca duş almamayı mı yoksa bir ay boyunca her gün aynı yemeği mi yemeyi tercih edersin?"</item>
+        <item>"Hiç arkadaşının sırrını başkasıyla paylaştın mı?"</item>
+        <item>"Hiç bir arkadaşının mesajını görmezden geldin mi?"</item>
+        <item>"Hiç en iyi arkadaşına yalan söyledin mi?"</item>
+        <item>"Hiç bir kız/erkek için arkadaşından vazgeçmeyi düşündün mü?"</item>
+        <item>"İki kişilik bir tatil kazansan kiminle gitmeyi tercih edersin?"</item>
+        <item>"Biri sana en yakın arkadaşını sorduğunda onu nasıl tarif edersin?"</item>
+        <item>"En yakın arkadaşının bir fiziksel özelliğini değiştirebilecek olsan bu ne olurdu?"</item>
+        <item>"Hiç saklamak için söz verdiğin bir sırrı başkasına söyledin mi?"</item>
+        <item>"En iyi arkadaşınla ilgili en sinir olduğun şey nedir?"</item>
+        <item>"Arkadaşının sevgilisi yoksa onun kiminle çıkması gerektiğini düşünüyorsun?"</item>
+        <item>"Hiç en yakın arkadaşın istedi diye sevgilinden ayrıldın mı?"</item>
+        <item>"Eğer bu odadan biriyle evlenseydin kimi seçerdin ?"</item>
+        <item>"İnstagramdan 5 kişi silecek olsan kimleri silerdin ? İsim ver."</item>
+        <item>"Senin arkadan söylenen en kötü laf neydi ?"</item>
+        <item>"Hiç bir öğretmenine aşık oldun mu ? Kime ?"</item>
+        <item>"Hiç aynı cinsiyetten birinden etkilendin mi ?"</item>
+        <item>"Hiç bir arkadaşını sevgilisini terk etmesi için doldurmaya çalıştın mı ?"</item>
+        <item>"Arkadaşının eski sevgilisiyle takıldığın oldu mu ?"</item>
+        <item>"Hiç bir hayvana kötü davrandın mı ?"</item>
+        <item>"Hiç asılsız bir dedikodu yaydın mı ?"</item>
+        <item>"Acımasızca davrandığın bir anını anlat !"</item>
+        <item>"Yaptığın en kötü davranış nedir ?"</item>
+        <item>"Suçlu sayılmayacağını bilsen kimi öldürürdün ?"</item>
+        <item>"Gerçekleşeceğini bilsen yapacağın tek dilek ne olurdu ?"</item>
+        <item>"Kendinin gerizekalı olduğundan şüphelendiğin bir an oldu mu ?"</item>
+        <item>"Ailenin yaptığını bilmediği bir şey söyle !"</item>
+        <item>"Biri hakkında dedikodu yaydın mı ?"</item>
+        <item>"Sence instagram profilinde yansıttığın kişiye yüzde kaç oranında benziyorsun ?"</item>
+        <item>"Birinden ödünç alıp da vermediğin şey nedir ?"</item>
+        <item>"Normalde yapmayacağın ancak sırf instagramda daha fazla beğeni almak için yaptığın şey nedir ?"</item>
+        <item>"Hiç sevgilisi olduğunu bildiğin biriyle takıldın mı ?"</item>
+        <item>"Sonradan iyi ki yapmamışım dediğin kötü bir kararını açıklar mısın ?"</item>
+        <item>"Eski sevgilinin sosyal medya profilini hangi sıklıkla ziyaret ediyorsun ?"</item>
+        <item>"En büyük kişisel güvensizliğin nedir ?"</item>
+        <item>"Kasti olarak kavga çıkardın mı ? Neden ?"</item>
+        <item>"Alkollüyken yaptığın en utanç verici şey neydi ?"</item>
+        <item>"Bir şey itiraf et !"</item>
+        <item>"Hiç birine psikolojik işkence yaptın mı ?"</item>
+        <item>"Sosyal medyada en çok gözetlediğin kişi kimdir ?"</item>
+        <item>"(Odadaki birini göstererek) Onunla ilgili 1 iyi ve 1 kötü şey söyle !"</item>
+        <item>"Şuana kadar yaptığın en flörtöz hareket neydi ?"</item>
+        <item>"Biriyle buluşmaya gitmeden önce aynada kendini kaç defa kontrol edersin ?"</item>
+        <item>"Sence buradaki en eğlenceli karaktere sahip olan kişi kim ?"</item>
+        <item>"En son ne zaman ağladın ?"</item>
+        <item>"Hiç timsah gözyaşları döktün mü ?"</item>
+        <item>"Birinden kötü bir şekilde reddedildin mi ? Nasıl ?"</item>
+        <item>"Aradan yıllar geçse bile hatırladığında seni sinirlendiren şey nedir ?"</item>
+        <item>"Sosyal medyada sürekli olarak gizlice takip ettiğin / stalk yaptığın kişi kimdir ?"</item>
+        <item>"Birine yanlışlıkla gönderdiğin en utanç verici mesaj neydi ?"</item>
+        <item>"Hiç batıl inancın var mıdır ?"</item>
+        <item>"Şuan sevdiğin ama ona karşı adım atamadığın biri var mı ?"</item>
+        <item>"Ona (odadaki bir kişiyi göstererek) bakınca aklında beliren ilk düşüne ne ?"</item>
+        <item>"Hiç yakın bir arkadaşını sattın mı ? Neden ?"</item>
+        <item>"Seni yalan makinasına soksalar ortaya çıkacağından en çok korktuğun yalanın nedir ?"</item>
+        <item>"Hiç arkadaşının bir sırrını başkasıyla paylaştın mı ?"</item>
+        <item>"İyi bir arkadaşına söylediğin bir yalanı paylaş !"</item>
+        <item>"Eğer arkadaşının sevgilisinin onu aldattığını öğrenseydin ne yapardın ?"</item>
+        <item>"En iyi arkadaşın sevgiline aşık olduğunu söylese ne yapardın ?"</item>
+        <item>"Unutmayı çok istediğin utanç verici bir anını anlat !"</item>
+        <item>"Eğer araban ıssız bir yerde bozulsaydı, bu odada bulunanlardan en son yardım isteyeceğin kişi kim olurdu ? Neden ?"</item>
+        <item>"Asla yemem dediğin bir yemek söyle !"</item>
+        <item>"Keşke görmeseydim dediğin bir şeyi söyle."</item>
+        <item>"Senden daha kısa biriyle çıkar mıydın ?"</item>
+        <item>"Hiç salak yerine koyduldun mu ? Nasıl ?"</item>
+        <item>"Son zamanlarda en çok nefret ettiğin kişi kimdir ?"</item>
+        <item>"Gelecekte kaç çocuğa sahip olmak istersin ?"</item>
+        <item>"Okulda / iş yerinde keşke onun yerinde olaydım dediğin gibi kimdir ?"</item>
+        <item>"Hayatında en çok kıskandığın kişi kimdir ?"</item>
+        <item>"Vücudunda bir yerine estetik ameliyat yaptırmak isteseydin nerede yaptırırdın ?"</item>
+        <item>"Aşık olduğun ünlü kimdi ?"</item>
+        <item>"Reddedildiğinde en içini acıtan kişi kimdi ?"</item>
+        <item>"Geçmişe baktığında keşke onunla çıkmasaydım dediğin biri ?"</item>
+        <item>"En son ne zaman altına kaçırdın ?"</item>
+        <item>"Hiç bitlendin mi ?"</item>
+        <item>"Vücudunda en sevmediğin yer neresi ?"</item>
+        <item>"Duş almadan yaşadığın en uzun süre ?"</item>
+        <item>"Enayilik yaptığın bir anı anlat !"</item>
+        <item>"Kendini rezil ettığin bir anını anlat !"</item>
+        <item>"Bir günde en çok kaç selfie çektin ?"</item>
+        <item>"Hiç kazıklandın mı ? Nasıl ?"</item>
+        <item>"Bir oturuşta mideni en çok tıkabasa doldurduğun zaman neler yemiştin ?"</item>
+        <item>"Biriyle buluşmamak için hastayım diye yalan attığın olduğu mu ? İsim ver !"</item>
+        <item>"Sana takılan en rahatsız edici lakap neydi ?"</item>
+        <item>"Seni insanlar içinde en son utanç verici bir duruma düşüren şey neydi ?"</item>
+        <item>"Dünya haftaya sona erecek olsa, hangi yasa dışı şeyleri yapardın ?"</item>
+        <item>"En büyük saçma korkun nedir ?"</item>
+        <item>"Hiç sosyal medyaya yükleyip sonra pişman olup sildiğin bir fotoğraf oldu mu ?"</item>
+        <item>"Kendini en ezik hissettiğin an hangisiydi ?"</item>
+        <item>"Birine alıcı gözle dikkatli bir şekilde yaparken o kişi tarafından aniden fark edildiğin oldu mu ?"</item>
+        <item>"Hiç aldatıldın mı ?"</item>
+        <item>"Eğer bir zaman makinen olsaydı ve geçmişe gidip yaptığın tek bir şeyi silebilecek olsaydın, neyi silerdin ?"</item>
+        <item>"Eğer tekrar dünyaya gelseydin, doğmak için hangi yılı seçerdin ?"</item>
+        <item>"Sence bu odadaki kimle çıkmazdın ? Neden ?"</item>
+        <item>"En gıcık olduğun şey nedir ?"</item>
+        <item>"Benim hakkımda sevmediğin bir şey söyle."</item>
+        <item>"Sence (odadaki birinin adını vererek) tatlı biri mi ?"</item>
+        <item>"Gizli platoniğin kim ?"</item>
+        <item>"Dışarıda yaşadığın en utanç verici an neydi ?"</item>
+        <item>"Küçükken hiç bir çizgi film karakterine aşık olmuş muydun ?"</item>
+
+    </string-array>
 </resources>

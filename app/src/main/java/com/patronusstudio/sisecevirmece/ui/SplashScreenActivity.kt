@@ -26,7 +26,7 @@ class SplashScreenActivity : AppCompatActivity() {
         val isWrited = sharedVeriSaklama.isSharedPrefCreated()
 
         if (!isWrited) {
-            val soruEkleme = SoruEkleme()
+            val soruEkleme = SoruEkleme(this)
             val cesaretDatabase = CesaretDatabase.getDatabaseManager(this)
             cesaretDatabase.cesaretDao().insertAll(soruEkleme.cesaretListesiEkleme())
 
