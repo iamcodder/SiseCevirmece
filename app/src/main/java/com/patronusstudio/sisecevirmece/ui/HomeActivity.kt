@@ -1,5 +1,7 @@
 package com.patronusstudio.sisecevirmece.ui
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -7,6 +9,7 @@ import com.patronusstudio.sisecevirmece.R
 import com.patronusstudio.sisecevirmece.databinding.ActivityHomeBinding
 import com.patronusstudio.sisecevirmece.util.extSayfaGecisi
 import com.patronusstudio.sisecevirmece.util.extStatusBarColor
+
 
 class HomeActivity : AppCompatActivity() {
 
@@ -29,6 +32,9 @@ class HomeActivity : AppCompatActivity() {
             this.extSayfaGecisi(AyarlarActivity::class.java)
         }
         binding.imgStore.setOnClickListener {
+            intent =
+                Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.theopen.android"))
+            startActivity(intent)
         }
     }
 

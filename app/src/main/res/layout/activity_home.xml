@@ -16,7 +16,7 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            app:cardBackgroundColor="#907CB342"
+            app:cardBackgroundColor="#A67CB342"
             app:cardCornerRadius="40dp"
             app:cardElevation="0dp"
             app:layout_constraintBottom_toTopOf="@+id/imgSoru"
@@ -59,7 +59,7 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            app:cardBackgroundColor="#95D81B60"
+            app:cardBackgroundColor="#A6D81B60"
             app:cardCornerRadius="40dp"
             app:cardElevation="0dp"
             app:layout_constraintBottom_toTopOf="@+id/imgAyarlar"
@@ -101,7 +101,7 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            app:cardBackgroundColor="#80FB8C00"
+            app:cardBackgroundColor="#A6FB8C00"
             app:cardCornerRadius="40dp"
             app:cardElevation="0dp"
             app:layout_constraintBottom_toTopOf="@+id/imgStore"
@@ -142,7 +142,7 @@
             android:id="@+id/imgStore"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="#89039BE5"
+            app:cardBackgroundColor="#A6039BE5"
             app:cardCornerRadius="40dp"
             app:cardElevation="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -162,7 +162,7 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:contentDescription="@string/uygulamarimiz"
+                    android:contentDescription="@string/bizi_oyla"
                     android:src="@drawable/playstore" />
 
                 <TextView
@@ -170,7 +170,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:text="@string/uygulamarimiz"
+                    android:text="@string/bizi_oyla"
                     android:textColor="@android:color/white"
                     android:textSize="24sp"
                     android:textStyle="bold" />
