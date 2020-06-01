@@ -28,12 +28,13 @@ class SorulariGoruntuleActivity : AppCompatActivity() {
     private var dogrulukListesi: List<DogrulukModel> = listOf()
     private var cesaretListesi: List<CesaretModel> = listOf()
     private lateinit var mAdapter: SorularAdapter
+    private var getBooleanIntent = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_sorulari_goruntule)
 
-        val getBooleanIntent = intent.getBooleanExtra(DogrulukCesaret.DOGRULUK_CESARET.isim, false)
+        getBooleanIntent = intent.getBooleanExtra(DogrulukCesaret.DOGRULUK_CESARET.isim, false)
 
         if (getBooleanIntent)
             dogrulukListesi = DogrulukDatabase.getDatabaseManager(this).dogrulukDao().getAllModel()
@@ -103,6 +104,12 @@ class SorulariGoruntuleActivity : AppCompatActivity() {
             OyunIslemleri.soruGuncellendiMi = false
             OyunIslemleri.degisenSoruIndexi = 0
             OyunIslemleri.guncellenenSoru = ""
+        } else if (OyunIslemleri.soruEklendiMi) {
+            mAdapter.addData()
+            OyunIslemleri.guncellenenSoru = ""
+            OyunIslemleri.soruEklendiMi = false
+            if (getBooleanIntent) binding.sorularRecycler.smoothScrollToPosition(OyunIslemleri.dogrulukSize - 1)
+            else binding.sorularRecycler.smoothScrollToPosition(OyunIslemleri.cesaretSize - 1)
         }
     }
 

@@ -13,6 +13,7 @@ object OyunIslemleri {
 
     var soruSilindiMi = false
     var soruGuncellendiMi = false
+    var soruEklendiMi = false
     var degisenSoruIndexi = 0
     var guncellenenSoru = ""
 }

@@ -30,9 +30,13 @@ class SoruEkleActivity : AppCompatActivity() {
         binding.butonSoruEkle.setOnClickListener {
             val girilenSoru = binding.edxGirilenSoru.text
             val sonuc = textControl(girilenSoru, getBooleanIntent)
-            val toastMessage = if (sonuc) "Kayıt Başarılı"
-            else "Girilen soruyu kontrol ediniz."
-            Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show()
+
+            if (sonuc) {
+                Toast.makeText(this, getString(R.string.soru_kayit_basarili), Toast.LENGTH_SHORT)
+                    .show()
+                finish()
+            } else Toast.makeText(this, getString(R.string.soru_kayit_hatali), Toast.LENGTH_SHORT)
+                .show()
         }
 
     }
@@ -52,6 +56,8 @@ class SoruEkleActivity : AppCompatActivity() {
                 OyunIslemleri.cesaretSize++
                 sharedPref.updateCesaretSize(OyunIslemleri.cesaretSize)
             }
+            OyunIslemleri.guncellenenSoru = girilenSoru.toString()
+            OyunIslemleri.soruEklendiMi = true
             true
         } else false
 

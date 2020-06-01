@@ -51,6 +51,21 @@ class SorularAdapter(
 
     }
 
+    fun addData() {
+        val listSize = if (dogrulukMu) dogrulukSoruListesi.size
+        else cesaretSoruListesi.size
+
+        val soru = OyunIslemleri.guncellenenSoru
+
+        if (dogrulukMu) (dogrulukSoruListesi as ArrayList).add(
+            listSize,
+            DogrulukModel(listSize, soru, false)
+        )
+        else (cesaretSoruListesi as ArrayList).add(listSize, CesaretModel(listSize, soru, false))
+
+        notifyItemInserted(listSize)
+    }
+
     fun updateData() {
         val getSoru = OyunIslemleri.guncellenenSoru
         val index = OyunIslemleri.degisenSoruIndexi
