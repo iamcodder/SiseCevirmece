@@ -10,4 +10,9 @@ object OyunIslemleri {
     var siseTuru = 1
 
     var dialogButonunaBasildiMi = false
+
+    var soruSilindiMi = false
+    var soruGuncellendiMi = false
+    var degisenSoruIndexi = 0
+    var guncellenenSoru = ""
 }

@@ -6,7 +6,7 @@ import com.patronusstudio.sisecevirmece.model.CesaretModel
 import com.patronusstudio.sisecevirmece.model.DogrulukModel
 
 
-class SoruEkleme(val mContext: Context) {
+class SoruEkleme(private val mContext: Context) {
     private val _cesaretList = mutableListOf<CesaretModel>()
     private val _dogrulukList = mutableListOf<DogrulukModel>()
 

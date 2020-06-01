@@ -16,7 +16,10 @@ import com.patronusstudio.sisecevirmece.databinding.ActivitySorulariGoruntuleBin
 import com.patronusstudio.sisecevirmece.enums.DogrulukCesaret
 import com.patronusstudio.sisecevirmece.model.CesaretModel
 import com.patronusstudio.sisecevirmece.model.DogrulukModel
+import com.patronusstudio.sisecevirmece.util.OyunIslemleri
 import com.patronusstudio.sisecevirmece.util.SharedVeriSaklama
+import jp.wasabeef.recyclerview.adapters.ScaleInAnimationAdapter
+import jp.wasabeef.recyclerview.animators.FlipInBottomXAnimator
 
 
 class SorulariGoruntuleActivity : AppCompatActivity() {
@@ -24,6 +27,7 @@ class SorulariGoruntuleActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySorulariGoruntuleBinding
     private var dogrulukListesi: List<DogrulukModel> = listOf()
     private var cesaretListesi: List<CesaretModel> = listOf()
+    private lateinit var mAdapter: SorularAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,25 +41,30 @@ class SorulariGoruntuleActivity : AppCompatActivity() {
 
         val longClick = { position: Int ->
 
-            val model = if(getBooleanIntent)dogrulukListesi[position]
+            val model = if (getBooleanIntent) dogrulukListesi[position]
             else cesaretListesi[position]
 
             val gecis = Intent(applicationContext, SoruDuzenleActivitiy::class.java)
             gecis.putExtra(DogrulukCesaret.DOGRULUK_CESARET.isim, getBooleanIntent)
             gecis.putExtra(DogrulukCesaret.SORU_MODELI.isim, model)
+            gecis.putExtra(DogrulukCesaret.SORUNUN_INDEXI.isim, position)
             startActivity(gecis)
 
         }
+
+        mAdapter =
+            SorularAdapter(dogrulukListesi, cesaretListesi, getBooleanIntent, longClick)
 
         binding.dogrulukMu = getBooleanIntent
         binding.dogrulukListesi = dogrulukListesi
         binding.cesaretListesi = cesaretListesi
         binding.onClickBinding = SorulariGoruntuleOnClickBinding(this)
-        binding.sorularRecycler.adapter =
-            SorularAdapter(dogrulukListesi, cesaretListesi, getBooleanIntent, longClick)
         binding.sorularRecycler.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         toolTip()
+        binding.sorularRecycler.adapter = ScaleInAnimationAdapter(mAdapter)
+        binding.sorularRecycler.itemAnimator = FlipInBottomXAnimator()
+
     }
 
     private fun toolTip() {
@@ -81,6 +90,20 @@ class SorulariGoruntuleActivity : AppCompatActivity() {
         }
 
 
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (OyunIslemleri.soruSilindiMi) {
+            mAdapter.deleteData()
+            OyunIslemleri.soruSilindiMi = false
+            OyunIslemleri.degisenSoruIndexi = 0
+        } else if (OyunIslemleri.soruGuncellendiMi) {
+            mAdapter.updateData()
+            OyunIslemleri.soruGuncellendiMi = false
+            OyunIslemleri.degisenSoruIndexi = 0
+            OyunIslemleri.guncellenenSoru = ""
+        }
     }
 
 }

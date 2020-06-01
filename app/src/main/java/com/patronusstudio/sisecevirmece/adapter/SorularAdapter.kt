@@ -8,6 +8,7 @@ import com.patronusstudio.sisecevirmece.R
 import com.patronusstudio.sisecevirmece.databinding.ItemviewSorulariGoruntuleBinding
 import com.patronusstudio.sisecevirmece.model.CesaretModel
 import com.patronusstudio.sisecevirmece.model.DogrulukModel
+import com.patronusstudio.sisecevirmece.util.OyunIslemleri
 
 class SorularAdapter(
     private val dogrulukSoruListesi: List<DogrulukModel>,
@@ -36,5 +37,35 @@ class SorularAdapter(
         else holder.setText(cesaretSoruListesi[position].soru)
         holder.onLongClick(position, longClick)
     }
+
+    fun deleteData() {
+        val index = OyunIslemleri.degisenSoruIndexi
+        if (dogrulukMu) (dogrulukSoruListesi as ArrayList).removeAt(index)
+        else (cesaretSoruListesi as ArrayList).removeAt(index)
+        val listSize =
+            if (dogrulukSoruListesi.size > cesaretSoruListesi.size) dogrulukSoruListesi.size
+            else cesaretSoruListesi.size
+
+        notifyItemRemoved(index)
+        notifyItemRangeChanged(index, listSize)
+
+    }
+
+    fun updateData() {
+        val getSoru = OyunIslemleri.guncellenenSoru
+        val index = OyunIslemleri.degisenSoruIndexi
+
+        if (dogrulukMu) {
+            val model = dogrulukSoruListesi[index]
+            model.soru = getSoru
+            (dogrulukSoruListesi as ArrayList)[index] = model
+        } else {
+            val model = cesaretSoruListesi[index]
+            model.soru = getSoru
+            (cesaretSoruListesi as ArrayList)[index] = model
+        }
+        notifyItemChanged(index)
+    }
+
 
 }
