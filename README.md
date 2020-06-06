@@ -13,7 +13,7 @@
 - Databinding kullanıldı.
 - Ui tasarımları AdobeXD de yapılmıştır.
 
-[![N|play_store](https://user-images.githubusercontent.com/25854605/67431801-b12bc200-f5ed-11e9-9475-4ad1202ec2f1.png)](https://play.google.com/store/apps/details?id=com.patronusstudio.kaydirkazan)
+[![N|play_store](https://user-images.githubusercontent.com/25854605/67431801-b12bc200-f5ed-11e9-9475-4ad1202ec2f1.png)](https://play.google.com/store/apps/details?id=com.patronusstudio.sisecevirmece)
 
 ## License
 ```
