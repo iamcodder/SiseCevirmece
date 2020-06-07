@@ -9,7 +9,6 @@ import com.patronusstudio.sisecevirmece.R
 import com.patronusstudio.sisecevirmece.databinding.ActivityHomeBinding
 import com.patronusstudio.sisecevirmece.enums.PlayStore
 import com.patronusstudio.sisecevirmece.util.extSayfaGecisi
-import com.patronusstudio.sisecevirmece.util.extStatusBarColor
 
 
 class HomeActivity : AppCompatActivity() {
@@ -20,7 +19,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_home)
 
-        this extStatusBarColor "#01A555"
+//        this extStatusBarColor "#000000ff"
 
         binding.imgBeer.setOnClickListener {
             this.extSayfaGecisi(SiseDondurmeActivity::class.java)

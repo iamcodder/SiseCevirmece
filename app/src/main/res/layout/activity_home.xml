@@ -9,6 +9,7 @@
         android:layout_height="match_parent"
         android:background="@drawable/floor"
         android:orientation="vertical"
+        android:fitsSystemWindows="true"
         tools:context=".ui.HomeActivity">
 
         <androidx.cardview.widget.CardView
