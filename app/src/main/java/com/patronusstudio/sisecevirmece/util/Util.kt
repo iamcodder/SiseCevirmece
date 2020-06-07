@@ -41,16 +41,16 @@ infix fun String.extLogMessage(message: String) {
 
 fun Float.extGetRandomNumber(): Float {
     val randomNumber: IntRange = when (this.toInt()) {
-        in ImageDegree.SIFIR.deger..ImageDegree.BIN.deger -> ImageDegree.BIN.deger..ImageDegree.IKIBIN.deger
-        in ImageDegree.BIN.deger..ImageDegree.IKIBIN.deger -> ImageDegree.IKIBIN.deger..ImageDegree.UCBIN.deger
-        in ImageDegree.IKIBIN.deger..ImageDegree.UCBIN.deger -> ImageDegree.UCBIN.deger..ImageDegree.DORTBIN.deger
-        in ImageDegree.UCBIN.deger..ImageDegree.DORTBIN.deger -> ImageDegree.DORTBIN.deger..ImageDegree.BESBIN.deger
-        in ImageDegree.DORTBIN.deger..ImageDegree.BESBIN.deger -> ImageDegree.BESBIN.deger..ImageDegree.ALTIBIN.deger
-        in ImageDegree.BESBIN.deger..ImageDegree.ALTIBIN.deger -> ImageDegree.ALTIBIN.deger..ImageDegree.YEDIBIN.deger
-        in ImageDegree.ALTIBIN.deger..ImageDegree.YEDIBIN.deger -> ImageDegree.YEDIBIN.deger..ImageDegree.SEKIZBIN.deger
-        in ImageDegree.YEDIBIN.deger..ImageDegree.SEKIZBIN.deger -> ImageDegree.SEKIZBIN.deger..ImageDegree.DOKUZBIN.deger
-        in ImageDegree.SEKIZBIN.deger..ImageDegree.DOKUZBIN.deger -> ImageDegree.DOKUZBIN.deger..ImageDegree.ONBIN.deger
-        in ImageDegree.DOKUZBIN.deger..ImageDegree.ONBIN.deger -> ImageDegree.SIFIR.deger..ImageDegree.BIN.deger
+        in ImageDegree.SIFIR.deger..ImageDegree.BIN.deger -> ImageDegree.DORTBIN.deger..ImageDegree.BESBIN.deger
+        in ImageDegree.BIN.deger..ImageDegree.IKIBIN.deger -> ImageDegree.BESBIN.deger..ImageDegree.ALTIBIN.deger
+        in ImageDegree.IKIBIN.deger..ImageDegree.UCBIN.deger -> ImageDegree.ALTIBIN.deger..ImageDegree.YEDIBIN.deger
+        in ImageDegree.UCBIN.deger..ImageDegree.DORTBIN.deger -> ImageDegree.YEDIBIN.deger..ImageDegree.SEKIZBIN.deger
+        in ImageDegree.DORTBIN.deger..ImageDegree.BESBIN.deger -> ImageDegree.SEKIZBIN.deger..ImageDegree.DOKUZBIN.deger
+        in ImageDegree.BESBIN.deger..ImageDegree.ALTIBIN.deger -> ImageDegree.DOKUZBIN.deger..ImageDegree.ONBIN.deger
+        in ImageDegree.ALTIBIN.deger..ImageDegree.YEDIBIN.deger -> ImageDegree.SIFIR.deger..ImageDegree.BIN.deger
+        in ImageDegree.YEDIBIN.deger..ImageDegree.SEKIZBIN.deger -> ImageDegree.BIN.deger..ImageDegree.IKIBIN.deger
+        in ImageDegree.SEKIZBIN.deger..ImageDegree.DOKUZBIN.deger -> ImageDegree.IKIBIN.deger..ImageDegree.UCBIN.deger
+        in ImageDegree.DOKUZBIN.deger..ImageDegree.ONBIN.deger -> ImageDegree.UCBIN.deger..ImageDegree.DORTBIN.deger
         else -> ImageDegree.SIFIR.deger..ImageDegree.ONBIN.deger
     }
     return (randomNumber.random()).toFloat()
