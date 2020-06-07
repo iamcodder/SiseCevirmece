@@ -14,7 +14,6 @@ import com.patronusstudio.sisecevirmece.model.CesaretModel
 import com.patronusstudio.sisecevirmece.model.DogrulukModel
 import com.patronusstudio.sisecevirmece.util.OyunIslemleri
 import com.patronusstudio.sisecevirmece.util.SharedVeriSaklama
-import com.patronusstudio.sisecevirmece.util.extStatusBarColor
 
 class SoruEkleActivity : AppCompatActivity() {
 
@@ -23,7 +22,6 @@ class SoruEkleActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_soru_ekle)
-        this extStatusBarColor "#01A555"
 
         val getBooleanIntent = intent.getBooleanExtra(DogrulukCesaret.DOGRULUK_CESARET.isim, false)
 
