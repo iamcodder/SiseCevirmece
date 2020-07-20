@@ -6,7 +6,7 @@
 
         <variable
             name="secondAyarlar"
-            type="com.patronusstudio.sisecevirmece.binding.SiseSecimiOnClickBinding" />
+            type="com.patronusstudio.sisecevirmece.binding.SiseSecimiOnBinding" />
 
     </data>
 

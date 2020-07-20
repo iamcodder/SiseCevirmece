@@ -41,6 +41,7 @@
     <string name="silmek_icin_uzun_bas">SİLMEK VEYA DÜZENLEMEK İÇİN UZUN BASIN</string>
     <string name="soru_kayit_basarili">Kayıt Başarılı</string>
     <string name="soru_kayit_hatali">Girilen soruyu kontrol ediniz.</string>
+    <string name="icecek_ismi">kola</string>
 
     <string-array name="cesaretListesi">
         <item>"Alfabeyi tersten oku."</item>
