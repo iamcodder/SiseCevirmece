@@ -4,6 +4,8 @@ import android.content.Context
 import android.content.Context.MODE_PRIVATE
 import com.patronusstudio.sisecevirmece.enums.SharedPref
 
+object SharedVeri
+
 class SharedVeriSaklama(private val mContext: Context) {
 
     private val sharedPreferences by lazy {
