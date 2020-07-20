@@ -3,7 +3,6 @@ package com.patronusstudio.sisecevirmece.binding
 import android.view.View
 import com.patronusstudio.sisecevirmece.util.OyunIslemleri
 import com.patronusstudio.sisecevirmece.util.SharedVeriSaklama
-import kotlinx.android.synthetic.main.card_ayarlar_sise_turu.view.*
 
 class SiseSecimiOnClickBinding(private val mainView: View) {
 
@@ -22,20 +21,20 @@ class SiseSecimiOnClickBinding(private val mainView: View) {
     }
 
     private fun setRadioButton(siseTuru: Int) {
-        when (siseTuru) {
-            1 -> {
-                mainView.radioGroup.radioCola.isChecked = true
-            }
-            2 -> {
-                mainView.radioGroup.radioWine.isChecked = true
-            }
-            3 -> {
-                mainView.radioGroup.radioWhisky.isChecked = true
-            }
-            4 -> {
-                mainView.radioGroup.radioBottle.isChecked = true
-            }
-        }
+//        when (siseTuru) {
+//            1 -> {
+//                mainView.radioGroup.radioCola.isChecked = true
+//            }
+//            2 -> {
+//                mainView.radioGroup.radioWine.isChecked = true
+//            }
+//            3 -> {
+//                mainView.radioGroup.radioWhisky.isChecked = true
+//            }
+//            4 -> {
+//                mainView.radioGroup.radioBottle.isChecked = true
+//            }
+//        }
     }
 
 

@@ -40,7 +40,7 @@ class SharedVeriSaklama(private val mContext: Context) {
 
     fun getSiseTuru(): Int = sharedPreferences.getInt(
         SharedPref.SISE_TURU.value,
-        1
+        0
     )
 
     fun getToolTip(): Boolean = sharedPreferences.getBoolean(

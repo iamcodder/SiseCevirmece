@@ -58,7 +58,7 @@ class OyunSifirlaActivity : AppCompatActivity() {
             true,
             soruEkleme.dogrulukListSize,
             soruEkleme.cesaretListSize,
-            4
+            0
         )
         OyunIslemleri.cesaretSize = sharedVeriSaklama.getCesaretListValue()
         OyunIslemleri.dogrulukSize = sharedVeriSaklama.getDogrulukListValue()

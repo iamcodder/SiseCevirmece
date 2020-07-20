@@ -37,7 +37,7 @@ class SplashScreenActivity : AppCompatActivity() {
                 true,
                 soruEkleme.dogrulukListSize,
                 soruEkleme.cesaretListSize,
-                4
+                0
             )
         }
 

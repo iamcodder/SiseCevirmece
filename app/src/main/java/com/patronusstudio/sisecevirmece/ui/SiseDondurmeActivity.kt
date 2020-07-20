@@ -42,10 +42,10 @@ class SiseDondurmeActivity : AppCompatActivity() {
 
         val resId =
             when (OyunIslemleri.siseTuru) {
-                1 -> R.drawable.cola
-                2 -> R.drawable.whisky
-                3 -> R.drawable.wine
-                4 -> R.drawable.beer
+                0 -> R.drawable.cola
+                1 -> R.drawable.whisky
+                2 -> R.drawable.wine
+                3 -> R.drawable.beer
                 else -> R.drawable.beer
             }
 
