@@ -9,7 +9,6 @@ import com.patronusstudio.sisecevirmece.databinding.CardAyarlarItemSiseTuruBindi
 
 class SiseSecimiAdapter(
     val imageList: List<Int>,
-    val isimListesi: List<String>,
     var secilenItem: MutableList<Boolean>,
     val siseSecimi: (Int) -> Unit
 ) : RecyclerView.Adapter<SiseSecimiViewHolder>() {
@@ -29,7 +28,6 @@ class SiseSecimiAdapter(
 
     override fun onBindViewHolder(holder: SiseSecimiViewHolder, position: Int) {
         holder.setImage(imageList[position])
-        holder.setRadioText(isimListesi[position])
         holder.setRadio(secilenItem[position])
         holder.onClick(position, siseSecimi)
     }

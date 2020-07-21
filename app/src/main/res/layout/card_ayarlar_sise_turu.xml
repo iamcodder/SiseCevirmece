@@ -53,7 +53,8 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/cardAyarlarRecyclerView"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="16dp" />
 
 
             </LinearLayout>

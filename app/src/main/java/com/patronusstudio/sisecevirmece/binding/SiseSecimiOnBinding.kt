@@ -10,6 +10,7 @@ import com.patronusstudio.sisecevirmece.util.SharedVeriSaklama
 import kotlinx.android.synthetic.main.activity_ayarlar.view.*
 import kotlinx.android.synthetic.main.card_ayarlar_sise_turu.view.*
 
+
 class SiseSecimiOnBinding(private val mainView: View) {
 
     private val sharedVeriSaklama by lazy {
@@ -34,16 +35,7 @@ class SiseSecimiOnBinding(private val mainView: View) {
                 SiseSecimiEnum.Sampanya.getSiseImage(),
                 SiseSecimiEnum.Cayci.getSiseImage()
             )
-        val isimListesi =
-            listOf(
-                SiseSecimiEnum.Gazoz.getSiseName(),
-                SiseSecimiEnum.Kola.getSiseName(),
-                SiseSecimiEnum.Sarap.getSiseName(),
-                SiseSecimiEnum.Bira.getSiseName(),
-                SiseSecimiEnum.EskiSarap.getSiseName(),
-                SiseSecimiEnum.Sampanya.getSiseName(),
-                SiseSecimiEnum.Cayci.getSiseName()
-            )
+
         val secilenItem = mutableListOf(false, false, false, false, false, false, false)
 
         var lastPosition = sharedVeriSaklama.getSiseTuru()
@@ -56,10 +48,15 @@ class SiseSecimiOnBinding(private val mainView: View) {
             kayit(islemTuru = lastPosition)
         }
 
-        adapter = SiseSecimiAdapter(resimListesi, isimListesi, secilenItem, tiklandi)
+        adapter = SiseSecimiAdapter(resimListesi, secilenItem, tiklandi)
+
+        val layoutManager = LinearLayoutManager(mainView.context, RecyclerView.HORIZONTAL, false)
+        layoutManager.isSmoothScrollbarEnabled = true
+
         mainView.includeUst.cardAyarlarRecyclerView.adapter = adapter
-        mainView.includeUst.cardAyarlarRecyclerView.layoutManager =
-            LinearLayoutManager(mainView.context, RecyclerView.HORIZONTAL, false)
+        mainView.includeUst.cardAyarlarRecyclerView.layoutManager = layoutManager
+        mainView.includeUst.cardAyarlarRecyclerView.scrollToPosition(lastPosition - 1)
+
     }
 
 
