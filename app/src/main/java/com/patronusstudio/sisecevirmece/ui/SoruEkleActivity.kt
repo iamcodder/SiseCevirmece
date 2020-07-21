@@ -9,7 +9,7 @@ import com.patronusstudio.sisecevirmece.R
 import com.patronusstudio.sisecevirmece.abstracts.CesaretDatabase
 import com.patronusstudio.sisecevirmece.abstracts.DogrulukDatabase
 import com.patronusstudio.sisecevirmece.databinding.ActivitySoruEkleBinding
-import com.patronusstudio.sisecevirmece.enums.DogrulukCesaret
+import com.patronusstudio.sisecevirmece.enums.DogrulukCesaretEnum
 import com.patronusstudio.sisecevirmece.model.CesaretModel
 import com.patronusstudio.sisecevirmece.model.DogrulukModel
 import com.patronusstudio.sisecevirmece.util.OyunIslemleri
@@ -23,7 +23,8 @@ class SoruEkleActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_soru_ekle)
 
-        val getBooleanIntent = intent.getBooleanExtra(DogrulukCesaret.DOGRULUK_CESARET.isim, false)
+        val getBooleanIntent =
+            intent.getBooleanExtra(DogrulukCesaretEnum.DOGRULUK_CESARET.isim, false)
 
         binding.butonSoruEkle.setOnClickListener {
             val girilenSoru = binding.edxGirilenSoru.text

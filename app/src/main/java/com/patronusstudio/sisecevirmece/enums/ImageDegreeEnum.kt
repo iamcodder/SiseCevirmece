@@ -1,6 +1,6 @@
 package com.patronusstudio.sisecevirmece.enums
 
-enum class ImageDegree(val deger: Int) {
+enum class ImageDegreeEnum(val deger: Int) {
     SIFIR(0),
     BIN(1000),
     IKIBIN(2000),

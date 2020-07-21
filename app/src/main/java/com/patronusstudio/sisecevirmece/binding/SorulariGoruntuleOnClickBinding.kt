@@ -5,7 +5,7 @@ import android.view.View
 import android.widget.Toast
 import com.patronusstudio.sisecevirmece.abstracts.CesaretDatabase
 import com.patronusstudio.sisecevirmece.abstracts.DogrulukDatabase
-import com.patronusstudio.sisecevirmece.enums.DogrulukCesaret
+import com.patronusstudio.sisecevirmece.enums.DogrulukCesaretEnum
 import com.patronusstudio.sisecevirmece.model.CesaretModel
 import com.patronusstudio.sisecevirmece.model.DogrulukModel
 import com.patronusstudio.sisecevirmece.ui.SoruEkleActivity
@@ -20,7 +20,7 @@ class SorulariGoruntuleOnClickBinding(private val mContext: Context) {
     ) {
         view.context.extSayfaGecisi(
             SoruEkleActivity::class.java,
-            DogrulukCesaret.DOGRULUK_CESARET.isim,
+            DogrulukCesaretEnum.DOGRULUK_CESARET.isim,
             dogrulukMu
         )
     }

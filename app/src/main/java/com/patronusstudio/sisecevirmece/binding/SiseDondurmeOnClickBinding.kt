@@ -4,7 +4,7 @@ import android.view.View
 import android.view.animation.Animation
 import android.view.animation.RotateAnimation
 import android.widget.ImageView
-import com.patronusstudio.sisecevirmece.enums.ImageDegree
+import com.patronusstudio.sisecevirmece.enums.ImageDegreeEnum
 import com.patronusstudio.sisecevirmece.util.CustomTimer
 import com.patronusstudio.sisecevirmece.util.extGetRandomNumber
 
@@ -41,7 +41,7 @@ class SiseDondurmeOnClickBinding {
                 pivotY
             )
                 .apply {
-                    this.duration = ImageDegree.BESBIN.deger.toLong()
+                    this.duration = ImageDegreeEnum.BESBIN.deger.toLong()
                     this.fillAfter = true
                 }
 

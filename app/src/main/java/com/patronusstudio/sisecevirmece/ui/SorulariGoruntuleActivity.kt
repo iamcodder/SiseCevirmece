@@ -13,7 +13,7 @@ import com.patronusstudio.sisecevirmece.abstracts.DogrulukDatabase
 import com.patronusstudio.sisecevirmece.adapter.SorularAdapter
 import com.patronusstudio.sisecevirmece.binding.SorulariGoruntuleOnClickBinding
 import com.patronusstudio.sisecevirmece.databinding.ActivitySorulariGoruntuleBinding
-import com.patronusstudio.sisecevirmece.enums.DogrulukCesaret
+import com.patronusstudio.sisecevirmece.enums.DogrulukCesaretEnum
 import com.patronusstudio.sisecevirmece.model.CesaretModel
 import com.patronusstudio.sisecevirmece.model.DogrulukModel
 import com.patronusstudio.sisecevirmece.util.OyunIslemleri
@@ -34,7 +34,7 @@ class SorulariGoruntuleActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_sorulari_goruntule)
 
-        getBooleanIntent = intent.getBooleanExtra(DogrulukCesaret.DOGRULUK_CESARET.isim, false)
+        getBooleanIntent = intent.getBooleanExtra(DogrulukCesaretEnum.DOGRULUK_CESARET.isim, false)
 
         if (getBooleanIntent)
             dogrulukListesi = DogrulukDatabase.getDatabaseManager(this).dogrulukDao().getAllModel()
@@ -46,9 +46,9 @@ class SorulariGoruntuleActivity : AppCompatActivity() {
             else cesaretListesi[position]
 
             val gecis = Intent(applicationContext, SoruDuzenleActivitiy::class.java)
-            gecis.putExtra(DogrulukCesaret.DOGRULUK_CESARET.isim, getBooleanIntent)
-            gecis.putExtra(DogrulukCesaret.SORU_MODELI.isim, model)
-            gecis.putExtra(DogrulukCesaret.SORUNUN_INDEXI.isim, position)
+            gecis.putExtra(DogrulukCesaretEnum.DOGRULUK_CESARET.isim, getBooleanIntent)
+            gecis.putExtra(DogrulukCesaretEnum.SORU_MODELI.isim, model)
+            gecis.putExtra(DogrulukCesaretEnum.SORUNUN_INDEXI.isim, position)
             startActivity(gecis)
 
         }

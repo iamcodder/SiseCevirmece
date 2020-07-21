@@ -9,6 +9,7 @@ import com.google.android.gms.ads.MobileAds
 import com.patronusstudio.sisecevirmece.R
 import com.patronusstudio.sisecevirmece.binding.SiseDondurmeOnClickBinding
 import com.patronusstudio.sisecevirmece.databinding.ActivitySiseDondurmeBinding
+import com.patronusstudio.sisecevirmece.enums.SiseSecimiEnum
 import com.patronusstudio.sisecevirmece.util.CustomTimer
 import com.patronusstudio.sisecevirmece.util.OyunIslemleri
 import com.patronusstudio.sisecevirmece.util.extSayfaGecisi
@@ -42,11 +43,14 @@ class SiseDondurmeActivity : AppCompatActivity() {
 
         val resId =
             when (OyunIslemleri.siseTuru) {
-                0 -> R.drawable.cola
-                1 -> R.drawable.whisky
-                2 -> R.drawable.wine
-                3 -> R.drawable.beer
-                else -> R.drawable.beer
+                SiseSecimiEnum.Gazoz.getSiseId() -> SiseSecimiEnum.Gazoz.getSiseImage()
+                SiseSecimiEnum.Kola.getSiseId() -> SiseSecimiEnum.Kola.getSiseImage()
+                SiseSecimiEnum.Bira.getSiseId() -> SiseSecimiEnum.Bira.getSiseImage()
+                SiseSecimiEnum.Sarap.getSiseId() -> SiseSecimiEnum.Sarap.getSiseImage()
+                SiseSecimiEnum.EskiSarap.getSiseId() -> SiseSecimiEnum.EskiSarap.getSiseImage()
+                SiseSecimiEnum.Sampanya.getSiseId() -> SiseSecimiEnum.Sampanya.getSiseImage()
+                SiseSecimiEnum.Cayci.getSiseId() -> SiseSecimiEnum.Cayci.getSiseImage()
+                else -> SiseSecimiEnum.Gazoz.getSiseImage()
             }
 
         Glide

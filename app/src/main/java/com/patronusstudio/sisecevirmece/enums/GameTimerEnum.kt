@@ -1,6 +1,6 @@
 package com.patronusstudio.sisecevirmece.enums
 
-enum class GameTimer {
+enum class GameTimerEnum {
     ONE_SECOND {
         override fun getTimer(): Long = 1000L
     },

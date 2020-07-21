@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.patronusstudio.sisecevirmece.R
 import com.patronusstudio.sisecevirmece.databinding.ActivitySecimEkraniBinding
-import com.patronusstudio.sisecevirmece.enums.DogrulukCesaret
+import com.patronusstudio.sisecevirmece.enums.DogrulukCesaretEnum
 import com.patronusstudio.sisecevirmece.util.extSayfaGecisi
 import com.patronusstudio.sisecevirmece.util.extStatusBarColor
 import kotlinx.android.synthetic.main.activity_secim_ekrani.view.*
@@ -19,8 +19,8 @@ class SecimEkraniActivity : AppCompatActivity() {
 
         this extStatusBarColor "#00000000"
 
-        binding.cesaret = DogrulukCesaret.CESARET.isim
-        binding.dogruluk = DogrulukCesaret.DOGRULUK.isim
+        binding.cesaret = DogrulukCesaretEnum.CESARET.isim
+        binding.dogruluk = DogrulukCesaretEnum.DOGRULUK.isim
 
 
         binding.cardviewGroup.imgCesaret.setOnClickListener {
@@ -31,7 +31,7 @@ class SecimEkraniActivity : AppCompatActivity() {
         binding.cardviewGroup.imgDogruluk.setOnClickListener {
             it.context.extSayfaGecisi(
                 SoruActivity::class.java,
-                DogrulukCesaret.DOGRULUK_CESARET.isim,
+                DogrulukCesaretEnum.DOGRULUK_CESARET.isim,
                 true
             )
             finish()

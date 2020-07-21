@@ -1,6 +1,6 @@
 package com.patronusstudio.sisecevirmece.enums
 
-enum class SharedPref(val value: String) {
+enum class SharedPrefEnum(val value: String) {
 
     FILE_PATH("com.patronusstudio.prefs"),
     SISE_TURU("siseTuru"),

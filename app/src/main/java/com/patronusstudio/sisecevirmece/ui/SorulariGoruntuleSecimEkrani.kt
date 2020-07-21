@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.patronusstudio.sisecevirmece.R
 import com.patronusstudio.sisecevirmece.databinding.ActivitySorulariGoruntuleSecimEkraniBinding
-import com.patronusstudio.sisecevirmece.enums.DogrulukCesaret
+import com.patronusstudio.sisecevirmece.enums.DogrulukCesaretEnum
 import com.patronusstudio.sisecevirmece.util.extSayfaGecisi
 import com.patronusstudio.sisecevirmece.util.extStatusBarColor
 
@@ -31,7 +31,7 @@ class SorulariGoruntuleSecimEkrani : AppCompatActivity() {
         binding.imgDogruluk.setOnClickListener {
             this.extSayfaGecisi(
                 SorulariGoruntuleActivity::class.java,
-                DogrulukCesaret.DOGRULUK_CESARET.isim,
+                DogrulukCesaretEnum.DOGRULUK_CESARET.isim,
                 true
             )
             finishActivity()

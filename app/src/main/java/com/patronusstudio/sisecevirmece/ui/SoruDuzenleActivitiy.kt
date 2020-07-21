@@ -7,7 +7,7 @@ import androidx.databinding.DataBindingUtil
 import com.patronusstudio.sisecevirmece.R
 import com.patronusstudio.sisecevirmece.binding.SoruDuzenleOnClickBinding
 import com.patronusstudio.sisecevirmece.databinding.ActivitySoruDuzenleBinding
-import com.patronusstudio.sisecevirmece.enums.DogrulukCesaret
+import com.patronusstudio.sisecevirmece.enums.DogrulukCesaretEnum
 import com.patronusstudio.sisecevirmece.model.CesaretModel
 import com.patronusstudio.sisecevirmece.model.DogrulukModel
 
@@ -25,11 +25,11 @@ class SoruDuzenleActivitiy : AppCompatActivity() {
                 finish()
             }
         }
-        val soruIndexi = intent.getIntExtra(DogrulukCesaret.SORUNUN_INDEXI.isim, 0)
-        val getBoolean = intent.getBooleanExtra(DogrulukCesaret.DOGRULUK_CESARET.isim, false)
+        val soruIndexi = intent.getIntExtra(DogrulukCesaretEnum.SORUNUN_INDEXI.isim, 0)
+        val getBoolean = intent.getBooleanExtra(DogrulukCesaretEnum.DOGRULUK_CESARET.isim, false)
         val getModel = if (getBoolean)
-            intent.getParcelableExtra(DogrulukCesaret.SORU_MODELI.isim) as DogrulukModel
-        else intent.getParcelableExtra(DogrulukCesaret.SORU_MODELI.isim) as CesaretModel
+            intent.getParcelableExtra(DogrulukCesaretEnum.SORU_MODELI.isim) as DogrulukModel
+        else intent.getParcelableExtra(DogrulukCesaretEnum.SORU_MODELI.isim) as CesaretModel
 
         binding.soruDuzenleOnClick =
             SoruDuzenleOnClickBinding(this, soruIndexi, getBoolean, getModel, activitySonlandir)

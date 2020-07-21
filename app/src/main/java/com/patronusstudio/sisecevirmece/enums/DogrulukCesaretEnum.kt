@@ -1,6 +1,6 @@
 package com.patronusstudio.sisecevirmece.enums
 
-enum class DogrulukCesaret(val isim: String) {
+enum class DogrulukCesaretEnum(val isim: String) {
     DOGRULUK("Doğruluk"),
     CESARET("Cesaret"),
     DOGRULUK_CESARET("DOGRULUK_CESARET"),

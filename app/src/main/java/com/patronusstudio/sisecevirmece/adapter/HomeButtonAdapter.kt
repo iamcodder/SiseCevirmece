@@ -9,7 +9,7 @@ import com.patronusstudio.sisecevirmece.databinding.ActivityHomeItemButtonBindin
 import com.patronusstudio.sisecevirmece.model.HomeButonModel
 
 class HomeButtonAdapter(
-    val modelList: List<HomeButonModel>,
+    val modelList: ArrayList<HomeButonModel>,
     val clickedButton: (position: Int) -> Unit
 ) : RecyclerView.Adapter<HomeButonViewHolder>() {
 
@@ -28,5 +28,10 @@ class HomeButtonAdapter(
         holder.setIcon(modelList[position].butonIconu)
         holder.setCardBdColor(modelList[position].butonBdColor)
         holder.onClickItem(position, clickedButton)
+    }
+
+    fun updateButonIcon(imageId: Int) {
+        modelList[0].butonIconu = imageId
+        this.notifyItemChanged(0)
     }
 }

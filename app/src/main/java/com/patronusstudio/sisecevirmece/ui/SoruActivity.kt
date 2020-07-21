@@ -9,7 +9,7 @@ import com.patronusstudio.sisecevirmece.R
 import com.patronusstudio.sisecevirmece.abstracts.CesaretDatabase
 import com.patronusstudio.sisecevirmece.abstracts.DogrulukDatabase
 import com.patronusstudio.sisecevirmece.databinding.ActivitySoruBinding
-import com.patronusstudio.sisecevirmece.enums.DogrulukCesaret
+import com.patronusstudio.sisecevirmece.enums.DogrulukCesaretEnum
 import com.patronusstudio.sisecevirmece.util.OyunIslemleri
 import com.patronusstudio.sisecevirmece.util.SharedVeriSaklama
 import com.patronusstudio.sisecevirmece.util.extStatusBarColor
@@ -38,7 +38,7 @@ class SoruActivity : AppCompatActivity() {
 
         this extStatusBarColor "#00000000"
 
-        getBooleanIntent = intent.getBooleanExtra(DogrulukCesaret.DOGRULUK_CESARET.isim, false)
+        getBooleanIntent = intent.getBooleanExtra(DogrulukCesaretEnum.DOGRULUK_CESARET.isim, false)
 
 
         soruSayisiKontrol(getBooleanIntent)
