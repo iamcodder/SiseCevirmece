@@ -2,18 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-    <FrameLayout
+    <TextView
+        android:id="@+id/itemview_soru"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/itemview_soru"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:gravity="center"
-            android:textColor="@color/sorularTextColor"
-            android:textSize="20sp" />
-
-    </FrameLayout>
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:textColor="@color/sorularTextColor"
+        android:textSize="20sp" />
 </layout>

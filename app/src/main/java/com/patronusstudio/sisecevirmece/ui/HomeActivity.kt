@@ -32,7 +32,7 @@ class HomeActivity : AppCompatActivity() {
                 0 -> this.extSayfaGecisi(SiseDondurmeActivity::class.java)
                 1 -> this.extSayfaGecisi(SorulariGoruntuleSecimEkrani::class.java)
                 2 -> this.extSayfaGecisi(AyarlarActivity::class.java)
-//                3 -> feedback sayfası eklenecek
+                3 -> this.extSayfaGecisi(FeedbackActivity::class.java)
                 4 -> {
                     intent = Intent(Intent.ACTION_VIEW, Uri.parse(PlayStoreEnum.PAKET_ISMI.isim))
                     startActivity(intent)

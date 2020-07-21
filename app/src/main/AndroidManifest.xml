@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.patronusstudio.sisecevirmece">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:fullBackupContent="true"
@@ -10,6 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.FeedbackActivity"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-1818679104699845~9597315196" />
@@ -17,7 +23,6 @@
         <activity
             android:name=".ui.OyunSifirlaActivity"
             android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
-
         <activity
             android:name=".ui.SoruDuzenleActivitiy"
             android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />

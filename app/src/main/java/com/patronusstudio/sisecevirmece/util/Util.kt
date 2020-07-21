@@ -10,6 +10,7 @@ import android.view.Window
 import android.view.WindowManager
 import android.widget.Toast
 import com.patronusstudio.sisecevirmece.enums.ImageDegreeEnum
+import java.util.regex.Pattern
 
 
 /**     Code with ❤
@@ -68,5 +69,12 @@ infix fun Activity.extStatusBarColor(color: String) {
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
         window.statusBarColor = Color.parseColor(color)
     }
+}
+
+fun String.isEmailValid(): Boolean {
+    val expression = "^[\\w.-]+@([\\w\\-]+\\.)+[A-Z]{2,8}$"
+    val pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE)
+    val matcher = pattern.matcher(this)
+    return matcher.matches()
 }
 

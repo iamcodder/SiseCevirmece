@@ -7,7 +7,7 @@ import com.patronusstudio.sisecevirmece.abstracts.DogrulukDatabase
 import com.patronusstudio.sisecevirmece.model.CesaretModel
 import com.patronusstudio.sisecevirmece.model.DogrulukModel
 import com.patronusstudio.sisecevirmece.util.OyunIslemleri
-import kotlinx.android.synthetic.main.activity_soru_ekle.view.*
+import kotlinx.android.synthetic.main.activity_soru_duzenle.view.*
 
 class SoruDuzenleOnClickBinding<Model>(
     private val mContext: Context,

@@ -58,8 +58,8 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_margin="16dp"
-                    app:cardBackgroundColor="#AEFFFFFF"
                     app:cardCornerRadius="16dp"
+                    app:cardBackgroundColor="#AEFFFFFF"
                     app:layout_constraintBottom_toTopOf="@+id/cardSoruEkleButton"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -70,7 +70,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="16dp" />
-
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView

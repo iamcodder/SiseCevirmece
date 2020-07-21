@@ -40,10 +40,11 @@
                     android:id="@+id/imgDogruluk"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:contentDescription="@string/dogruluk"
                     android:src="@drawable/dogruluk"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgCesaret"
                     app:layout_constraintEnd_toStartOf="@+id/imgCesaret"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:contentDescription="@string/dogruluk"
                     app:layout_constraintTop_toTopOf="@+id/imgCesaret" />
 
                 <ImageView
