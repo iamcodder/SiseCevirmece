@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".ui.FeedbackLoadingActivity"
+            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
+        <activity
             android:name=".ui.FeedbackActivity"
             android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" />
 

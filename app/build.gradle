@@ -61,6 +61,8 @@ android {
         implementation 'com.github.bumptech.glide:glide:4.11.0'
         annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 
+        implementation "com.airbnb.android:lottie:3.4.1"
+
         implementation "com.github.sam43:AnimateViewLibrary:1.0.1"
         implementation 'com.google.android.gms:play-services-ads:19.2.0'
         implementation 'com.android.support:multidex:1.0.3'
@@ -69,4 +71,3 @@ android {
 
     }
 }
-

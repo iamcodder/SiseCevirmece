@@ -43,6 +43,9 @@
     <string name="soru_kayit_hatali">Girilen soruyu kontrol ediniz.</string>
     <string name="icecek_ismi">kola</string>
     <string name="feedback">Feedback</string>
+    <string name="email">Email</string>
+    <string name="gorus_oneri_sorun">Görüş/Öneri/Sorun</string>
+    <string name="gonder">Gönder</string>
 
     <string-array name="cesaretListesi">
         <item>"Alfabeyi tersten oku."</item>
