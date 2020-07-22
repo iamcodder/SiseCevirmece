@@ -54,8 +54,6 @@ class FeedbackActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == IntentResultKeyEnum.REQUEST_CODE.getResultKey() && resultCode == IntentResultKeyEnum.SUCCES.getResultKey()) {
             finish()
-        } else {
-            this.extToastMessage("Bir hata oluştu.Tekrar deneyiniz")
         }
     }
 }

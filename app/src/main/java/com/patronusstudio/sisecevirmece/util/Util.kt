@@ -4,6 +4,8 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
 import android.os.Build
 import android.util.Log
 import android.view.Window
@@ -77,4 +79,11 @@ fun String.isEmailValid(): Boolean {
     val matcher = pattern.matcher(this)
     return matcher.matches()
 }
+
+fun isInternetConnection(mContext: Context): Boolean {
+    val connMgr = mContext.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+    val networkInfo: NetworkInfo? = connMgr.activeNetworkInfo
+    return networkInfo?.isConnected == true
+}
+
 

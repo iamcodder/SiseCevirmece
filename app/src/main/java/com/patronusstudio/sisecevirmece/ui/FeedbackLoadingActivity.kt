@@ -13,12 +13,15 @@ import com.patronusstudio.sisecevirmece.enums.IntentKeyEnum
 import com.patronusstudio.sisecevirmece.enums.IntentResultKeyEnum
 import com.patronusstudio.sisecevirmece.model.FeedbackModel
 import com.patronusstudio.sisecevirmece.network.FirebaseDb
+import com.patronusstudio.sisecevirmece.util.extToastMessage
+import com.patronusstudio.sisecevirmece.util.isInternetConnection
 
 
 class FeedbackLoadingActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityFeedbackLoadingBinding
-    private var resultCode: Int = 0
+    private var resultCode: Int = IntentResultKeyEnum.FAILURE.getResultKey()
+    private val animCountSize = 0
 
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,16 +33,26 @@ class FeedbackLoadingActivity : AppCompatActivity() {
         lottieSet(R.raw.uploading)
 
         val firebaseResult = { isSucces: Boolean ->
+            binding.lottieAnimation.repeatCount = animCountSize
             val rawRes = if (isSucces) R.raw.succes else R.raw.error
             resultCode =
                 if (isSucces) IntentResultKeyEnum.SUCCES.getResultKey() else IntentResultKeyEnum.FAILURE.getResultKey()
+
+            val message = if (isSucces) "Tebrikler iletiniz gönderildi" else "Bir hata oluştu"
+            this.extToastMessage(message)
 
             lottieSet(rawRes)
             animationListener()
         }
 
         val firebaseDb = FirebaseDb(firebaseResult)
-        firebaseDb.addFeedback(feedbackModel)
+        if (isInternetConnection(this.applicationContext)) firebaseDb.addFeedback(feedbackModel)
+        else {
+            this.extToastMessage("İnternet bağlantınızı kontrol edin")
+            binding.lottieAnimation.repeatCount = animCountSize
+            lottieSet(R.raw.error)
+            animationListener()
+        }
 
     }
 
