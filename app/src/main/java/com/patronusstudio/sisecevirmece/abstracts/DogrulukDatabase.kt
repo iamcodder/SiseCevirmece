@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.patronusstudio.sisecevirmece.enums.DatabaseNameEnum
 import com.patronusstudio.sisecevirmece.interfaces.DogrulukDao
 import com.patronusstudio.sisecevirmece.model.DogrulukModel
 
@@ -21,7 +22,7 @@ abstract class DogrulukDatabase : RoomDatabase() {
                 dogrulukDb = Room.databaseBuilder(
                     mContext,
                     DogrulukDatabase::class.java,
-                    "Dogruluk.db"
+                    DatabaseNameEnum.DOGRULUK_DB.getDatabaseName()
                 )
                     .allowMainThreadQueries()
                     .build()

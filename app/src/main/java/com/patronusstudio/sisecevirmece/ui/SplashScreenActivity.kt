@@ -9,12 +9,19 @@ import com.app.lets_go_splash.OnAnimationListener
 import com.app.lets_go_splash.StarterAnimation
 import com.patronusstudio.sisecevirmece.R
 import com.patronusstudio.sisecevirmece.abstracts.CesaretDatabase
+import com.patronusstudio.sisecevirmece.abstracts.CesaretEklendiDatabase
 import com.patronusstudio.sisecevirmece.abstracts.DogrulukDatabase
+import com.patronusstudio.sisecevirmece.abstracts.DogrulukEklendiDatabase
+import com.patronusstudio.sisecevirmece.network.FirebaseDb
 import com.patronusstudio.sisecevirmece.util.*
 import kotlinx.android.synthetic.main.activity_splash_screen.*
 
 
 class SplashScreenActivity : AppCompatActivity() {
+
+    val sharedVeriSaklama by lazy {
+        SharedVeriSaklama(this)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,7 +29,6 @@ class SplashScreenActivity : AppCompatActivity() {
 
         this extStatusBarColor "#00000000"
 
-        val sharedVeriSaklama = SharedVeriSaklama(this)
         val isWrited = sharedVeriSaklama.isSharedPrefCreated()
 
         if (!isWrited) {
@@ -43,14 +49,56 @@ class SplashScreenActivity : AppCompatActivity() {
 
         OyunIslemleri.cesaretSize = sharedVeriSaklama.getCesaretListValue()
         OyunIslemleri.dogrulukSize = sharedVeriSaklama.getDogrulukListValue()
+        OyunIslemleri.dogrulukEklenenLastValue = sharedVeriSaklama.getDogrulukEklenenLastValue()
+        OyunIslemleri.cesaretEklenenLastValue = sharedVeriSaklama.getCesaretEklenenLastValue()
 
-        OyunIslemleri.cesaretLastValue = sharedVeriSaklama.getCesaretLastValue()
-        OyunIslemleri.dogrulukLastValue = sharedVeriSaklama.getDogrulukLastValue()
+        OyunIslemleri.cesaretLastValue = sharedVeriSaklama.getCesaretSize()
+        OyunIslemleri.dogrulukLastValue = sharedVeriSaklama.getDogrulukSize()
+        OyunIslemleri.cesaretEklenenSize = sharedVeriSaklama.getCesaretEklenenSize()
+        OyunIslemleri.dogrulukEklenenSize = sharedVeriSaklama.getDogrulukEklenenSize()
 
         OyunIslemleri.siseTuru = sharedVeriSaklama.getSiseTuru()
 
+        val internetConnection = isInternetConnection(this)
+        if (internetConnection) writeDb()
         startAnim()
 
+    }
+
+    private fun writeDb() {
+        val cesaretEklendiDatabase = CesaretEklendiDatabase.getDatabaseManager(this)
+        val dogrulukEklendiDatabase = DogrulukEklendiDatabase.getDatabaseManager(this)
+
+        val firebaseDb = FirebaseDb {
+            if (!it) startAnim()
+        }
+        val dogrulugaEklenenSoruBoyutu =
+            dogrulukEklendiDatabase.dogrulukEklenenDao().getAllModel().size
+        val cesareteEklenenSoruBoyutu =
+            cesaretEklendiDatabase.cesareEklenentDao().getAllModel().size
+
+        if (dogrulugaEklenenSoruBoyutu > 0) {
+            for (i in OyunIslemleri.dogrulukEklenenLastValue..OyunIslemleri.dogrulukEklenenSize) {
+                val model = dogrulukEklendiDatabase.dogrulukEklenenDao().getModel(i)
+                model?.soru?.let {
+                    firebaseDb.addSoru(true, it)
+                }
+            }
+
+            dogrulukEklendiDatabase.dogrulukEklenenDao().deleteAllModel()
+            sharedVeriSaklama.updateCesaretEklenenLastValue(OyunIslemleri.dogrulukEklenenSize)
+        }
+
+        if (cesareteEklenenSoruBoyutu > 0) {
+            for (i in OyunIslemleri.cesaretEklenenLastValue..OyunIslemleri.cesaretEklenenSize) {
+                val model = cesaretEklendiDatabase.cesareEklenentDao().getModel(i)
+                model?.soru?.let {
+                    firebaseDb.addSoru(false, it)
+                }
+            }
+            cesaretEklendiDatabase.cesareEklenentDao().deleteAllModel()
+            sharedVeriSaklama.updateCesaretEklenenLastValue(OyunIslemleri.cesaretEklenenSize)
+        }
 
     }
 

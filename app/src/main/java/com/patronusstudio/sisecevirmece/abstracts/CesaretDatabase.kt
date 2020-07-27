@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.patronusstudio.sisecevirmece.enums.DatabaseNameEnum
 import com.patronusstudio.sisecevirmece.interfaces.CesaretDao
 import com.patronusstudio.sisecevirmece.model.CesaretModel
 
@@ -21,7 +22,7 @@ abstract class CesaretDatabase : RoomDatabase() {
                 cesaretDb = Room.databaseBuilder(
                     mContext,
                     CesaretDatabase::class.java,
-                    "Cesaret.db"
+                    DatabaseNameEnum.CESARET_DB.getDatabaseName()
                 )
                     .allowMainThreadQueries()
                     .build()

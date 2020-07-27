@@ -63,8 +63,8 @@ class OyunSifirlaActivity : AppCompatActivity() {
         OyunIslemleri.cesaretSize = sharedVeriSaklama.getCesaretListValue()
         OyunIslemleri.dogrulukSize = sharedVeriSaklama.getDogrulukListValue()
 
-        OyunIslemleri.cesaretLastValue = sharedVeriSaklama.getCesaretLastValue()
-        OyunIslemleri.dogrulukLastValue = sharedVeriSaklama.getDogrulukLastValue()
+        OyunIslemleri.cesaretLastValue = sharedVeriSaklama.getCesaretSize()
+        OyunIslemleri.dogrulukLastValue = sharedVeriSaklama.getDogrulukSize()
 
         OyunIslemleri.siseTuru = sharedVeriSaklama.getSiseTuru()
     }

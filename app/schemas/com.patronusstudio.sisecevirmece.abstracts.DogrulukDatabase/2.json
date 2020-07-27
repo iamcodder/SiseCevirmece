@@ -1,0 +1,46 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "d92a73cbe6bbcfd0f4b19956e18a952f",
+    "entities": [
+      {
+        "tableName": "DogrulukTablosu",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`soruId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `soru` TEXT NOT NULL, `sorulduMu` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "soruId",
+            "columnName": "soruId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "soru",
+            "columnName": "soru",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sorulduMu",
+            "columnName": "sorulduMu",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "soruId"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'd92a73cbe6bbcfd0f4b19956e18a952f')"
+    ]
+  }
+}

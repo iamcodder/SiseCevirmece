@@ -8,8 +8,11 @@ enum class FirebasePathEnum {
     SORU_EKLEME {
         override fun getPathName(): String = "SoruEkleme"
     },
-    SORU {
-        override fun getPathName(): String = "Soru"
+    CESARET {
+        override fun getPathName(): String = "Cesaret"
+    },
+    DOGRULUK {
+        override fun getPathName(): String = "Dogruluk"
     };
 
     abstract fun getPathName(): String
