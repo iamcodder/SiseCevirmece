@@ -12,6 +12,7 @@ import android.view.Window
 import android.view.WindowManager
 import android.widget.Toast
 import com.patronusstudio.sisecevirmece.enums.ImageDegreeEnum
+import java.util.*
 import java.util.regex.Pattern
 
 
@@ -85,5 +86,7 @@ fun isInternetConnection(mContext: Context): Boolean {
     val networkInfo: NetworkInfo? = connMgr.activeNetworkInfo
     return networkInfo?.isConnected == true
 }
+
+fun getRandomUUID(): UUID = UUID.randomUUID()
 
 

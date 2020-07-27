@@ -1,8 +1,9 @@
 package com.patronusstudio.sisecevirmece.network
 
 import com.google.firebase.database.FirebaseDatabase
+import com.patronusstudio.sisecevirmece.enums.FirebasePathEnum
 import com.patronusstudio.sisecevirmece.model.FeedbackModel
-import java.util.*
+import com.patronusstudio.sisecevirmece.util.getRandomUUID
 
 
 class FirebaseDb(
@@ -11,9 +12,8 @@ class FirebaseDb(
     private var mDatabase: FirebaseDatabase = FirebaseDatabase.getInstance()
 
     fun addFeedback(model: FeedbackModel) {
-        val uid = UUID.randomUUID()
-        val databaseReference = mDatabase.getReference("feedback")
-        databaseReference.child("" + uid).setValue(model)
+        val databaseReference = mDatabase.getReference(FirebasePathEnum.FEEDBACK.getPathName())
+        databaseReference.child("" + getRandomUUID()).setValue(model)
             .addOnSuccessListener {
                 firebaseCallBack(true)
             }
