@@ -57,7 +57,10 @@ class SoruActivity : AppCompatActivity() {
         binding.altCard.soru_benSoracagim.setOnClickListener {
             finish()
         }
+        requestAds()
+    }
 
+    private fun requestAds() {
         MobileAds.initialize(this) {}
         val adRequest = AdRequest.Builder().build()
         binding.adView.loadAd(adRequest)

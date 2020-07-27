@@ -11,7 +11,10 @@ import kotlinx.android.synthetic.main.activity_ayarlar.view.*
 import kotlinx.android.synthetic.main.card_ayarlar_sise_turu.view.*
 
 
-class SiseSecimiOnBinding(private val mainView: View) {
+class SiseSecimiOnBinding(
+    private val mainView: View,
+    val tiklandi: (tiklandiMi: Boolean) -> Unit
+) {
 
     private val sharedVeriSaklama by lazy {
         SharedVeriSaklama(mainView.context)
@@ -46,6 +49,7 @@ class SiseSecimiOnBinding(private val mainView: View) {
             adapter.updateData(lastPosition, currentPosition)
             lastPosition = currentPosition
             kayit(islemTuru = lastPosition)
+            tiklandi(true)
         }
 
         adapter = SiseSecimiAdapter(resimListesi, secilenItem, tiklandi)

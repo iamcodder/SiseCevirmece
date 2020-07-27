@@ -100,6 +100,7 @@ class SplashScreenActivity : AppCompatActivity() {
             sharedVeriSaklama.updateCesaretEklenenLastValue(OyunIslemleri.cesaretEklenenSize)
         }
 
+
     }
 
     private fun startAnim() {

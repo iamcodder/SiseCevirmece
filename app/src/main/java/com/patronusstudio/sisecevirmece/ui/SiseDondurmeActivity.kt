@@ -33,10 +33,13 @@ class SiseDondurmeActivity : AppCompatActivity() {
         binding.sise = SiseDondurmeOnClickBinding()
         binding.customTimer = customTimer
 
+        requestAds()
+    }
+
+    private fun requestAds() {
         MobileAds.initialize(this) {}
         val adRequest = AdRequest.Builder().build()
         binding.adView.loadAd(adRequest)
-
     }
 
     private fun imgKontrol() {
@@ -62,6 +65,7 @@ class SiseDondurmeActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         binding.siseDonen.isEnabled = true
+        requestAds()
     }
 
     override fun onBackPressed() {
