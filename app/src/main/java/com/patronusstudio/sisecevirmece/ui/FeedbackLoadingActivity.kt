@@ -28,8 +28,8 @@ class FeedbackLoadingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_feedback_loading)
 
-        val feedbackModel: FeedbackModel =
-            intent.getParcelableExtra(IntentKeyEnum.FEEDBACKMODEL.getModelName())!!
+        val feedbackModel: FeedbackModel? =
+            intent.getParcelableExtra(IntentKeyEnum.FEEDBACKMODEL.getModelName())
         lottieSet(R.raw.uploading)
 
         val firebaseResult = { isSucces: Boolean ->
@@ -46,7 +46,9 @@ class FeedbackLoadingActivity : AppCompatActivity() {
         }
 
         val firebaseDb = FirebaseDb(firebaseResult)
-        if (isInternetConnection(this.applicationContext)) firebaseDb.addFeedback(feedbackModel)
+        if (isInternetConnection(this.applicationContext) && feedbackModel != null) firebaseDb.addFeedback(
+            feedbackModel
+        )
         else {
             this.extToastMessage("İnternet bağlantınızı kontrol edin")
             binding.lottieAnimation.repeatCount = animCountSize

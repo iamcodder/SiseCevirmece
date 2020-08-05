@@ -5,6 +5,6 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class FeedbackModel(
-    var email: String,
-    var message: String
+    var email: String = "",
+    var message: String = ""
 ) : Parcelable

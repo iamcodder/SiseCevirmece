@@ -5,6 +5,7 @@ import com.patronusstudio.sisecevirmece.enums.DogrulukCesaretEnum
 import com.patronusstudio.sisecevirmece.enums.FirebasePathEnum
 import com.patronusstudio.sisecevirmece.model.FeedbackModel
 import com.patronusstudio.sisecevirmece.util.getRandomUUID
+import java.util.*
 
 
 class FirebaseDb(
@@ -13,8 +14,20 @@ class FirebaseDb(
     private var mDatabase: FirebaseDatabase = FirebaseDatabase.getInstance()
 
     fun addFeedback(model: FeedbackModel) {
+        val uid = getRandomUUID()
         val databaseReference = mDatabase.getReference(FirebasePathEnum.FEEDBACK.getPathName())
-        databaseReference.child("" + getRandomUUID()).setValue(model)
+        databaseReference.child("" + uid).child("soru").setValue(model.message)
+            .addOnSuccessListener {
+                addFeedback2(uid, model.email)
+            }
+            .addOnFailureListener {
+                firebaseCallBack(false)
+            }
+    }
+
+    fun addFeedback2(randomId: UUID, mail: String) {
+        val databaseReference = mDatabase.getReference(FirebasePathEnum.FEEDBACK.getPathName())
+        databaseReference.child("" + randomId).child("mail").setValue(mail)
             .addOnSuccessListener {
                 firebaseCallBack(true)
             }

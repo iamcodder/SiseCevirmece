@@ -11,6 +11,6 @@ data class CesaretSoruEklenenModel(
     //Db'de soru id ilk olarak 1 den başlıyor.
     @PrimaryKey(autoGenerate = true)
     var soruId: Int = 0,
-    var soru: String,
+    var soru: String = "",
     var sorulduMu: Boolean = false
 ) : Parcelable
