@@ -46,6 +46,13 @@
     <string name="email">Email</string>
     <string name="gorus_oneri_sorun">Görüş/Öneri/Sorun</string>
     <string name="gonder">Gönder</string>
+    <string name="reklam_gosterilsin_mi">Reklam izleyerek soru kazanabilirsiniz.Ekstra soru kazanmak ister misiniz?</string>
+    <string name="evet">Evet</string>
+    <string name="hayir">Hayır</string>
+    <string name="odul_alindi">Ödül alındı</string>
+    <string name="reklam_yuklenemedi">Reklam yüklenemedi</string>
+    <string name="reklam_kapatildi">Reklam kapatıldı</string>
+    <string name="uygulamadan_cikildi">Uygulamadan çıkıldı</string>
 
     <string-array name="cesaretListesi">
         <item>"Alfabeyi tersten oku."</item>

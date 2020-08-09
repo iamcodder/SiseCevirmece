@@ -19,16 +19,6 @@ enum class FirebasePathEnum {
     },
     SORU_PAKETI {
         override fun getPathName(): String = "SoruPaketi"
-    },
-    TOPLAM_SORU_PAKETI {
-        override fun getPathName(): String = "ToplamSoruPaketi"
-    },
-    DOGRULUK_SORU_PAKETI {
-        override fun getPathName(): String = "DogrulukSoruPaketi"
-    },
-    CESARET_SORU_PAKETI {
-        override fun getPathName(): String = "CesaretSoruPaketi"
-
     };
 
     abstract fun getPathName(): String
