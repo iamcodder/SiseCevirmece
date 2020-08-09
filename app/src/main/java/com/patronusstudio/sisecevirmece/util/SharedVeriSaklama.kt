@@ -4,8 +4,6 @@ import android.content.Context
 import android.content.Context.MODE_PRIVATE
 import com.patronusstudio.sisecevirmece.enums.SharedPrefEnum
 
-object SharedVeri
-
 class SharedVeriSaklama(private val mContext: Context) {
 
     private val sharedPreferences by lazy {
@@ -68,6 +66,21 @@ class SharedVeriSaklama(private val mContext: Context) {
     fun getToolTip(): Boolean = sharedPreferences.getBoolean(
         SharedPrefEnum.TOOLTIP.getValue(),
         false
+    )
+
+    fun getToplamSoruPaketi(): String? = sharedPreferences.getString(
+        SharedPrefEnum.TOPLAM_SORU_PAKETI.getValue(),
+        "0"
+    )
+
+    fun getDogrulukSoruPaketi(): String? = sharedPreferences.getString(
+        SharedPrefEnum.DOGRULUK_SORU_PAKETI.getValue(),
+        "0"
+    )
+
+    fun getCesaretSoruPaketi(): String? = sharedPreferences.getString(
+        SharedPrefEnum.CESARET_SORU_PAKETI.getValue(),
+        "0"
     )
 
     fun updateToolTip(gosterildiMi: Boolean) {
@@ -154,6 +167,24 @@ class SharedVeriSaklama(private val mContext: Context) {
             .apply()
     }
 
+    fun updateSoruPaketi(
+        toplamSoruPaketi: String,
+        guncellenenSoruPaketi: String,
+        dogrulugaMiEklendi: Boolean
+    ) {
+        if (dogrulugaMiEklendi) {
+            sharedPreferences.edit()
+                .putString(SharedPrefEnum.TOPLAM_SORU_PAKETI.getValue(), toplamSoruPaketi)
+                .putString(SharedPrefEnum.DOGRULUK_SORU_PAKETI.getValue(), guncellenenSoruPaketi)
+                .apply()
+        } else {
+            sharedPreferences.edit()
+                .putString(SharedPrefEnum.TOPLAM_SORU_PAKETI.getValue(), toplamSoruPaketi)
+                .putString(SharedPrefEnum.CESARET_SORU_PAKETI.getValue(), guncellenenSoruPaketi)
+                .apply()
+        }
+    }
+
     fun putValueForFirstStarted(
         isCreated: Boolean,
         dogrulukSize: Int,
@@ -200,6 +231,18 @@ class SharedVeriSaklama(private val mContext: Context) {
             .putInt(
                 SharedPrefEnum.SISE_TURU.getValue(),
                 siseTuru
+            )
+            .putString(
+                SharedPrefEnum.TOPLAM_SORU_PAKETI.getValue(),
+                "0"
+            )
+            .putString(
+                SharedPrefEnum.DOGRULUK_SORU_PAKETI.getValue(),
+                "0"
+            )
+            .putString(
+                SharedPrefEnum.CESARET_SORU_PAKETI.getValue(),
+                "0"
             )
             .putBoolean(
                 SharedPrefEnum.TOOLTIP.getValue(),

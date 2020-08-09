@@ -35,6 +35,15 @@ enum class SharedPrefEnum {
     DB_CESARET_EKLENEN_LAST_VALUE() {
         override fun getValue(): String = "cesaretEklenenLastValue"
     },
+    TOPLAM_SORU_PAKETI {
+        override fun getValue(): String = "toplamSoruPaketi"
+    },
+    DOGRULUK_SORU_PAKETI {
+        override fun getValue(): String = "dogrulukSoruPaketi"
+    },
+    CESARET_SORU_PAKETI {
+        override fun getValue(): String = "cesaretSoruPaketi"
+    },
     TOOLTIP() {
         override fun getValue(): String = "tooltip"
     };

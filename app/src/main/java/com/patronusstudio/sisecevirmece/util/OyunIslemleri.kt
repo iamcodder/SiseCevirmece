@@ -19,4 +19,8 @@ object OyunIslemleri {
     var soruEklendiMi = false
     var degisenSoruIndexi = 0
     var guncellenenSoru = ""
+
+    var toplamSoruPaketi = "0"
+    var dogrulukSoruPaketi = "0"
+    var cesaretSoruPaketi = "0"
 }

@@ -59,6 +59,10 @@ class SplashScreenActivity : AppCompatActivity() {
 
         OyunIslemleri.siseTuru = sharedVeriSaklama.getSiseTuru()
 
+        OyunIslemleri.toplamSoruPaketi = sharedVeriSaklama.getToplamSoruPaketi() ?: "0"
+        OyunIslemleri.dogrulukSoruPaketi = sharedVeriSaklama.getDogrulukSoruPaketi() ?: "0"
+        OyunIslemleri.cesaretSoruPaketi = sharedVeriSaklama.getCesaretSoruPaketi() ?: "0"
+
         val internetConnection = isInternetConnection(this)
         if (internetConnection) writeDb()
         startAnim()
