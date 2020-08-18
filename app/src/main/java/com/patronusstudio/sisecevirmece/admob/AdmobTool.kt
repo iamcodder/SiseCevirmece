@@ -21,13 +21,10 @@ class AdmobTool(val mContext: Context, val isSucces: (Boolean, message: String) 
     }
 
     fun loadAd() {
-//        mRewardedVideoAd.loadAd("ca-app-pub-1818679104699845/8964537567",
-//            AdRequest.Builder().build())
         mRewardedVideoAd.loadAd(
-            "ca-app-pub-3940256099942544/5224354917",
+            "ca-app-pub-1818679104699845/8964537567",
             AdRequest.Builder().build()
         )
-        //todo : reklam idsini değiştirmeyi unutma.Ekli olan test id
     }
 
     override fun onRewardedVideoAdClosed() {

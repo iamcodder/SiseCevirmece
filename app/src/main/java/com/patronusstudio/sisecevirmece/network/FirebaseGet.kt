@@ -17,7 +17,6 @@ class FirebaseGet(
     }
 
     fun getToplamSoru() {
-
         mDatabase.getReference(FirebasePathEnum.SORULAR.getPathName())
             .child(FirebasePathEnum.SORU_PAKETI.getPathName())
             .addListenerForSingleValueEvent(object : ValueEventListener {
@@ -34,7 +33,6 @@ class FirebaseGet(
     }
 
     fun getSorular(pathId: String, dogrulukMu: Boolean) {
-        //todo pathteki soru listesi dönecek
         val pathName = if (dogrulukMu) FirebasePathEnum.DOGRULUK.getPathName()
         else FirebasePathEnum.CESARET.getPathName()
 

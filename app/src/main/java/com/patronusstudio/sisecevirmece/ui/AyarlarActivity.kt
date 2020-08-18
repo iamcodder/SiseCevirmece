@@ -50,12 +50,9 @@ class AyarlarActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-//        if (OyunIslemleri.dialogButonunaBasildiMi) {
-//            OyunIslemleri.dialogButonunaBasildiMi = false
         binding.include2.switchOyunSifirla.isChecked = false
         binding.mainAyarlar = SiseSecimiOnBinding(binding.root) {
             reklamiGoster()
-//            }
         }
         binding.include2.switchSoruEkle.isChecked = false
     }
