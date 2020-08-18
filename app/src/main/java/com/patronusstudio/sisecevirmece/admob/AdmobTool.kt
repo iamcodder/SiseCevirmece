@@ -12,6 +12,9 @@ class AdmobTool(val mContext: Context, val isSucces: (Boolean, message: String) 
     RewardedVideoAdListener {
 
     private var mRewardedVideoAd: RewardedVideoAd = MobileAds.getRewardedVideoAdInstance(mContext)
+    var isClickShowAd = false
+    var isGettingReward = false
+
 
     init {
         mRewardedVideoAd.rewardedVideoAdListener = this
@@ -28,6 +31,8 @@ class AdmobTool(val mContext: Context, val isSucces: (Boolean, message: String) 
     }
 
     override fun onRewardedVideoAdClosed() {
+        if (isGettingReward) isSucces(true, mContext.getString(R.string.odul_alindi))
+        else isSucces(false, mContext.getString(R.string.reklam_kapatildi))
     }
 
     override fun onRewardedVideoAdLeftApplication() {
@@ -35,7 +40,7 @@ class AdmobTool(val mContext: Context, val isSucces: (Boolean, message: String) 
     }
 
     override fun onRewardedVideoAdLoaded() {
-        mRewardedVideoAd.show()
+        if (isClickShowAd) mRewardedVideoAd.show()
     }
 
     override fun onRewardedVideoAdOpened() {
@@ -46,6 +51,7 @@ class AdmobTool(val mContext: Context, val isSucces: (Boolean, message: String) 
 
     override fun onRewarded(p0: RewardItem?) {
         isSucces(true, mContext.getString(R.string.odul_alindi))
+        isGettingReward = true
     }
 
     override fun onRewardedVideoStarted() {

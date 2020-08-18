@@ -5,14 +5,15 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.patronusstudio.sisecevirmece.R
+import com.patronusstudio.sisecevirmece.abstracts.CesaretDatabase
+import com.patronusstudio.sisecevirmece.abstracts.DogrulukDatabase
 import com.patronusstudio.sisecevirmece.admob.AdmobTool
 import com.patronusstudio.sisecevirmece.databinding.ActivityFetchSoruBinding
+import com.patronusstudio.sisecevirmece.model.CesaretModel
+import com.patronusstudio.sisecevirmece.model.DogrulukModel
 import com.patronusstudio.sisecevirmece.model.SoruPaketi
 import com.patronusstudio.sisecevirmece.network.FirebaseGet
-import com.patronusstudio.sisecevirmece.util.OyunIslemleri
-import com.patronusstudio.sisecevirmece.util.SharedVeriSaklama
-import com.patronusstudio.sisecevirmece.util.extToastMessage
-import com.patronusstudio.sisecevirmece.util.isInternetConnection
+import com.patronusstudio.sisecevirmece.util.*
 
 class FetchSoru : AppCompatActivity() {
 
@@ -21,7 +22,7 @@ class FetchSoru : AppCompatActivity() {
     private lateinit var admobTool: AdmobTool
 
     private var dogrulukMu: Boolean = false
-    private var soruListesi = mutableListOf<String>()
+    private var soruListesi = listOf<String>()
 
     private val firebaseGet by lazy {
         FirebaseGet({
@@ -29,7 +30,7 @@ class FetchSoru : AppCompatActivity() {
             soruKontrolu()
         }
             ,
-            { soruListesi: MutableList<String>, dogrulukMu: Boolean ->
+            { soruListesi: List<String>, dogrulukMu: Boolean ->
                 this.dogrulukMu = dogrulukMu
                 this.soruListesi = soruListesi
                 admobTool.loadAd()
@@ -66,7 +67,7 @@ class FetchSoru : AppCompatActivity() {
     }
 
 
-    private fun dbSoruEkle(dogrulukMu: Boolean, soruListesi: MutableList<String>) {
+    private fun dbSoruEkle(dogrulukMu: Boolean, soruListesi: List<String>) {
         var toplamPaket: Int = OyunIslemleri.toplamSoruPaketi.toInt()
         toplamPaket++
         if (dogrulukMu) {
@@ -77,7 +78,21 @@ class FetchSoru : AppCompatActivity() {
                 "$toplamPaket",
                 "$dogrulukPaketi", true
             )
-            //todo : shared pref güncellendi.Dbye yazma yaptır
+
+            var soruSayisi = OyunIslemleri.dogrulukSize
+            val sorular = ArrayList<DogrulukModel>()
+
+            for (i in soruListesi) {
+                soruSayisi++
+                sorular.add(DogrulukModel(soruSayisi, i, false))
+            }
+            DogrulukDatabase.getDatabaseManager(this).dogrulukDao().insertAll(sorular)
+            sharedVeriSaklama.updateDogrulukSize(soruSayisi)
+            OyunIslemleri.dogrulukSize = soruSayisi
+            DogrulukDatabase.getDatabaseManager(this).dogrulukDao().getAllModel().forEach {
+                "Sülo".extLogMessage(it.soru)
+            }
+            this.extToastMessage("Doğruluğa ${soruListesi.size} tane soru eklendi")
 
         } else {
             var cesaretSoruPaketi = OyunIslemleri.cesaretSoruPaketi.toInt()
@@ -87,7 +102,16 @@ class FetchSoru : AppCompatActivity() {
                 "$toplamPaket",
                 "$cesaretSoruPaketi", false
             )
-            //todo : shared pref güncellendi.Dbye yazma yaptır
+            var soruSayisi = OyunIslemleri.cesaretSize
+            val sorular = ArrayList<CesaretModel>()
+            for (i in soruListesi) {
+                soruSayisi++
+                sorular.add(CesaretModel(soruSayisi, i, false))
+            }
+            CesaretDatabase.getDatabaseManager(this).cesaretDao().insertAll(sorular)
+            sharedVeriSaklama.updateCesaretSize(soruSayisi)
+            OyunIslemleri.cesaretSize = soruSayisi
+            this.extToastMessage("Cesarete ${soruListesi.size} tane soru eklendi")
 
         }
         OyunIslemleri.toplamSoruPaketi = "$toplamPaket"
@@ -97,10 +121,13 @@ class FetchSoru : AppCompatActivity() {
 
     private fun buttonIslevleri() {
         binding.buttonHayir.setOnClickListener {
+            admobTool.isClickShowAd = false
             finish()
+            admobTool.destroyAd()
         }
         binding.buttonEvet.setOnClickListener {
             dialog_visible()
+            admobTool.isClickShowAd = true
             admobTool.loadAd()
         }
     }
@@ -113,6 +140,7 @@ class FetchSoru : AppCompatActivity() {
     }
 
     private fun dialog_visible() {
+        this.extToastMessage("Reklam yükleniyor")
         binding.progressBar.visibility = View.VISIBLE
         binding.buttonEvet.visibility = View.GONE
         binding.buttonHayir.visibility = View.GONE
