@@ -60,6 +60,10 @@ class OyunSifirlaActivity : AppCompatActivity() {
             soruEkleme.cesaretListSize,
             0
         )
+        OyunIslemleri.toplamSoruPaketi = sharedVeriSaklama.getToplamSoruPaketi() ?: "0"
+        OyunIslemleri.dogrulukSoruPaketi = sharedVeriSaklama.getDogrulukSoruPaketi() ?: "0"
+        OyunIslemleri.cesaretSoruPaketi = sharedVeriSaklama.getCesaretSoruPaketi() ?: "0"
+
         OyunIslemleri.cesaretSize = sharedVeriSaklama.getCesaretListValue()
         OyunIslemleri.dogrulukSize = sharedVeriSaklama.getDogrulukListValue()
 

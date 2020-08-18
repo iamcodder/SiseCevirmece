@@ -6,7 +6,6 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.patronusstudio.sisecevirmece.enums.FirebasePathEnum
 import com.patronusstudio.sisecevirmece.model.SoruPaketi
-import com.patronusstudio.sisecevirmece.util.extLogMessage
 
 class FirebaseGet(
     val soruPaketiDondur: (SoruPaketi) -> Unit,
@@ -29,9 +28,6 @@ class FirebaseGet(
                     val soruPaketi = snapshot.getValue(SoruPaketi::class.java)
                     if (soruPaketi != null) {
                         soruPaketiDondur(soruPaketi)
-                        "Sülo".extLogMessage("t" + soruPaketi.ToplamSoruPaketi)
-                        "Sülo".extLogMessage("d" + soruPaketi.DogrulukSoruPaketi)
-                        "Sülo".extLogMessage("c" + soruPaketi.CesaretSoruPaketi)
                     }
                 }
             })
@@ -49,7 +45,7 @@ class FirebaseGet(
                 }
 
                 override fun onDataChange(snapshot: DataSnapshot) {
-                    val list = mutableListOf<String>()
+                    val list = ArrayList<String>()
                     snapshot.children.forEach {
                         list.add("" + it.value)
                     }
