@@ -13,7 +13,10 @@ import com.patronusstudio.sisecevirmece.model.CesaretModel
 import com.patronusstudio.sisecevirmece.model.DogrulukModel
 import com.patronusstudio.sisecevirmece.model.SoruPaketi
 import com.patronusstudio.sisecevirmece.network.FirebaseGet
-import com.patronusstudio.sisecevirmece.util.*
+import com.patronusstudio.sisecevirmece.util.OyunIslemleri
+import com.patronusstudio.sisecevirmece.util.SharedVeriSaklama
+import com.patronusstudio.sisecevirmece.util.extToastMessage
+import com.patronusstudio.sisecevirmece.util.isInternetConnection
 
 class FetchSoru : AppCompatActivity() {
 
@@ -23,6 +26,8 @@ class FetchSoru : AppCompatActivity() {
 
     private var dogrulukMu: Boolean = false
     private var soruListesi = listOf<String>()
+
+    private var toastMessage = ""
 
     private val firebaseGet by lazy {
         FirebaseGet({
@@ -55,14 +60,24 @@ class FetchSoru : AppCompatActivity() {
             firebaseGet.getToplamSoru()
             buttonIslevleri()
 
-            admobTool = AdmobTool(this) { isSucces: Boolean, message: String ->
-                if (!isSucces) {
-                    this.extToastMessage(message)
-                } else {
-                    dbSoruEkle(this.dogrulukMu, this.soruListesi)
+            admobTool =
+                AdmobTool(this) { isSucces: Boolean, message: String, isAdsClosed: Boolean ->
+                    when {
+                        isAdsClosed -> {
+                            finish()
+                            this.extToastMessage(toastMessage)
+                        }
+                        isSucces -> {
+                            dbSoruEkle(this.dogrulukMu, this.soruListesi)
+                            this.extToastMessage(message)
+                        }
+                        else -> {
+                            finish()
+                            this.extToastMessage(message)
+                        }
+                    }
+                    dialog_invisible()
                 }
-                finish()
-            }
         }
     }
 
@@ -89,10 +104,8 @@ class FetchSoru : AppCompatActivity() {
             DogrulukDatabase.getDatabaseManager(this).dogrulukDao().insertAll(sorular)
             sharedVeriSaklama.updateDogrulukSize(soruSayisi)
             OyunIslemleri.dogrulukSize = soruSayisi
-            DogrulukDatabase.getDatabaseManager(this).dogrulukDao().getAllModel().forEach {
-                "Sülo".extLogMessage(it.soru)
-            }
-            this.extToastMessage("Doğruluğa ${soruListesi.size} tane soru eklendi")
+
+            toastMessage = "Doğruluğa ${soruListesi.size} tane soru eklendi"
 
         } else {
             var cesaretSoruPaketi = OyunIslemleri.cesaretSoruPaketi.toInt()
@@ -111,8 +124,7 @@ class FetchSoru : AppCompatActivity() {
             CesaretDatabase.getDatabaseManager(this).cesaretDao().insertAll(sorular)
             sharedVeriSaklama.updateCesaretSize(soruSayisi)
             OyunIslemleri.cesaretSize = soruSayisi
-            this.extToastMessage("Cesarete ${soruListesi.size} tane soru eklendi")
-
+            toastMessage = "Cesarete ${soruListesi.size} tane soru eklendi"
         }
         OyunIslemleri.toplamSoruPaketi = "$toplamPaket"
 

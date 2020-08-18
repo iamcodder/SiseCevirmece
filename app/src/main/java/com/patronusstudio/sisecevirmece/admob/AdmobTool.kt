@@ -8,7 +8,10 @@ import com.google.android.gms.ads.reward.RewardedVideoAd
 import com.google.android.gms.ads.reward.RewardedVideoAdListener
 import com.patronusstudio.sisecevirmece.R
 
-class AdmobTool(val mContext: Context, val isSucces: (Boolean, message: String) -> Unit) :
+class AdmobTool(
+    val mContext: Context,
+    val isSucces: (Boolean, message: String, isAdsClosed: Boolean) -> Unit
+) :
     RewardedVideoAdListener {
 
     private var mRewardedVideoAd: RewardedVideoAd = MobileAds.getRewardedVideoAdInstance(mContext)
@@ -28,12 +31,12 @@ class AdmobTool(val mContext: Context, val isSucces: (Boolean, message: String) 
     }
 
     override fun onRewardedVideoAdClosed() {
-        if (isGettingReward) isSucces(true, mContext.getString(R.string.odul_alindi))
-        else isSucces(false, mContext.getString(R.string.reklam_kapatildi))
+        if (isGettingReward) isSucces(true, mContext.getString(R.string.odul_alindi), true)
+        else isSucces(false, mContext.getString(R.string.reklam_kapatildi), false)
     }
 
     override fun onRewardedVideoAdLeftApplication() {
-        isSucces(false, mContext.getString(R.string.uygulamadan_cikildi))
+        isSucces(false, mContext.getString(R.string.uygulamadan_cikildi), false)
     }
 
     override fun onRewardedVideoAdLoaded() {
@@ -47,7 +50,7 @@ class AdmobTool(val mContext: Context, val isSucces: (Boolean, message: String) 
     }
 
     override fun onRewarded(p0: RewardItem?) {
-        isSucces(true, mContext.getString(R.string.odul_alindi))
+        isSucces(true, mContext.getString(R.string.odul_alindi), false)
         isGettingReward = true
     }
 
@@ -55,7 +58,7 @@ class AdmobTool(val mContext: Context, val isSucces: (Boolean, message: String) 
     }
 
     override fun onRewardedVideoAdFailedToLoad(p0: Int) {
-        isSucces(false, mContext.getString(R.string.reklam_yuklenemedi))
+        isSucces(false, mContext.getString(R.string.reklam_yuklenemedi), false)
     }
 
     fun pauseAd() {
