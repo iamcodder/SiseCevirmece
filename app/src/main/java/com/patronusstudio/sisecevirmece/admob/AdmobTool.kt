@@ -62,15 +62,16 @@ class AdmobTool(
     }
 
     fun pauseAd() {
-        mRewardedVideoAd.pause(mContext)
+        if (mRewardedVideoAd.isLoaded) mRewardedVideoAd.pause(mContext)
+
     }
 
     fun resumeAd() {
-        mRewardedVideoAd.resume(mContext)
+        if (mRewardedVideoAd.isLoaded) mRewardedVideoAd.resume(mContext)
     }
 
     fun destroyAd() {
-        mRewardedVideoAd.destroy(mContext)
+        if (mRewardedVideoAd.isLoaded) mRewardedVideoAd.destroy(mContext)
     }
 
 }
