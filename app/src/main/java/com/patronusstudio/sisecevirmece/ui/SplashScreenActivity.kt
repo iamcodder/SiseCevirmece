@@ -30,23 +30,33 @@ class SplashScreenActivity : AppCompatActivity() {
         this extStatusBarColor "#00000000"
 
         val isWrited = sharedVeriSaklama.isSharedPrefCreated()
+        if (!isWrited) isntWritedShared()
+        langControl()
 
-        if (!isWrited) {
-            val soruEkleme = SoruEkleme(this)
-            val cesaretDatabase = CesaretDatabase.getDatabaseManager(this)
-            cesaretDatabase.cesaretDao().insertAll(soruEkleme.cesaretListesiEkleme())
+        oyunIslemleri()
 
-            val dogrulukDatabase = DogrulukDatabase.getDatabaseManager(this)
-            dogrulukDatabase.dogrulukDao().insertAll(soruEkleme.dogrulukListesiEkleme())
+        val internetConnection = isInternetConnection(this)
+        if (internetConnection) writeDb()
+        startAnim()
+    }
 
-            sharedVeriSaklama.putValueForFirstStarted(
-                true,
-                soruEkleme.dogrulukListSize,
-                soruEkleme.cesaretListSize,
-                0
-            )
-        }
+    private fun isntWritedShared() {
+        val soruEkleme = SoruEkleme(this)
+        val cesaretDatabase = CesaretDatabase.getDatabaseManager(this)
+        cesaretDatabase.cesaretDao().insertAll(soruEkleme.cesaretListesiEkleme())
 
+        val dogrulukDatabase = DogrulukDatabase.getDatabaseManager(this)
+        dogrulukDatabase.dogrulukDao().insertAll(soruEkleme.dogrulukListesiEkleme())
+
+        sharedVeriSaklama.putValueForFirstStarted(
+            true,
+            soruEkleme.dogrulukListSize,
+            soruEkleme.cesaretListSize,
+            0
+        )
+    }
+
+    private fun oyunIslemleri() {
         OyunIslemleri.cesaretSize = sharedVeriSaklama.getCesaretListValue()
         OyunIslemleri.dogrulukSize = sharedVeriSaklama.getDogrulukListValue()
         OyunIslemleri.dogrulukEklenenLastValue = sharedVeriSaklama.getDogrulukEklenenLastValue()
@@ -63,9 +73,22 @@ class SplashScreenActivity : AppCompatActivity() {
         OyunIslemleri.dogrulukSoruPaketi = sharedVeriSaklama.getDogrulukSoruPaketi() ?: "0"
         OyunIslemleri.cesaretSoruPaketi = sharedVeriSaklama.getCesaretSoruPaketi() ?: "0"
 
-        val internetConnection = isInternetConnection(this)
-        if (internetConnection) writeDb()
-        startAnim()
+    }
+
+    private fun langControl() {
+        val deviceLang = if (isLanguageTurkish()) "tr" else "en"
+        val getLocatedLang = sharedVeriSaklama.getLanguage()
+
+        if (!getLocatedLang.equals(deviceLang)) {
+            sharedVeriSaklama.clearSharedPref()
+            val cesaretDatabase = CesaretDatabase.getDatabaseManager(this)
+            cesaretDatabase.cesaretDao().deleteAllModel()
+            val dogrulukDatabase = DogrulukDatabase.getDatabaseManager(this)
+            dogrulukDatabase.dogrulukDao().deleteAllModel()
+            isntWritedShared()
+
+            sharedVeriSaklama.updateLanguage(deviceLang)
+        }
     }
 
     private fun writeDb() {

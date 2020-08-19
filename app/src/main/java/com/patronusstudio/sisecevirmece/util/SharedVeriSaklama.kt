@@ -83,6 +83,11 @@ class SharedVeriSaklama(private val mContext: Context) {
         "0"
     )
 
+    fun getLanguage(): String? = sharedPreferences.getString(
+        SharedPrefEnum.LANGUAGE.getValue(),
+        "tr"
+    )
+
     fun updateToolTip(gosterildiMi: Boolean) {
         sharedPreferences.edit()
             .putBoolean(
@@ -185,6 +190,12 @@ class SharedVeriSaklama(private val mContext: Context) {
         }
     }
 
+    fun updateLanguage(language: String) {
+        sharedPreferences.edit()
+            .putString(SharedPrefEnum.LANGUAGE.getValue(), language)
+            .apply()
+    }
+
     fun putValueForFirstStarted(
         isCreated: Boolean,
         dogrulukSize: Int,
@@ -247,6 +258,10 @@ class SharedVeriSaklama(private val mContext: Context) {
             .putBoolean(
                 SharedPrefEnum.TOOLTIP.getValue(),
                 false
+            )
+            .putString(
+                SharedPrefEnum.LANGUAGE.getValue(),
+                "tr"
             )
             .apply()
     }
