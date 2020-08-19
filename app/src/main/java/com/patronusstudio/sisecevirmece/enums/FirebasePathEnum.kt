@@ -19,6 +19,12 @@ enum class FirebasePathEnum {
     },
     SORU_PAKETI {
         override fun getPathName(): String = "SoruPaketi"
+    },
+    TR {
+        override fun getPathName(): String = "tr"
+    },
+    EN {
+        override fun getPathName(): String = "en"
     };
 
     abstract fun getPathName(): String
