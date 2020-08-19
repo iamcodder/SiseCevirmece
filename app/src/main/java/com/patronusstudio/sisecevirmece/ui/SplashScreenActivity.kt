@@ -66,7 +66,6 @@ class SplashScreenActivity : AppCompatActivity() {
         val internetConnection = isInternetConnection(this)
         if (internetConnection) writeDb()
         startAnim()
-
     }
 
     private fun writeDb() {

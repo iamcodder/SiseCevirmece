@@ -89,4 +89,11 @@ fun isInternetConnection(mContext: Context): Boolean {
 
 fun getRandomUUID(): UUID = UUID.randomUUID()
 
+fun isLanguageTurkish(): Boolean {
+    val lang = Locale.getDefault().language
+    return lang == "tr"
+}
+
+
+
 
