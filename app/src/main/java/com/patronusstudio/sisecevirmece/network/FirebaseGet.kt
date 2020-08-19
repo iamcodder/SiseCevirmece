@@ -6,6 +6,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.patronusstudio.sisecevirmece.enums.FirebasePathEnum
 import com.patronusstudio.sisecevirmece.model.SoruPaketi
+import com.patronusstudio.sisecevirmece.util.isLanguageTurkish
 
 class FirebaseGet(
     val soruPaketiDondur: (SoruPaketi) -> Unit,
@@ -36,8 +37,10 @@ class FirebaseGet(
         val pathName = if (dogrulukMu) FirebasePathEnum.DOGRULUK.getPathName()
         else FirebasePathEnum.CESARET.getPathName()
 
+        val lang = if (isLanguageTurkish()) "tr" else "en"
+
         mDatabase.getReference(FirebasePathEnum.SORULAR.getPathName())
-            .child(pathName).child(pathId)
+            .child(pathName).child(lang).child(pathId)
             .addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onCancelled(error: DatabaseError) {
                 }
