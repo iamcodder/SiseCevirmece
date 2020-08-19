@@ -46,6 +46,10 @@ enum class SharedPrefEnum {
     },
     TOOLTIP() {
         override fun getValue(): String = "tooltip"
+    },
+    LANGUAGE {
+        override fun getValue(): String = "language"
+
     };
 
     abstract fun getValue(): String
