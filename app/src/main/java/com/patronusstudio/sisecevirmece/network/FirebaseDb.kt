@@ -5,6 +5,7 @@ import com.patronusstudio.sisecevirmece.enums.DogrulukCesaretEnum
 import com.patronusstudio.sisecevirmece.enums.FirebasePathEnum
 import com.patronusstudio.sisecevirmece.model.FeedbackModel
 import com.patronusstudio.sisecevirmece.util.getRandomUUID
+import com.patronusstudio.sisecevirmece.util.isLanguageTurkish
 import java.util.*
 
 
@@ -40,9 +41,11 @@ class FirebaseDb(
         val soruPathi =
             if (isDogruluk) DogrulukCesaretEnum.DOGRULUK.isim else DogrulukCesaretEnum.CESARET.isim
 
+        val lang =
+            if (isLanguageTurkish()) FirebasePathEnum.TR.getPathName() else FirebasePathEnum.EN.getPathName()
+
         val databaseReference = mDatabase.getReference(FirebasePathEnum.SORU_EKLEME.getPathName())
-        databaseReference.child(soruPathi).child(("" + getRandomUUID()))
-            .setValue(soru)
+        databaseReference.child(lang).child(soruPathi).push().setValue(soru)
             .addOnSuccessListener {
                 firebaseCallBack(true)
             }
