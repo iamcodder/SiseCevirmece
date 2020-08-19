@@ -1,6 +1,7 @@
 package com.patronusstudio.sisecevirmece.ui
 
 import android.os.Bundle
+import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.google.android.gms.ads.AdRequest
@@ -9,6 +10,8 @@ import com.patronusstudio.sisecevirmece.R
 import com.patronusstudio.sisecevirmece.binding.SiseSecimiOnBinding
 import com.patronusstudio.sisecevirmece.databinding.ActivityAyarlarBinding
 import com.patronusstudio.sisecevirmece.util.extSayfaGecisi
+import com.patronusstudio.sisecevirmece.util.extToastMessage
+import com.patronusstudio.sisecevirmece.util.isInternetConnection
 
 class AyarlarActivity : AppCompatActivity() {
 
@@ -35,7 +38,15 @@ class AyarlarActivity : AppCompatActivity() {
 
         binding.include2.switchSoruEkle.setOnCheckedChangeListener { buttonView, isChecked ->
             if (isChecked) {
-                this.extSayfaGecisi(FetchSoru::class.java)
+                if (isInternetConnection(this))
+                    this.extSayfaGecisi(FetchSoru::class.java)
+                else {
+                    this.extToastMessage("İnternet sorunu")
+                    Handler().postDelayed({
+                        binding.include2.switchSoruEkle.isChecked = false
+                    }, 250)
+
+                }
             }
         }
 
