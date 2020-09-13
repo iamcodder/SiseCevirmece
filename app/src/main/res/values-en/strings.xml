@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Spin the Bottle</string>
+    <string name="splash_screen_resmi">Splash screen picture</string>
+    <string name="oyuna_basla">Start Game</string>
+    <string name="sorulari_goruntule">View Questions</string>
+    <string name="cesaret">Dare</string>
+    <string name="dogruluk">Truth</string>
+    <string name="sise_donuyor">Bottle is turning</string>
+    <string name="dogruluk_sorularini_goruntule">View the Truth Questions</string>
+    <string name="cesaret_sorularini_goruntule">View the Dare Questions</string>
+    <string name="kola_sisesi">Coke Bottle</string>
+    <string name="viski_sisesi">Whisky Bottle</string>
+    <string name="sarap_sisesi">Wine Bottle</string>
+    <string name="gazoz_sisesi">Soda Water Bottle</string>
+    <string name="surum">Version 1.1</string>
+    <string name="basla">Start</string>
+    <string name="sorular">Questions</string>
+    <string name="ayarlar">Settings</string>
+    <string name="bizi_oyla">Rate Us</string>
+    <string name="soruyu_ben_soracagim">I Will Ask The Question</string>
+    <string name="sise_turu">Type Of Bottle</string>
+    <string name="cola">Coke</string>
+    <string name="sarap">Wine</string>
+    <string name="viski">Whisky</string>
+    <string name="gazoz">Soda Water</string>
+    <string name="ornek_soru_1">Who is the most Beautiful Girl in the Room?</string>
+    <string name="cevaplandi">Replied</string>
+    <string name="soru_degistir">Change Question</string>
+    <string name="soru_ekle">Add a Question</string>
+    <string name="soruyu_yazin">Write the Question</string>
+    <string name="soruyu_kaydet">Save Question</string>
+    <string name="sorulari_karistir">Mix Question</string>
+    <string name="kaydet">Save</string>
+    <string name="Sil">Delete</string>
+    <string name="dogruluk_sorulari">Truth Questions</string>
+    <string name="oyunu_sifirla">Reset Game</string>
+    <string name="iptal_et">Cancel</string>
+    <string name="oyun_verileri_silme">Do you want to delete game data?\nQuestions and game settings will reset.</string>
+    <string name="sifirlandi">Reset Complete</string>
+    <string name="iptal_edildi">Cancelled</string>
+    <string name="silmek_icin_uzun_bas">PRESS LONG TO DELETE OR EDIT</string>
+    <string name="soru_kayit_basarili">Saving Succeed</string>
+    <string name="soru_kayit_hatali">Check the question that write</string>
+    <string name="icecek_ismi">Coke</string>
+    <string name="feedback">Feedback</string>
+    <string name="email">Email</string>
+    <string name="gorus_oneri_sorun">Opinion/Suggestions/Problems</string>
+    <string name="gonder">Send</string>
+    <string name="reklam_gosterilsin_mi">You can win questions by watching ads. Would you like to earn extra questions?</string>
+    <string name="evet">Yes</string>
+    <string name="hayir">No</string>
+    <string name="odul_alindi">Ödül alındı</string>
+    <string name="reklam_yuklenemedi">Ads doesn\'t loaded.</string>
+    <string name="reklam_kapatildi">Ads was closed</string>
+    <string name="uygulamadan_cikildi">Application exited</string>
+    <string name="isaretli_mi">is_it_checked</string>
+
+
+    <string-array name="cesaretListesi">
+        <item>"Say the alphabet from the last to the first."</item>
+        <item>"Close your eyes, dance slowly with a player and guess who the player you're dancing with is by touch."</item>
+        <item>"Be a human blanket and warm one of the players."</item>
+        <item>"Dance with a mop or broom."</item>
+        <item>"The player on your left will slap you."</item>
+        <item>"Show how to date with someone."</item>
+        <item>"Shout to your neighbors: "Shut the fuck up!""</item>
+        <item>"Write "I am a fido" with a ballpoint pen on both arms."</item>
+        <item>"Send a message saying "I love you" to the last three people you messaged with on Whatsapp."</item>
+        <item>"One of the players apply lipstick on you."</item>
+        <item>"Pick someone from the room and kiss him."</item>
+        <item>"If male; put on makeup. If the girl is; remove your makeup."</item>
+        <item>"Take off your shirt and dance for 30 seconds."</item>
+        <item>"Sing your favorite song with baby voice!"</item>
+        <item>"Open the window and have someone in the street wave to you"</item>
+        <item>"Speak in a desired accent for the next 3 rounds."</item>
+        <item>"Do magic like a wizard."</item>
+        <item>"Do four somersaults in a row."</item>
+        <item>" Become someone's pet in the game for 5 minutes."</item>
+        <item>"Dance for 30 seconds in any type of music you want."</item>
+        <item>"Reshape a person's hair without any cutting and trimming."</item>
+        <item>"Move like a worm for 3 minutes."</item>
+        <item>"Pretend a baby for 3 minutes."</item>
+        <item>"Do belly dance keep pace with to the rhythm of the music."</item>
+        <item>"If you are a boy, wash a girl's make-up, if you are a girl, put make up on the boy."</item>
+        <item>"Dance for 3 minutes without music."</item>
+        <item>"Drink 3 glasses of water in a row without taking the glass out of your mouth."</item>
+        <item>"Want to take an embarrassing pose of person who said dare and share it."</item>
+        <item>"Drink 1 glass of fizzy drink / juice in one swig without out of your mouth."</item>
+        <item>"Write something on the body of a selected person from group with makeup supplies."</item>
+        <item>"Do various exercises for 5 minutes."</item>
+        <item>"Tamper the phones of everyone in the group for one minute."</item>
+        <item>"Imitate a celebrity for 3 minutes."</item>
+        <item>"Walk around the house on your hands."</item>
+        <item>"Choose someone from the group and she/he will slap to your face."</item>
+        <item>"While the game is running, turn it around an imaginary hulahop on your waist for 3 minutes."</item>
+        <item>"Write a poem consisting eight-line, two-verse on a topic that group will say."</item>
+        <item>"Go out into the street and scare the first person you see."</item>
+        <item>"Kiss someone from group chosen by the people in the game."</item>
+        <item>"Massage a friend for 5 minutes."</item>
+        <item>"Go out and tell someone funny something on the street."</item>
+        <item>"Become a slave of someone in the game for 5 minutes."</item>
+        <item>"Dance with a broom or mop."</item>
+        <item>"Cat walk like a mannequin."</item>
+        <item>"Read the alphabet from beginning to end without moving your mouth."</item>
+        <item>"Close your eyes and touch anyone in the game's face to guess who it is."</item>
+        <item>"Make up a story about the player to your right."</item>
+        <item>"Give someone a foot massage in the game."</item>
+        <item>"Bark 6 times like a dog."</item>
+        <item>"Sing a song from beginning to end."</item>
+        <item>"Dance like crazy to your favorite song."</item>
+        <item>"Wait a minute without blinking."</item>
+        <item>"Describe the worst and best person you dated."</item>
+        <item>"Walk like a opposite sex for a minute."</item>
+        <item>"Send the most brutal message you can send to your girlfriend."</item>
+        <item>"Hold hands with someone for a few tours."</item>
+        <item>"Tell something funny you know about every person in the game."</item>
+        <item>"Speak a different language for a few tours."</item>
+        <item>"Show your browser history to everyone in game."</item>
+        <item>"Make underwear research pretending to buy to someone from the game."</item>
+        <item>"Act like an old woman or an old man."</item>
+        <item>"Act like a chicken for 1 minute."</item>
+        <item>"Tie your shoes strings and try to walk backwards."</item>
+        <item>"Act like a baby until it’s your turn."</item>
+        <item>"Act like your favorite superhero."</item>
+        <item>"Move like a statue (without speaking or moving) until it's your turn."</item>
+        <item>"Meow like a cat."</item>
+        <item>"Assume it's a plane for 2 minutes and fly like a plane for 2 minutes."</item>
+        <item>"Give your phone to the person next to you. It's free to look everywhere for 5 minutes."</item>
+        <item>"Give someone your phone and she/he can text anyone she/he want."</item>
+        <item>"Be someone's pet in the next 5 minutes."</item>
+        <item>"Post a very ugly photo of your from a social media account of your choice."</item>
+        <item>"Open the texting app on your phone, close your eyes and blindly send a text to a random person."</item>
+        <item>"Brush someone's teeth."</item>
+        <item>"Sing in an annoying tone."</item>
+        <item>"False cry for 2 minutes."</item>
+        <item>"Call a random person from your phonebook, then say "I called the wrong number" and hang up."</item>
+        <item>"Act like a chicken for 1 minute."</item>
+        <item>"Share something ridiculous on Instagram, delete it after 5 minutes!"</item>
+        <item>"Tell a short, funny story about something you did today."</item>
+        <item>"Call someone and speak with a Indian accent."</item>
+        <item>"Read us your last message on Whatsapp."</item>
+        <item>"Shout for 3 seconds very loudly."</item>
+        <item>"Pretend to be drunk."</item>
+        <item>"Write and read a short love poem immediately."</item>
+        <item>"Massage the person next to you."</item>
+        <item>"Dance like a ballerina for 30 seconds"</item>
+        <item>"Give your face an ugly and disgusting look."</item>
+        <item>"Get down and act like a fish."</item>
+        <item>"Pretend a dog for a minute."</item>
+        <item>"Make up a rap song and sing."</item>
+        <item>"Turn around yourself 10 times quickly and try to walk in a straight line."</item>
+        <item>"Act like a monkey until it's your turn again."</item>
+        <item>"Try to sing an opera song for 30 seconds."</item>
+        <item>"Show us your last 5 photos from your phone gallery"</item>
+        <item>"Try to sing with water in your mouth."</item>
+        <item>"Let the person next to you draw something on your face with a pen."</item>
+        <item>"Stand on one leg for 3 minutes."</item>
+        <item>"Try to eat raw onions."</item>
+        <item>"Act like a chicken for 3 minutes."</item>
+    </string-array>
+
+    <string-array name="dogrulukListesi">
+
+        <item> "When was your most embarrassed moment?"</item>
+        <item> "Why did you cry last?"</item>
+        <item> "Who did you call in the most desperate moment?"</item>
+        <item> "They tell you" choose a memory in the past and we will return you there. What is the moment you want to live again?"</item>
+        <item> "Who is the most difficult person in this room to keep a secret?"</item>
+        <item> "Talk about something you did and feel totally ashamed of"</item>
+        <item> "What's your worst habit?"</item>
+        <item> "Who was the last person you blocked on Instagram and why?"</item>
+        <item> "If you had a chance to take someone in this room as a slave, who would you be and what would you like them to do?"</item>
+        <item> "What's the biggest mistake you made in your life?"</item>
+        <item> "What was the last lie you told?"</item>
+        <item> "Tell us a story of drunkenness!"</item>
+        <item> "Which feature of the person sitting on the right side do you not like the most?"</item>
+        <item> "Have you ever stolen anything from a neighbor before?"</item>
+        <item> "What was the last thing you searched for on your phone?"</item>
+        <item> "Is it to be naked or everything you think is written on your shirt? Which one would you choose?"</item>
+        <item> "What was the last thing you dropped and ate after a long wait?"</item>
+        <item> "What would be the first thing you would do if you woke up as the opposite sex one day?"</item>
+        <item> "Have you ever pissed in the pool and pretended nothing happened?"</item>
+        <item> "Who do you think is the worst dressed person in this room?"</item>
+        <item> "Do you have an imaginary friend growing up with you?"</item>
+        <item> "Have you ever farted in an elevator?"</item>
+        <item> "With whom would you want to change your life from the people in this room?"</item>
+        <item> "What do you usually think when you sit on the toilet?"</item>
+        <item> "Have you ever tried kissing in the mirror?"</item>
+        <item> "What's your worst habit?"</item>
+        <item> "Have you ever walked in when you were in the bathroom?"</item>
+        <item> "Do you pick your nose?"</item>
+        <item> "Do you sing a song in the bathroom?"</item>
+        <item> "What would you be ashamed of if someone saw your web history?"</item>
+        <item> "Do you speak in your sleep?"</item>
+        <item> "Who is your secret crush?"</item>
+        <item> "Who do you like least in this room and why?"</item>
+        <item> "What is your dream boy/girl?"</item>
+        <item> "What is your popular song in the shower?"</item>
+        <item> "What do you dislike about me?"</item>
+        <item> "What was the last message you sent from Instagram?"</item>
+        <item> "Do you think you will marry your current girlfriend?"</item>
+        <item> "How often do you wash your underwear?"</item>
+        <item> "Have you ever farted and blamed someone else?"</item>
+        <item> "Do you lick your plate?"</item>
+        <item> "What is it that nobody knows about you?"</item>
+        <item> "What is the cartoon you watch every time again?"</item>
+        <item> "Can you wash your feet every day?"</item>
+        <item> "Do you have any stupid nicknames?"</item>
+        <item> "When was the last time you got your bed wet?"</item>
+        <item> "Which app do you use on your phone more often?"</item>
+        <item> "Have you ever pretended to be a sick person to avoid something? If you did, what was the thing you avoid from?"</item>
+        <item> "What is the most food you eat in one sitting?"</item>
+        <item> "What are you most afraid of?"</item>
+        <item> "Do you dance while alone?"</item>
+        <item> "What would you do if you spent the whole day at home?"</item>
+        <item> "When was the last time you brushed your teeth?"</item>
+        <item> "Do you love your mom or dad more?"</item>
+        <item> "What was the most illegal thing you did?"</item>
+        <item> "Do you love your mom or dad more?"</item>
+        <item> "Would you change your sibling to another sibling for 1 million TL?"</item>
+        <item> "If you could marry more than one person, who would you choose?"</item>
+        <item> "Who would you marry in this room if you had to?"</item>
+        <item> "If you could only hear one song for the rest of your life, what would it be?"</item>
+        <item> "Who do you think could be the worst person in this room?"</item>
+        <item> "If you had a chance to be born again, in what period would you like to live?"</item>
+        <item> "If you could go back and erase something you've said or done, what would it be?"</item>
+        <item> "Has your darling ever embarrassed you?"</item>
+        <item> "What is the longest time you spent in the bathroom?"</item>
+        <item> "What is the craziest picture you've taken at school?"</item>
+        <item> "Have you ever cried because you miss your family?"</item>
+        <item> "Have you ever posted something you regret on social media?"</item>
+        <item> "What is your biggest fear?"</item>
+        <item> "Will you toilet in the shower?"</item>
+        <item> "Have you left anyone?"</item>
+        <item> "Have you ever cheated on your darling?"</item>
+        <item> "What's the most childish thing you still do?"</item>
+        <item> "Have you ever stolen a book from a library?"</item>
+        <item> "What are 10 things you bought but never used?"</item>
+        <item> "What was the most embarrassing moment of your life?" </item>
+        <item> "Have you been despised by anyone? On what subject have you been despised?"</item>
+        <item> "Can you describe the strangest dream you've ever had?"</item>
+        <item> "With whom would you like to change your life for a week with this group?"</item>
+        <item> "Which feature would you give the most compliment to?"</item>
+        <item> "What is it that you would never do even if someone offers you to be the richest person in the world?"</item>
+        <item> "Who do you think is the person in this group who will be the worst lover?"</item>
+        <item> "What is your attribute or characteristic you want to change?"</item>
+        <item> "Have you ever fallen in love with your darling's friend?"</item>
+        <item> "What do you think your darling thinks about marriage?"</item>
+        <item> "What was the craziest thing that happened in a shopping center?"</item>
+        <item> "What was the roughest thing you've done in your life?"</item>
+        <item> "What was the worst gossip subject you said or told your friend?"</item>
+        <item> "What was the most disgusting joke you ever made to someone?"</item>
+        <item> "What was the craziest thing you've done to be influenced by someone else?"</item>
+        <item> "What was the last thing you searched for on Google?"</item>
+        <item> "Have you ever tasted slime before?"</item>
+        <item> "Do you snore while sleeping?"</item>
+        <item> "Who do you think is the worst dressed person in this room?"</item>
+        <item> "Have you fallen in love with someone at least 10 years older than yourself?"</item>
+        <item> "What was the most embarrassing situation you were a part of?"</item>
+        <item> "Have you ever accidentally hit a wall or a tree?"</item>
+        <item> "How old would you be dating someone?"</item>
+        <item> "Have you ever pee one's pants?</item>
+        <item> "What was your most embarrassed moment in public?"</item>
+        <item> "Have you ever slept with a toy animal?"</item>
+        <item> "Have you ever had a drooling mouth in your sleep?"</item>
+        <item> "Do you speak in your sleep?"</item>
+        <item> "Who is the person you are secretly interested in?"</item>
+        <item> "Who is your least favorite person in this game?"</item>
+        <item> "Can you describe your dream man/woman?"</item>
+        <item> "Can you sing a song you sang in the shower?"</item>
+        <item> "How would you rate your appearance between 1 and 10?"</item>
+        <item> "What are the things you dislike about me?"</item>
+        <item> "What is your favorite song that you secretly sing?"</item>
+        <item> "What was the last message you sent to someone of the opposite sex?"</item>
+        <item> "You will save people from a burning building, but someone in this game has to stay in the building, who would you choose?"</item>
+        <item> "Have you ever accidentally revealed a friend's secret?" </item>
+        <item>"How often do you change your underwear?"</item>
+        <item>"Have you ever farted someone else even though you gasped?"</item>
+        <item>"If you were allowed to marry more than one person, who would you choose to marry?"</item>
+        <item>"Who is the person in this game that you believe is the worst person you know?"</item>
+        <item>"What year would you like to be born if you had a chance to be born again?"</item>
+        <item>"If you could go back in time to delete something you said or done, what would it be?"</item>
+        <item>"Has your boyfriend/girlfriend ever embarrassed you?"</item>
+        <item>"What would you do if you were suddenly invisible?"</item>
+        <item>"Have you caught anyone secretly stalking?"</item>
+        <item>"What is your favorite drink?"</item>
+        <item>"What would you do if someone who has not seen you for a long time waved at you?"</item>
+        <item>"What's the most annoying school picture?"</item>
+        <item>"Have you ever cried because you miss your family so much?"</item>
+        <item>"Have you ever been caught confusing your nose?"</item>
+        <item>"What is your biggest fear that is unreal?"</item>
+        <item>"What is the scariest movie you have ever seen?"</item>
+        <item>"Have you ever throat someone out of anger?"</item>
+        <item>"Have you done something that really made you proud?"</item>
+        <item>"The world will disappear next week; you can do whatever you want, what would you do?"</item>
+        <item>"Which salad sauce can you drink directly?"</item>
+        <item>"What's the most childish thing you've ever done?"</item>
+        <item>"How long will you go on chasing the man/woman of your dreams?"</item>
+        <item>"When was the time you were most embarrassed in front of the person you fell in love with?"</item>
+        <item>"Who is someone you claim to love but don't really love?"</item>
+        <item>"Do you have a silly nickname?"</item>
+        <item>"When was the last time you got your bed wet?"</item>
+        <item>"Which application do you spend the most time with on your phone?"</item>
+        <item>"What is the most painful experience of your life?"</item>
+        <item>"What's the cruelest thing you've ever told someone?"</item>
+        <item>"Have you ever had a bubble bath?"</item>
+        <item>" How many times do you take selfies a day?"</item>
+        <item>"If you had a chance to meet the person you fell in love with in high school today, would you meet?"</item>
+        <item>"What are you doing to look more attractive?"</item>
+        <item>"Can you tell me when was the last time you brushed your teeth?"</item>
+        <item>"How long did you use an outfit?"</item>
+        <item>"Is there anything you like since childhood?"</item>
+        <item>"Do you like hanging out with your family?"</item>
+        <item>"Do you prefer to go to bed late or go to bed early?"</item>
+        <item>"Have you ever stolen anything?"</item>
+        <item>"What's the worst relationship you've ever had?"</item>
+        <item>"Have you ever fallen in love with a friend's girlfriend?"</item>
+        <item>"If you had to date someone from your school, who would that be?"</item>
+        <item>"How many people have you flirted with so far?"</item>
+        <item>"Are you flirting with someone right now?"</item>
+        <item>"Have you ever looked in the mirror and admired yourself?"</item>
+        <item>"If you had the opportunity to marry any celebrity, who would it be?"</item>
+        <item>"What is the most embarrassing thing you've done or said in front of a loved one?"</item>
+        <item>"Who is the famous name you admire?"</item>
+        <item>"If you could change something about your body, what would it be?"</item>
+        <item>"Who are you most jealous of?"</item>
+        <item>"Who do you hate the most?"</item>
+        <item>"If you were stranded on a deserted island, who would you like to be with?"</item>
+        <item>"Have you ever been abandoned?"</item>
+        <item>"Curly hair or straight hair?"</item>
+        <item>"Would you date with someone shorter than you?"</item>
+        <item>"Who would you follow closely if you were invisible?"</item>
+        <item>"Who would you like to date with the people here?"</item>
+        <item>"Have you ever been in love?"</item>
+        <item>"Blondes or brunettes?"</item>
+        <item>"If your family hates your girlfriend / boyfriend, would you leave him?"</item>
+        <item>"Have you ever been rejected by someone before?"</item>
+        <item>"Have you ever lied to your darling?"</item>
+        <item>"Have you ever cheated on your darling?"</item>
+        <item>"Have you ever lied about your age?"</item>
+        <item>"If a girl / guy you don't like fell in love with you, what would your behavior be like?"</item>
+        <item>"What's the stupidest thing you've done in front of a crowd you don't know?"</item>
+        <item>"What would you want to do if you were invisible for an hour?"</item>
+        <item>"Have you ever been humiliated by anyone else?"</item>
+        <item>"Have you ever been revenged on someone who did wrong to you?"</item>
+        <item>"What are the top 10 products you have never used?"</item>
+        <item>"What would it be if you chose a swearing for the rest of your life?"</item>
+        <item>"If you thought that everyone in the room is a meal, who would be what food?"</item>
+        <item>"If you wanted to marry someone in this room, who would it be?"</item>
+        <item>"What's the stupidest thing you've done to be known?"</item>
+        <item>"Which relationship do you choose; steady, calm or crazy?"</item>
+        <item>"How many days at most did you spend without a shower?"</item>
+        <item>"If you had someone you could communicate with for the rest of your life just by texting, who would that be?"</item>
+        <item>"What is the food you will never eat on your first date?"</item>
+        <item>"Who is the person you do not want to see but you have to see?"</item>
+        <item>"If you could live in someone else's body, who would you choose?"</item>
+        <item>"What is the food you would never order in a restaurant?"</item>
+        <item>"What is the most useless information you know?"</item>
+        <item>"What is the thing you learned at school and say I wish forget?"</item>
+        <item>"Do you prefer to use shampoo as a soap or to use soap as a shampoo?"</item>
+        <item>"What would you choose if you had only one vow for the rest of your life?"</item>
+        <item>"Do you prefer to eat dog food or cat food?"</item>
+        <item>"If you had nine lives, what would you try to do now that you couldn't?"</item>
+        <item>"Have you ever pretended to like a gift even though you didn't like it at all?"</item>
+        <item>"Do you prefer not to take a shower for a month or to eat the same food every day for a month?"</item>
+        <item>"Have you ever shared your friend's secret with anyone else?"</item>
+        <item>"Have you ever ignored a friend's message?"</item>
+        <item>"Have you ever lied to your best friend?"</item>
+        <item>"Have you ever thought of giving up your friend for a boy/girl?"</item>
+        <item>"If you could go on holiday with someone, who would you go with?"</item>
+        <item>"How would you define your best friend, if it was asked?"</item>
+        <item>"If you could change one part of physical appearance of your best friend, what would you change? "</item>
+        <item>"Have you ever leaked a secret someone told you then regretted it?"</item>
+        <item>"What is the most annoying thing with your best friend?"</item>
+        <item>"With whom you would like to see your best friend to go to a date with?"</item>
+        <item>"Have you ever broke up with someone because your best friend asked you to?"</item>
+        <item>"If you were to marry someone in this room, who would it be?"</item>
+        <item>"If you were to remove 5 person on your Instagram, Who would they be? Names required."</item>
+        <item>"What is the worst thing someone said to you behind your back?"</item>
+        <item>"Have you ever fallen in love with your teacher? If yes, who was it?"</item>
+        <item>"Have you ever been attracted to someone in your own gender?"</item>
+        <item>"Have you ever tried to make your friend end their relationship?"</item>
+        <item>"Have yoou ever been with your best friend’s ex-lover?"</item>
+        <item>"Have you ever mistreated an animal?"</item>
+        <item>"Have you ever spread a misleading word about someone?"</item>
+        <item>"Describe a moment in which you were ruthless!"</item>
+        <item>"What is the worst habit of yours?"</item>
+        <item>"If you knew that you wouldn’t be charged of murder, who would you kill?"</item>
+        <item>"If you had one wish, what would it be ?"</item>
+        <item>"Has there ever been a moment in which you felt stupid?"</item>
+        <item>"Tell something your parents don’t know about !"</item>
+        <item>"Have you ever spread a gossip ?"</item>
+        <item>"What percentage do you look like to the person you reflect on your Instagram profile?"</item>
+        <item>"What is something that you have borrowed but never gave it back?"</item>
+        <item>"Is there anything you did to get more likes on instagram but you wouldn’t normally do?"</item>
+        <item>"Have you ever been with someone even though you knew he/she had boyfriend/girlfriend?"</item>
+        <item>"Is there anything you regret doing/saying to someone?"</item>
+        <item>"How often do you pay a visit to your ex’s social media profile?"</item>
+        <item>"What is your biggest insecurity?"</item>
+        <item>"Did you deliberately start a fight? Why?"</item>
+        <item>"What was the most embarrassing thing you have done when you were drunk?"</item>
+        <item>"Confess something!"</item>
+        <item>"Have you ever psychologically tortured someone?"</item>
+        <item>"Who do you stalk most on social media?"</item>
+        <item>"(Pointing someone in the room) Tell one good thing and one  bad thing about them!"</item>
+        <item>"What is the most flirting thing you have ever done?"</item>
+        <item>"How many times do you check yourself in the mirror before going to a date?"</item>
+        <item>"Who do you think is the most entertaining person in here?"</item>
+        <item>"When was the last time you cried?"</item>
+        <item>"Have you ever shed crocodile tears?"</item>
+        <item>"Have you ever been badly rejected by someone? How?"</item>
+        <item>"What is the thing that makes you annoyed after all these years?"</item>
+        <item>"Who is the person you stalk on social media?"</item>
+        <item>"What is the most embarrassing thing you have sent to a wrong person?"</item>
+        <item>"Do you have any superstitions?"</item>
+        <item>"Is there anyone you fall in love with but you are afraid to talk to?"</item>
+        <item>"What is the first thing comes to your mind when you look at him/her (pointing someone in the room)?"</item>
+        <item>"Have you ever sell out one of your friend?"</item>
+        <item>" What lie are you most afraid of if they put you in a lie detector?"</item>
+        <item>" Have you ever exposed someone’s secret?"</item>
+        <item>"Tell us a lie you have told to your best friend!"</item>
+        <item>"If you knew your best friend’s girlfriend was cheating on him, what would you do?"</item>
+        <item>"What would you do if your best friend told you that he has fallen in love with your girlfriend? ?"</item>
+        <item>"Tell us an embarrassing moment you wish to forget !"</item>
+        <item>"Who would be the last person you’d seek help in this room, if your car had been brokedown? Why ?"</item>
+        <item>"Tell us a meal that you won’t eat!"</item>
+        <item>"Tell us something you wish you have never seen it."</item>
+        <item>"Would you date someone that is shorter than you ?"</item>
+        <item>"Have you ever been embarrassed by someone? How ?"</item>
+        <item>"Who is the person you hate most  ?"</item>
+        <item>"How many children would you want to have ?"</item>
+        <item>"Is there aynone in your workplace/school that you wish you were at their place ?"</item>
+        <item>"Who is the person you envy the most ?"</item>
+        <item>"If you wanted to do plastic surgery somewhere in your body, where would it be ?"</item>
+        <item>"Who is the famous person you had fallen love with ?"</item>
+        <item>"Who was the person hurt you most after rejection ?"</item>
+        <item>"Who is the person you’d wish you’d never beenn with ?"</item>
+        <item>"When was the last time you pissed yourself ?"</item>
+        <item>"Have you ever had lice ?"</item>
+        <item>"Which part of your body you don’t like ?"</item>
+        <item>"How long have you gone the most without taking shower ?"</item>
+        <item> "Tell me about a moment when you were a sucker!"</item>
+        <item> "Tell me about a moment when you disgraced yourself!"</item>
+        <item> "The maximum number of selfies you took in a day?"</item>
+        <item> "Have you ever been ripped off? How?"</item>
+        <item> "What did you eat when you filled your stomach the most in one sitting?"</item>
+        <item> "Is it that you lied because I'm sick not to meet someone? Give a name!"</item>
+        <item> "What was the most irritating nickname for you?"</item>
+        <item> "What was the last thing that made you embarrassed among people?"</item>
+        <item> "If the world was to end by next week, what illegal things would you do?"</item>
+        <item> "What is your biggest nonsense fear?"</item>
+        <item> "Have you ever uploaded to social media and then regretted it and deleted?"</item>
+        <item> "When did you feel the most crushed?"</item>
+        <item> "Have you ever been suddenly noticed by that person while looking at someone carefully?"</item>
+        <item> "Have you ever been cheated?"</item>
+        <item> "If you had a time machine and you could go back and delete one thing you did, what would you delete?"</item>
+        <item> "If you were born again, what year would you choose to be born?"</item>
+        <item> "Who do you think you wouldn't date in this room? Why?"</item>
+        <item> "What's the annoying thing about you?"</item>
+        <item> "Say something you don't like about me."</item>
+        <item> "Do you think he/she's (named someone in the room) a sweet person?"</item>
+        <item> "Who is your secret platonic?"</item>
+        <item> "What was the most embarrassing moment you've had outside?"</item>
+        <item> "Did you ever fall in love with any cartoon character as a kid?"</item>
+
+    </string-array>
+</resources>
+
+
