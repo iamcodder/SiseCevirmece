@@ -19,9 +19,6 @@ class SecimEkraniActivity : AppCompatActivity() {
 
         this extStatusBarColor "#00000000"
 
-        binding.cesaret = DogrulukCesaretEnum.CESARET.isim
-        binding.dogruluk = DogrulukCesaretEnum.DOGRULUK.isim
-
 
         binding.cardviewGroup.imgCesaret.setOnClickListener {
             it.context.extSayfaGecisi(SoruActivity::class.java)

@@ -26,6 +26,7 @@
             android:layout_height="24dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
+            android:contentDescription="@string/isaretli_mi"
             android:src="@drawable/check" />
 
     </LinearLayout>
