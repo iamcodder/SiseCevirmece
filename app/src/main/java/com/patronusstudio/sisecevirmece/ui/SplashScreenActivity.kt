@@ -12,7 +12,7 @@ import com.patronusstudio.sisecevirmece.abstracts.CesaretDatabase
 import com.patronusstudio.sisecevirmece.abstracts.CesaretEklendiDatabase
 import com.patronusstudio.sisecevirmece.abstracts.DogrulukDatabase
 import com.patronusstudio.sisecevirmece.abstracts.DogrulukEklendiDatabase
-import com.patronusstudio.sisecevirmece.network.FirebaseDb
+import com.patronusstudio.sisecevirmece.firebase.FirebaseDb
 import com.patronusstudio.sisecevirmece.util.*
 import kotlinx.android.synthetic.main.activity_splash_screen.*
 
@@ -26,6 +26,7 @@ class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
+
 
         this extStatusBarColor "#00000000"
 

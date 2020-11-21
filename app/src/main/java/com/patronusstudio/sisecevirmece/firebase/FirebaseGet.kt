@@ -1,4 +1,4 @@
-package com.patronusstudio.sisecevirmece.network
+package com.patronusstudio.sisecevirmece.firebase
 
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError

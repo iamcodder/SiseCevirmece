@@ -11,8 +11,8 @@ import com.patronusstudio.sisecevirmece.R
 import com.patronusstudio.sisecevirmece.databinding.ActivityFeedbackLoadingBinding
 import com.patronusstudio.sisecevirmece.enums.IntentKeyEnum
 import com.patronusstudio.sisecevirmece.enums.IntentResultKeyEnum
+import com.patronusstudio.sisecevirmece.firebase.FirebaseDb
 import com.patronusstudio.sisecevirmece.model.FeedbackModel
-import com.patronusstudio.sisecevirmece.network.FirebaseDb
 import com.patronusstudio.sisecevirmece.util.extToastMessage
 import com.patronusstudio.sisecevirmece.util.isInternetConnection
 

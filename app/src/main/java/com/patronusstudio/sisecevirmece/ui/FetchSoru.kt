@@ -9,10 +9,10 @@ import com.patronusstudio.sisecevirmece.abstracts.CesaretDatabase
 import com.patronusstudio.sisecevirmece.abstracts.DogrulukDatabase
 import com.patronusstudio.sisecevirmece.admob.AdmobTool
 import com.patronusstudio.sisecevirmece.databinding.ActivityFetchSoruBinding
+import com.patronusstudio.sisecevirmece.firebase.FirebaseGet
 import com.patronusstudio.sisecevirmece.model.CesaretModel
 import com.patronusstudio.sisecevirmece.model.DogrulukModel
 import com.patronusstudio.sisecevirmece.model.SoruPaketi
-import com.patronusstudio.sisecevirmece.network.FirebaseGet
 import com.patronusstudio.sisecevirmece.util.OyunIslemleri
 import com.patronusstudio.sisecevirmece.util.SharedVeriSaklama
 import com.patronusstudio.sisecevirmece.util.extToastMessage
